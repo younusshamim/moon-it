@@ -1,0 +1,45 @@
+import { cn } from "@/lib/utils";
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
+
+type PropsTypes = {
+  children: ReactNode;
+  className?: string;
+  iconLeft?: ReactNode;
+  iconRight?: ReactNode;
+  size?: 'sm' | 'lg';
+  variant?: 'outline';
+} & DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+
+const PrimaryButton = ({
+  children,
+  onClick,
+  className,
+  iconLeft,
+  iconRight,
+  size,
+  variant,
+  ...rest
+}: PropsTypes) => {
+
+  return (
+    <button
+      className={cn(
+        "h-[40px] px-4 flex gap-2 items-center justify-center font-semibold shadow-lg rounded-btn text-primary-foreground  bg-gradient-to-r from-primary-lighter to-primary active:scale-[0.97]",
+        className,
+        {
+          "h-[35px] text-sm": size === 'sm',
+          "h-[50px] px-6 text-lg": size == 'lg',
+          "border border-primary-lighter bg-gradient-to-r from-primary to-primary-lighter text-transparent bg-clip-text":
+            variant === 'outline',
+        }
+      )}
+      {...rest}
+    >
+      {iconLeft && <div>{iconLeft}</div>}
+      <p>{children}</p>
+      {iconRight && <div>{iconRight}</div>}
+    </button>
+  );
+};
+
+export default PrimaryButton;
