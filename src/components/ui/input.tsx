@@ -1,15 +1,30 @@
-import { cn } from "@/lib/utils";
-import { ComponentProps } from "react";
-import { Input as RizzInput } from "rizzui";
+import * as React from "react"
+import { cn } from "@/lib/utils"
 
-type RizzInputProps = ComponentProps<typeof RizzInput>
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  inputClassName?: string;
+  label?: string;
+}
 
-type PropsTypes = {
-  inputClassName: string;
-} & RizzInputProps
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ className, inputClassName, type, label, ...props }, ref) => {
+    return (
+      <div className={cn("flex flex-col gap-1", className)}>
+        <label className="text-sm">{label}</label>
 
-const Input = ({ inputClassName, ...props }: PropsTypes) => {
-  return <RizzInput inputClassName={cn("px-3", inputClassName)} {...props} />;
-};
+        <input
+          type={type}
+          className={cn(
+            "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50",
+            inputClassName
+          )}
+          ref={ref}
+          {...props}
+        />
+      </div>
+    )
+  }
+)
+Input.displayName = "Input"
 
-export default Input;
+export { Input }

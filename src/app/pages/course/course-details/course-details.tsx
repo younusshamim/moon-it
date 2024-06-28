@@ -4,9 +4,9 @@ import Container from "@/components/container";
 import PrimaryButton from "@/components/primary-button";
 import { convertToBanglaNumber } from "@/lib/utils";
 import Image from "next/image";
-import AdmissionForm from "../admission-form/admission-form";
-import { useState } from "react";
 import { CourseType } from "@/lib/types/course";
+import AdmissionForm from "../admission-form/admission-form";
+import Modal from "@/components/modal";
 
 const CourseDetails = ({ course }: { course: CourseType }) => {
   return (
@@ -26,9 +26,13 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
           </h3>
 
           <div className="flex items-center gap-5 mb-2">
-            <PrimaryButton size="lg" onClick={() => { }}>
-              ডিস্কাউন্টে ভর্তি হোন
-            </PrimaryButton>
+            <Modal
+              triggerBtn={<PrimaryButton size="lg">ডিস্কাউন্টে ভর্তি হোন</PrimaryButton>}
+              className="bg-card "
+            >
+              <AdmissionForm />
+            </Modal>
+
             <h3 className="text-2xl font-bold text-primary-lighter">৳ ৭৩৫০ টাকা</h3>
           </div>
           <p className="font-semibold text-[17px]">

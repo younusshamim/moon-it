@@ -1,3 +1,5 @@
+"use client"
+
 import { cn } from "@/lib/utils";
 import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from "react";
 
@@ -8,11 +10,11 @@ type PropsTypes = {
   iconRight?: ReactNode;
   size?: 'sm' | 'lg';
   variant?: 'outline';
+
 } & DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 
 const PrimaryButton = ({
   children,
-  onClick,
   className,
   iconLeft,
   iconRight,

@@ -35,7 +35,6 @@ const FreeSeminar = () => {
           </p>
 
           <PrimaryButton
-            onClick={() => { }}
             size="lg"
             className="mt-7 border-white text-white"
             iconRight={<FaArrowRight className="text-white" />}

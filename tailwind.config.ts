@@ -1,17 +1,31 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
-  content: [
-    "./node_modules/rizzui/dist/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{ts,tsx,mdx}",
-  ],
+const config = {
   darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  prefix: "",
   theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
+    },
     extend: {
       colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         card: {
           DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
         foreground: {
           DEFAULT: "hsl(var(--foreground))",
@@ -26,7 +40,7 @@ const config: Config = {
           DEFAULT: "hsl(var(--secondary))",
           lighter: "hsl(var(--secondary-lighter))",
           dark: "hsl(var(--secondary-dark))",
-          forground: "hsl(var(--secondary-forground))",
+          foreground: "hsl(var(--secondary-forground))",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
@@ -44,16 +58,11 @@ const config: Config = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
       },
       borderRadius: {
-        sm: "calc(var(--radius) - 4px)",
-        md: "calc(var(--radius) - 2px)",
         lg: "var(--radius)",
-
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
         btn: "32px",
         card: "12px",
       },
@@ -73,6 +82,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
-};
+  plugins: [require("tailwindcss-animate")],
+} satisfies Config;
+
 export default config;

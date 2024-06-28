@@ -1,0 +1,39 @@
+import * as React from "react"
+import { Select as ShadcnSelect, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "./ui/select"
+import { cn } from "@/lib/utils";
+import { OptionType } from "@/lib/types/option-type";
+
+type PropsTypes = {
+    label: string;
+    placeholder: string;
+    options: OptionType[];
+    className?: string;
+}
+
+const Select = ({ label, placeholder = "", options, className }: PropsTypes) => {
+    return (
+        <div className={cn("flex flex-col gap-1", className)}>
+            <label className="text-sm">{label}</label>
+
+            <ShadcnSelect>
+                <SelectTrigger className="">
+                    <SelectValue placeholder={placeholder} />
+                </SelectTrigger>
+
+                <SelectContent>
+                    <SelectGroup>
+                        {/* <SelectLabel>aa</SelectLabel> */}
+                        {options.map((item, index) => (
+                            <SelectItem value={item.value} key={item.value + index}>
+                                {item.label}
+                            </SelectItem>
+                        ))}
+
+                    </SelectGroup>
+                </SelectContent>
+            </ShadcnSelect>
+        </div>
+    )
+}
+
+export default Select

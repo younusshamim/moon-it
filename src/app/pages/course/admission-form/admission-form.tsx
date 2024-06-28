@@ -1,12 +1,18 @@
 import PrimaryButton from "@/components/primary-button";
-import Input from "@/components/ui/input";
-import Textarea from "@/components/ui/textarea";
+import Select from "@/components/select";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import courseList from "@/data/course-list";
 import { convertToBanglaNumber } from "@/lib/utils";
 import Image from "next/image";
 
 const AdmissionForm = () => {
+  const courseOptions = courseList.map(course => {
+    return { label: course.name, value: course.id.toString() }
+  })
+
   return (
-    <div className="flex flex-col gap-7 py-5  w-2/3 place-self-center">
+    <div className="flex flex-col gap-7 px-10 py-5">
       <div className="flex flex-col items-center">
         <Image
           src="/logo/logo.png"
@@ -24,22 +30,30 @@ const AdmissionForm = () => {
         </h3>
       </div>
 
-      <form className="flex flex-col gap-5 w-full">
-        {/* <Input
+      <form className="grid grid-cols-2 gap-5">
+        <Input
           label="আপনার নাম (Only English)"
           placeholder="ইংরেজিতে আপনার নাম লিখুন"
         />
         <Input
           label="ফোন নাম্বার (Only English)"
           placeholder="ইংরেজিতে ফোন নাম্বার লিখুন"
-        />{" "}
+        />
+
+        <Select
+          label="আপনি যে কোর্সটি করতে চাচ্ছেন"
+          placeholder="আপনি যে কোর্সটি করতে চাচ্ছেন"
+          options={courseOptions}
+        />
+
         <Input
           label="ডিস্কাউন্টে কোর্স ফি"
-          value={convertToBanglaNumber(7350)}
+          value={`${convertToBanglaNumber(7350)}/-`}
+          inputClassName="disabled:opacity-100"
           disabled
         />
-        <Textarea label="আপনার ঠিকানা" placeholder="আপনার ঠিকানা লিখুন" /> */}
-        <PrimaryButton size="lg">সাবমিট করুন</PrimaryButton>
+        <Textarea label="আপনার ঠিকানা" placeholder="আপনার ঠিকানা লিখুন" className="col-span-2" />
+        <PrimaryButton className="col-span-2">সাবমিট করুন</PrimaryButton>
       </form>
     </div>
   );
