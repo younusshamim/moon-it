@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function convertToBanglaNumber(englishNumber: number) {
+export function convertToBanglaNumber(englishNumber: number | string) {
   const englishToBanglaMap: { [key: string]: string } = {
     0: "০",
     1: "১",

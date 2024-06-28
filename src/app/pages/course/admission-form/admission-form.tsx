@@ -48,8 +48,8 @@ const AdmissionForm = () => {
 
         <Input
           label="ডিস্কাউন্টে কোর্স ফি"
-          value={`${convertToBanglaNumber(7350)}/-`}
-          inputClassName="disabled:opacity-100"
+          value={`${convertToBanglaNumber(1350)}/-`}
+          inputClassName="disabled:opacity-100 font-sans"
           disabled
         />
         <Textarea label="আপনার ঠিকানা" placeholder="আপনার ঠিকানা লিখুন" className="col-span-2" />
