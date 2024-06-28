@@ -63,7 +63,7 @@ const Navbar = () => {
             {theme === 'light' ? <IoMdMoon /> : <MdSunny />}
           </div>
 
-          <Link href="free-seminar">
+          <Link href="/free-seminar">
             <PrimaryButton>ফ্রি সেমিনার</PrimaryButton>
           </Link>
         </div>

@@ -8,15 +8,16 @@ type PropsTypes = {
     placeholder: string;
     options: OptionType[];
     className?: string;
+    inputClassName?: string;
 }
 
-const Select = ({ label, placeholder = "", options, className }: PropsTypes) => {
+const Select = ({ label, placeholder = "", options, className, inputClassName }: PropsTypes) => {
     return (
         <div className={cn("flex flex-col gap-1", className)}>
             <label className="text-sm">{label}</label>
 
             <ShadcnSelect>
-                <SelectTrigger className="">
+                <SelectTrigger className={cn('', inputClassName)}>
                     <SelectValue placeholder={placeholder} />
                 </SelectTrigger>
 

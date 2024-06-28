@@ -53,7 +53,8 @@ const AdmissionForm = () => {
           disabled
         />
         <Textarea label="আপনার ঠিকানা" placeholder="আপনার ঠিকানা লিখুন" className="col-span-2" />
-        <PrimaryButton className="col-span-2">সাবমিট করুন</PrimaryButton>
+
+        <PrimaryButton className="col-span-2 mt-5">সাবমিট করুন</PrimaryButton>
       </form>
     </div>
   );
