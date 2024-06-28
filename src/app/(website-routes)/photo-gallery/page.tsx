@@ -3,19 +3,14 @@ import BTEBCertified from "@/app/pages/about-us/bteb-certified/bteb-certified";
 import Gallery from "@/app/pages/about-us/gallery/gallery";
 import Mentors from "@/app/pages/about-us/mentors/mentors";
 import AboutUsComp from "@/app/shared/about-us/about-us";
-import Logos from "@/app/shared/logos/logos";
 
-const AboutUs = () => {
+const PhotoGallery = () => {
   return (
     <>
-      <PageHeading label="আমাদের সম্পর্কে" />
-      <AboutUsComp />
-      <Logos />
-      {/* <BTEBCertified /> */}
-      <Mentors />
-      <Gallery />
+      <PageHeading label="ফটো গ্যালারী" />
+      <Gallery showAll={true} />
     </>
   );
 };
 
-export default AboutUs;
+export default PhotoGallery;

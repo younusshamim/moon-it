@@ -52,10 +52,11 @@ const Footer = () => {
           <div className="ml-20">
             <h3 className="font-bold text-xl mb-2">কুইক লিংক-</h3>
             <div className="flex flex-col gap-1">
+              <p className="cursor-pointer">ফটো গ্যালারী</p>
               <p className="cursor-pointer">জয়েন ফ্রি সেমিনার</p>
               <p className="cursor-pointer">সব কোর্স</p>
               <p className="cursor-pointer">আমাদের সম্পর্কে</p>
-              <p className="cursor-pointer">যোগাযোগ</p>
+              {/* <p className="cursor-pointer">যোগাযোগ</p> */}
             </div>
           </div>
 

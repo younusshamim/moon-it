@@ -6,13 +6,17 @@ const navItems: NavItemType[] = [
     link: "/",
   },
   {
-    name: "আমাদের সম্পর্কে",
-    link: "/about-us",
-  },
-  {
     name: "সব কোর্স ",
     link: "/courses",
   },
+  {
+    name: "আমাদের সম্পর্কে",
+    link: "/about-us",
+  },
+  // {
+  //   name: "ফটো গ্যালারি",
+  //   link: "/photo-gallery",
+  // },
   {
     name: "যোগাযোগ",
     link: "/contact",

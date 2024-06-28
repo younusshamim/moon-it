@@ -1,5 +1,4 @@
 import Container from "@/components/container";
-import GradientText from "@/components/gradient-text";
 import mentorList from "@/data/mentor-list";
 import React from "react";
 import MentorCard from "../../../shared/mentor-card/mentor-card";

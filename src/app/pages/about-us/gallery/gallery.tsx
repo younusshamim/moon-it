@@ -14,13 +14,17 @@ const imageCategories = [
   { id: "exam", title: "BTEB এক্সাম" },
 ];
 
-const Gallery = () => {
+type PropsTypes = {
+  showAll?: boolean;
+}
+
+const Gallery = ({ showAll = false }: PropsTypes) => {
   const [showMore, setShowMore] = useState(false);
   const [selected, setSelected] = useState(imageCategories[0]);
   const filteredImages = galleryImages.filter(
     (item) => item.category === selected.id
   );
-  const slicedImages = showMore ? filteredImages : filteredImages.slice(0, 6);
+  const slicedImages = (showMore || showAll) ? filteredImages : filteredImages.slice(0, 6);
 
   return (
     <div>
@@ -71,7 +75,7 @@ const Gallery = () => {
           })}
         </div>
 
-        {filteredImages.length > 6 && (
+        {filteredImages.length > 6 && !showAll && (
           <PrimaryButton
             className="mx-auto mt-10"
             size="lg"
