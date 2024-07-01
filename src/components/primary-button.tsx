@@ -26,7 +26,7 @@ const PrimaryButton = ({
   return (
     <button
       className={cn(
-        "h-[45px] px-6 flex gap-2 items-center justify-center font-semibold shadow-lg rounded-btn text-primary-foreground  bg-gradient-to-r from-primary-lighter to-primary active:scale-[0.97]",
+        "enforced h-[45px] px-6 flex gap-2 items-center justify-center font-semibold shadow-lg rounded-btn text-primary-foreground  bg-gradient-to-r from-primary-lighter to-primary active:scale-[0.97]",
         className,
         {
           "h-[35px] text-sm": size === 'sm',

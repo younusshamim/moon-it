@@ -17,15 +17,8 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
 
   const toggleTheme = () => {
-    switch (theme) {
-      case 'light': setTheme("dark")
-        break;
-      case 'dark': setTheme("light")
-        break;
-      default: setTheme("light")
-        break;
-    }
-  }
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
 
   return (
     <nav>
@@ -44,9 +37,9 @@ const Navbar = () => {
             <Link
               href={item.link}
               className={cn(
-                "px-3 py-2 rounded-md cursor-pointer font-bold hover:bg-foreground-dark hover:text-background transition-all duration-300 ease-in-out",
+                "px-3 py-2 rounded-md cursor-pointer font-bold hover:bg-foreground-dark dark:hover:bg-gray-800 hover:text-white transition-all duration-300 ease-in-out",
                 {
-                  "bg-foreground-dark text-background": pathname === item.link,
+                  "bg-foreground-dark text-white dark:bg-gray-800 ": pathname === item.link,
                 }
               )}
               key={item.name + index}
@@ -57,7 +50,7 @@ const Navbar = () => {
 
           <div
             className="text-2xl cursor-pointer mx-4"
-            title={theme === 'light' ? "Dark Mode" : "Light Mood"}
+            title={theme === 'light' ? "Dark Mode" : "Light Mode"}
             onClick={toggleTheme}
           >
             {theme === 'light' ? <IoMdMoon /> : <MdSunny />}

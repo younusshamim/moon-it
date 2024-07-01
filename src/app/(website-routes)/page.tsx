@@ -1,3 +1,4 @@
+"use client"
 import AboutUs from "../shared/about-us/about-us";
 import Courses from "../pages/home/courses/courses";
 import FreeSeminar from "../pages/home/free-seminar/free-seminar";
@@ -6,13 +7,16 @@ import Logos from "../shared/logos/logos";
 import ServiceOverview from "../pages/home/service-overview/service-overview";
 import Services from "../pages/home/services/services";
 import Navbar from "../shared/navbar/navbar";
+import { useTheme } from "next-themes";
 
 export default function Home() {
+  const { theme } = useTheme();
+
   return (
     <>
       <div
         style={{
-          backgroundImage: "url(svg/hero-bg.svg)",
+          backgroundImage: theme === 'light' ? "url(svg/hero-bg-light-pattern.svg)" : "url(svg/hero-bg-dark-pattern.svg)",
           backgroundRepeat: "repeat",
         }}
       >

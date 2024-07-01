@@ -13,7 +13,7 @@ type PropsTypes = {
 
 const CourseCard = ({ course, className }: PropsTypes) => {
   return (
-    <div className={cn("bg-background rounded-card", className)}>
+    <div className={cn("bg-background dark:bg-background2 rounded-card", className)}>
       <Image
         className="w-full h-[150px] object-cover rounded-t-card"
         sizes="100vw"

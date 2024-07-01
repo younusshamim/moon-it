@@ -10,15 +10,15 @@ type PropsTypes = {
 
 const ServiceCard = ({ service, index }: PropsTypes) => {
   const borderRight =
-    (index === 0 || index === 1 || index === 3 || index === 4) && "border-r ";
+    (index === 0 || index === 1 || index === 3 || index === 4) && "border-r border-border";
   const borderBottom =
-    (index === 0 || index === 1 || index === 2) && "border-b ";
+    (index === 0 || index === 1 || index === 2) && "border-b border-border";
   const classNames = [borderRight, borderBottom];
 
   return (
     <div
       className={cn(
-        "px-8 py-5 text-center border-gray-100 flex flex-col items-center gap-1",
+        "px-8 py-5 text-center border-border flex flex-col items-center gap-1",
         classNames
       )}
     >

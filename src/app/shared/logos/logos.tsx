@@ -22,7 +22,7 @@ const Logos = () => {
   ];
 
   return (
-    <div>
+    <div className="">
       <Container className="pb-20 flex gap-10 justify-center items-center">
         {logos.map((item, index) => (
           <Image

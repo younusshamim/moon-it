@@ -35,7 +35,7 @@ const AboutUs = () => {
 
         <div className="w-1/2">
           <Image
-            className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 rounded-card"
+            className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 dark:shadow-slate-700 rounded-card"
             sizes="100vw"
             width={0}
             height={0}

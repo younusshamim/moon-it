@@ -12,12 +12,12 @@ const AdmissionForm = () => {
   })
 
   return (
-    <div className="flex flex-col gap-7 px-10 py-5">
+    <div className="flex flex-col gap-12 px-10 py-5">
       <div className="flex flex-col items-center">
         <Image
           src="/logo/logo.png"
           alt="Moon IT"
-          className="w-[180px] h-auto object-contain mb-5"
+          className="w-[180px] h-auto object-contain mb-7"
           height={0}
           width={0}
           sizes="100vw"

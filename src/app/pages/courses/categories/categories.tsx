@@ -17,7 +17,7 @@ const Categories = () => {
           {categories.map((category, index) => (
             <div
               key={category.label + index}
-              className={"bg-white shadow-sm p-8 rounded-card text-center"}
+              className={"bg-background2 dark:bg-card shadow-sm p-8 rounded-card text-center"}
             >
               <Image
                 src={category.icon}

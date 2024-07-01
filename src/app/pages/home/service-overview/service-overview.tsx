@@ -3,7 +3,7 @@ import Container from "@/components/container";
 
 const ServiceOverview = () => {
   return (
-    <div className=" border-b border-slate-200">
+    <div className="border-b border-border">
       <Container className="py-8 flex items-center justify-center gap-5 font-semibold">
         <p className="border-r-2 border-foreground pr-5">
           প্রফেশনাল আইটি কোর্স

@@ -10,21 +10,24 @@ type PropsTypes = {
 
 const Categories = ({ categories, selectedCategory, setSelectedCategory }: PropsTypes) => {
   return (
-    <div className="grid grid-cols-4 gap-5 mb-5">
-      {categories.map((tab, i) => (
-        <p
-          className={cn(
-            "border border-slate-300 bg-slate-50 py-[7px] rounded-card cursor-pointer text-center",
-            {
-              "bg-foreground text-background": selectedCategory === tab.name,
-            }
-          )}
-          onClick={() => setSelectedCategory(tab.name)}
-          key={tab.name + i}
-        >
-          {tab.label}
-        </p>
-      ))}
+    <div className="flex gap-8 border-b-2 border-b-border mb-7">
+      {categories.map((tab, index) => {
+        return (
+          <p
+            key={tab.name + index}
+            className={cn(
+              "text-foreground font-semibold cursor-pointer pb-2 px-2",
+              {
+                "text-primary font-bold border-b-2 border-primary":
+                  selectedCategory === tab.name,
+              }
+            )}
+            onClick={() => setSelectedCategory(tab.name)}
+          >
+            {tab.label}
+          </p>
+        );
+      })}
     </div>
   );
 };

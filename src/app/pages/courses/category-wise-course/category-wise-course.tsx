@@ -15,7 +15,7 @@ const CategoryWiseCourses = () => {
         return (
           <div
             key={category.label + index}
-            className="bg-white shadow-sm p-10 rounded-card"
+            className="bg-card shadow-sm p-10 rounded-card"
           >
             <h1 className="text-4xl text-foreground-dark font-extrabold mb-5">
               {category.label}

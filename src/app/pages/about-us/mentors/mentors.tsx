@@ -6,11 +6,11 @@ import Chairman from "../chairman/chairman";
 
 const Mentors = () => {
   return (
-    <div className="bg-primary">
+    <div className="bg-primary dark:bg-background2">
       <Chairman />
 
       <Container className="py-20">
-        <h2 className="text-4xl text-background font-extrabold text-center mb-6">
+        <h2 className="text-4xl text-white font-extrabold text-center mb-6">
           ইন্ডাস্ট্রি এক্সপার্ট ইনস্ট্রাক্টর
         </h2>
 

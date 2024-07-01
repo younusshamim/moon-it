@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const FreeSeminar = () => {
   return (
-    <div className="bg-primary">
+    <div className="bg-primary dark:bg-background2">
       <Container className="py-20 flex gap-20 items-center">
         <div className="w-1/2 ">
           <Image

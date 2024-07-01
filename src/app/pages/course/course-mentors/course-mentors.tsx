@@ -5,9 +5,9 @@ import { MentorType } from "@/lib/types/mentor";
 
 const CourseMentors = ({ mentors }: { mentors: MentorType[] }) => {
   return (
-    <div className=" bg-primary">
+    <div className="bg-primary dark:bg-background2">
       <Container className="py-20">
-        <h2 className="text-4xl text-background font-extrabold text-center mb-6">
+        <h2 className="text-4xl text-white font-extrabold text-center mb-6">
           কোর্স ইনস্ট্রাক্টর
         </h2>
 

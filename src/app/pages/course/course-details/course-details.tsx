@@ -40,7 +40,6 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
           <div className="flex items-center gap-5 mb-2">
             <Modal
               triggerBtn={<PrimaryButton size="lg">ডিস্কাউন্টে ভর্তি হোন</PrimaryButton>}
-              className="bg-card "
             >
               <AdmissionForm />
             </Modal>

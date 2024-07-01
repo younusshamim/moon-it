@@ -17,12 +17,12 @@ const Courses = () => {
   );
 
   return (
-    <div className="bg-card">
+    <div className="bg-card border-b border-border">
       <Container className="py-20">
         <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-[6px]">
           অসাধারন <GradientText>কোর্স সমূহ</GradientText>
         </h2>
-        <p className="font-semibold mb-6 text-center">
+        <p className="font-semibold mb-10 text-center">
           প্রতিটি কোর্সের সিলেবাস ব্যাসিক টু এডভান্স লেভেল পর্যন্ত সাজানো
           হয়েছে।
         </p>

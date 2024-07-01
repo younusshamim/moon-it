@@ -15,7 +15,7 @@ const Chairman = () => {
           src="/instructor/yousuf.jpg"
           alt="Moon IT Seminar"
         />
-        <div className="w-[350px] h-[400px] bg-foreground rounded-card absolute top-10 -right-10 z-0 border-white border-4 shadow-lg"></div>
+        <div className="w-[350px] h-[400px] bg-foreground dark:bg-background2  rounded-card absolute top-10 -right-10 z-0 border-white border-4 shadow-lg"></div>
       </div>
 
       <div className="w-1/2  text-white">

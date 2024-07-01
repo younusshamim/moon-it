@@ -6,11 +6,14 @@ import { BsStars } from "react-icons/bs";
 import Image from "next/image";
 import GradientText from "@/components/gradient-text";
 import Link from "next/link";
+import LineShapes from "./line-shapes";
 
 const HeroSection = () => {
   return (
-    <div>
-      <Container className="h-[550px] flex items-center justify-between gap-28">
+    <div className="relative">
+      <LineShapes />
+
+      <Container className="h-[550px] flex items-center justify-between gap-28 ">
         <div className="w-full flex flex-col gap-7">
           <h2 className="font-bold text-[17px] shadow-md rounded-btn w-fit px-3 py-1">
             <BsStars className="inline text-xl text-primary mr-1" />
@@ -64,7 +67,7 @@ const HeroSection = () => {
 
         <div className="w-full">
           <Image
-            className="w-full h-[400px] object-cover rounded-card shadow-lg shadow-slate-400"
+            className="w-full h-[400px] object-cover rounded-card shadow-lg shadow-slate-400 dark:shadow-slate-700"
             sizes="100vw"
             width={0}
             height={0}

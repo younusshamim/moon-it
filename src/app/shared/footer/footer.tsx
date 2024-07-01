@@ -8,7 +8,7 @@ import { IoIosCall } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <div className="bg-card">
+    <div className="bg-card ">
       <Container className="pt-20 pb-10">
         <div className="grid grid-cols-4">
           {/* social and logo  */}
@@ -77,7 +77,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="border-1 border-slate-200 my-10" />
+        <hr className="border border-border my-10" />
 
         <p className="text-center">
           কপিরাইট ©{new Date().getFullYear()} মুন আইটি ট্রেইনিং ইনস্টিটিউট।

@@ -20,8 +20,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
 
-      <body className={`${HindSiliguri.className} font-medium`}>
-        <ThemeProvider>{children}</ThemeProvider>
+      <body>
+        <ThemeProvider>
+          <div className={`${HindSiliguri.className} font-medium bg-background`}>{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );

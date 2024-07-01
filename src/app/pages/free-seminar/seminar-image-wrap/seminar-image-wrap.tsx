@@ -8,7 +8,7 @@ const SeminarImageWrap = () => {
                 sizes="100vw"
                 width={0}
                 height={0}
-                src="/illustration/seminar.jpg"
+                src="/illustration/seminar.png"
                 alt="Moon IT Seminar"
             />
         </div>

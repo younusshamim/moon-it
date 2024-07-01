@@ -15,10 +15,10 @@ const Address = () => {
         তথ্য। এছাড়াও উল্লেখিত মেইলে কিংবা ফেসবুক ম্যাসেঞ্জারেও নক দিতে পারেন।
       </p>
 
-      <div className="flex items-center">
-        <div className="w-1/2">
+      <div className="flex items-center gap-10">
+        <div className="w-3/5">
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-red-50 p-5 rounded-card flex flex-col justify-center">
+            <div className="bg-red-50 dark:bg-card p-5 rounded-card flex flex-col justify-center">
               <h3 className="font-bold text-lg">ঠিকানা-</h3>
               <div className="flex gap-3 items-center mb-3">
                 <IoLocationSharp className="text-2xl" />
@@ -29,7 +29,7 @@ const Address = () => {
               </div>
             </div>
 
-            <div className="bg-amber-50 p-5 rounded-card flex flex-col justify-center">
+            <div className="bg-amber-50 dark:bg-card p-5 rounded-card flex flex-col justify-center">
               <h3 className="font-bold text-lg">অফিস ভিজিটের সময়-</h3>
               <div className="flex gap-3 items-center mb-3">
                 <MdAccessTime className="text-2xl" />
@@ -39,7 +39,7 @@ const Address = () => {
               </div>
             </div>
 
-            <div className="bg-purple-50 p-5 rounded-card flex flex-col justify-center">
+            <div className="bg-purple-50 dark:bg-card p-5 rounded-card flex flex-col justify-center">
               <h3 className="font-bold text-lg">ফোন নাম্বার-</h3>
               <div className="flex gap-3 items-center mb-3">
                 <IoIosCall className="text-2xl" />
@@ -50,7 +50,7 @@ const Address = () => {
               </div>
             </div>
 
-            <div className="bg-green-50 p-5 rounded-card flex flex-col justify-center">
+            <div className="bg-green-50 dark:bg-card p-5 rounded-card flex flex-col justify-center">
               <h3 className="font-bold text-lg">ই-মেইল-</h3>
               <div className="flex gap-3 items-center mb-3">
                 <MdEmail className="text-2xl" />
@@ -60,11 +60,11 @@ const Address = () => {
           </div>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-2/5">
           <Image
             className="w-full h-auto"
             sizes="100vw"
-            src="/illustration/location (2).jpg"
+            src="/illustration/location (2).png"
             width={0}
             height={0}
             alt="Address illustration"

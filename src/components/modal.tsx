@@ -15,7 +15,7 @@ const Modal = ({ triggerBtn, children, className }: PropsTypes) => {
                 {triggerBtn}
             </DialogTrigger >
 
-            <DialogContent className={cn("max-w-screen-sm max-h-screen overflow-y-auto", className)}>
+            <DialogContent className={cn("max-w-screen-md max-h-screen overflow-y-auto border-border", className)}>
                 {children}
             </DialogContent>
         </Dialog >
