@@ -24,9 +24,9 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
 
   return (
     <Container className="py-10 flex gap-20 relative">
-      <LineShapes />
+      <LineShapes lightClassName="left-[350px]" />
 
-      <div className="w-1/2">
+      <div className="w-1/2 z-50">
         <h1 className="text-4xl text-foreground font-extrabold mb-4">
           {name}
         </h1>
@@ -53,9 +53,9 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
             আগামী <NumSpan>{discountEndDate}</NumSpan> ইং তারিখ পর্যন্ত <NumSpan>{discountAmountText}</NumSpan> ডিস্কাউন্টে কোর্স ফি মাত্র ৳ <NumSpan>{feeAfterDiscount}</NumSpan>/- টাকা
           </p >
         </div >
-      </div >
+      </div>
 
-      <div className="w-1/2">
+      <div className="w-1/2 z-50">
         <Image
           className="w-full h-[350px] object-cover object-center rounded-card shadow-lg "
           sizes="100vw"

@@ -14,7 +14,7 @@ const HeroSection = () => {
       <LineShapes />
 
       <Container className="h-[550px] flex items-center justify-between gap-28 ">
-        <div className="w-full flex flex-col gap-7">
+        <div className="w-full flex flex-col gap-7 z-50">
           <h2 className="font-bold text-[17px] shadow-md rounded-btn w-fit px-3 py-1">
             <BsStars className="inline text-xl text-primary mr-1" />
             ফেনীর সেরা আইটি ট্রেনিং ইনষ্টিটিউটে
@@ -31,7 +31,7 @@ const HeroSection = () => {
             প্রস্তুত আপনার ক্যারিয়ার গড়ার অগ্রযাত্রায়।
           </h1>
 
-          <div className="flex gap-4 ">
+          <div className="flex gap-4  z-50">
             <Link href="free-seminar">
               <PrimaryButton size="lg" iconRight={<MdOutlineComputer />}>
                 ফ্রি সেমিনার
@@ -49,7 +49,7 @@ const HeroSection = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 z-50">
             <Image
               className="w-16 h-auto"
               sizes="100vw"
