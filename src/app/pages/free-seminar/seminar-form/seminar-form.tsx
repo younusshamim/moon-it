@@ -27,11 +27,14 @@ const SeminarForm = () => {
       </p>
 
       <form className="grid grid-cols-2 gap-5" onSubmit={handleSubmit}>
-        <Input label="পুরো নাম" placeholder="নাম লিখুন" inputClassName="bg-white" />
         <Input
-          label="মোবাইল"
-          placeholder="মোবাইল নাম্বার লিখুন"
+          label="আপনার নাম (Only English)"
+          placeholder="ইংরেজিতে আপনার নাম লিখুন"
           inputClassName="bg-white"
+        />
+        <Input
+          label="ফোন নাম্বার (Only English)"
+          placeholder="ইংরেজিতে ফোন নাম্বার লিখুন"
         />
 
         <Select
@@ -40,11 +43,13 @@ const SeminarForm = () => {
           options={courseOptions}
           inputClassName="bg-white"
         />
-
-        <Input label="ইমেইল" placeholder="ইমেইল লিখুন" inputClassName="bg-white" />
+        <Input
+          label="ইমেইল" placeholder="ইমেইল লিখুন"
+          inputClassName="bg-white"
+        />
         <Textarea
-          label="ঠিকানা"
-          placeholder="ঠিকানা লিখুন"
+          label="আপনার ঠিকানা"
+          placeholder="আপনার ঠিকানা লিখুন"
           className="col-span-2"
           inputClassName="bg-white"
         />

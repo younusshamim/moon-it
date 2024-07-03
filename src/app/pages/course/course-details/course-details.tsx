@@ -8,6 +8,7 @@ import { CourseType } from "@/lib/types/course";
 import AdmissionForm from "../admission-form/admission-form";
 import Modal from "@/components/modal";
 import NumSpan from "@/components/num-span";
+import LineShapes from "@/components/shapes/line-shapes";
 
 const CourseDetails = ({ course }: { course: CourseType }) => {
   const { name, description1, description2, fee, discount, image } = course;
@@ -22,7 +23,9 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
   const { discountEndDate, discountAmountText, feeAfterDiscount } = generateDiscount();
 
   return (
-    <Container className="py-10 flex gap-20">
+    <Container className="py-10 flex gap-20 relative">
+      <LineShapes />
+
       <div className="w-1/2">
         <h1 className="text-4xl text-foreground font-extrabold mb-4">
           {name}

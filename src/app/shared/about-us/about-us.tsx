@@ -2,10 +2,13 @@ import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
 import Image from "next/image";
 import React from "react";
+import LineShapes from "../../../components/shapes/line-shapes";
 
 const AboutUs = () => {
   return (
-    <div>
+    <div className="relative">
+      <LineShapes lightClassName="left-[500px]" />
+
       <Container className="pt-20 pb-10 flex gap-20 items-center">
         <div className="w-1/2">
           <p className="font-bold text-xl mb-1">প্রতিষ্ঠান সম্পর্কে কিছু কথা</p>
