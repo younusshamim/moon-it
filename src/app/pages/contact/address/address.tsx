@@ -1,5 +1,6 @@
 "use client";
 import Container from "@/components/container";
+import LineShapes from "@/components/shapes/line-shapes";
 import Image from "next/image";
 import React from "react";
 import { IoIosCall, IoIosTime } from "react-icons/io";
@@ -15,8 +16,10 @@ const Address = () => {
         তথ্য। এছাড়াও উল্লেখিত মেইলে কিংবা ফেসবুক ম্যাসেঞ্জারেও নক দিতে পারেন।
       </p>
 
-      <div className="flex items-center gap-10">
-        <div className="w-3/5">
+      <div className="flex items-center gap-10 relative">
+        <LineShapes />
+
+        <div className="w-3/5 z-50">
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-red-50 dark:bg-card p-5 rounded-card flex flex-col justify-center">
               <h3 className="font-bold text-lg">ঠিকানা-</h3>
@@ -60,7 +63,7 @@ const Address = () => {
           </div>
         </div>
 
-        <div className="w-2/5">
+        <div className="w-2/5 z-50">
           <Image
             className="w-full h-auto"
             sizes="100vw"
