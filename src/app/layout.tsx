@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
       <body>
         <ThemeProvider>
-          <div className={`${HindSiliguri.className} font-medium bg-background`}>{children}</div>
+          <div className={`${HindSiliguri.className} font-medium bg-background overflow-hidden`}>{children}</div>
         </ThemeProvider>
       </body>
     </html>

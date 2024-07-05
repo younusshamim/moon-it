@@ -6,10 +6,11 @@ export interface TextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   inputClassName?: string;
   label?: string;
+  error?: string;
 }
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
-  ({ className, inputClassName, label, ...props }, ref) => {
+  ({ className, inputClassName, label, error, ...props }, ref) => {
     return (
       <div className={cn("flex flex-col gap-1", className)}>
         <label className="text-sm">{label}</label>
@@ -22,6 +23,10 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           ref={ref}
           {...props}
         />
+
+        {error && (
+          <p className="text-[13px] ml-1 text-red-500">{error}</p>
+        )}
       </div>
     )
   }

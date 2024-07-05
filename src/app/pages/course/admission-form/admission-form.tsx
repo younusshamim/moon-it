@@ -4,9 +4,26 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import courseList from "@/data/course-list";
 import { convertToBanglaNumber } from "@/lib/utils";
+import { admissionFormSchema, CreateAdmissionFormInput } from "@/lib/validators/admission-form.schema";
 import Image from "next/image";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import ControlledSelect from "@/components/controlled-select";
+import { FormInputIcon } from "lucide-react";
 
 const AdmissionForm = () => {
+  const methods = useForm<CreateAdmissionFormInput>({
+    resolver: zodResolver(admissionFormSchema),
+  });
+
+  const { register,
+    handleSubmit,
+    control,
+    watch,
+    formState: { errors }, } = methods;
+
+  const onSubmit: SubmitHandler<CreateAdmissionFormInput> = (data: CreateAdmissionFormInput) => console.log(data)
+
   const courseOptions = courseList.map(course => {
     return { label: course.name, value: course.id.toString() }
   })
@@ -17,33 +34,40 @@ const AdmissionForm = () => {
         <Image
           src="/logo/logo.png"
           alt="Moon IT"
-          className="w-[180px] h-auto object-contain mb-7"
+          className="w-[150px] h-auto object-contain mb-7"
           height={0}
           width={0}
           sizes="100vw"
         />
-        <h1 className="text-3xl font-black text-primary mb-1">
+        <h1 className="text-3xl font-extrabold text-primary mb-1">
           নিচের ফর্মটি সঠিক তথ্য দিয়ে পূরণ করুন
         </h1>
-        <h3 className="font-semibold">
+        <h3 className="font-medium">
           ফর্মটি পূরণ করার পর আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন।
         </h3>
       </div>
 
-      <form className="grid grid-cols-2 gap-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-5">
         <Input
           label="আপনার নাম (Only English)"
           placeholder="ইংরেজিতে আপনার নাম লিখুন"
+          {...register("name")}
+          error={errors.name?.message as string}
         />
         <Input
           label="ফোন নাম্বার (Only English)"
           placeholder="ইংরেজিতে ফোন নাম্বার লিখুন"
+          {...register("contactNo")}
+          error={errors.contactNo?.message as string}
         />
 
-        <Select
+        <ControlledSelect
+          name="courseId"
           label="আপনি যে কোর্সটি করতে চাচ্ছেন"
           placeholder="আপনি যে কোর্সটি করতে চাচ্ছেন"
           options={courseOptions}
+          control={control}
+          error={errors.courseId?.message as string}
         />
 
         <Input
@@ -54,7 +78,7 @@ const AdmissionForm = () => {
         />
         <Textarea label="আপনার ঠিকানা" placeholder="আপনার ঠিকানা লিখুন" className="col-span-2" />
 
-        <PrimaryButton className="col-span-2 mt-5">সাবমিট করুন</PrimaryButton>
+        <PrimaryButton type="submit" className="col-span-2 mt-5">সাবমিট করুন</PrimaryButton>
       </form>
     </div>
   );

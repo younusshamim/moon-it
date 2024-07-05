@@ -4,7 +4,7 @@ import React from "react";
 const Shape1 = () => {
   return (
     <Image
-      className="hidden xl:block dark:hidden w-[180px] h-auto object-cover object-center absolute left-0 top-4"
+      className="dark:hidden w-[180px] h-auto object-cover object-center absolute left-0 top-4"
       sizes="100vw"
       width={0}
       height={0}

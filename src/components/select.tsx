@@ -3,27 +3,28 @@ import { Select as ShadcnSelect, SelectContent, SelectGroup, SelectItem, SelectL
 import { cn } from "@/lib/utils";
 import { OptionType } from "@/lib/types/option-type";
 
-type PropsTypes = {
+type SelectProps = React.ComponentProps<typeof ShadcnSelect>;
+interface PropsTypes extends React.SelectHTMLAttributes<HTMLInputElement> {
     label: string;
     placeholder: string;
     options: OptionType[];
     className?: string;
     inputClassName?: string;
+    error?: string;
 }
 
-const Select = ({ label, placeholder = "", options, className, inputClassName }: PropsTypes) => {
+const Select = ({ label, placeholder = "", options, className, inputClassName, error, ...props }: PropsTypes & SelectProps) => {
     return (
         <div className={cn("flex flex-col gap-1", className)}>
             <label className="text-sm">{label}</label>
 
-            <ShadcnSelect>
-                <SelectTrigger className={cn('dark:bg-card border-border', inputClassName)}>
+            <ShadcnSelect {...props}>
+                <SelectTrigger className={cn('dark:bg-card border-border', inputClassName, { 'border-2 border-red-500': error })}>
                     <SelectValue placeholder={placeholder} />
                 </SelectTrigger>
 
                 <SelectContent className="border-border dark:bg-gray-800 dark:text-white">
                     <SelectGroup>
-                        {/* <SelectLabel>aa</SelectLabel> */}
                         {options.map((item, index) => (
                             <SelectItem value={item.value} key={item.value + index}>
                                 {item.label}
@@ -33,6 +34,10 @@ const Select = ({ label, placeholder = "", options, className, inputClassName }:
                     </SelectGroup>
                 </SelectContent>
             </ShadcnSelect>
+
+            {error && (
+                <p className="text-[13px] ml-1 text-red-500">{error}</p>
+            )}
         </div>
     )
 }
