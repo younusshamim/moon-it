@@ -33,14 +33,14 @@ const Navbar = () => {
   return (
     <nav
       className={cn('h-[75px] w-full z-50 transition-all duration-150 my-[15px]',
-        { 'fixed top-0 backdrop-blur-3xl bg-card/95 border-b border-border/50 dark:border-border my-[0px]': navbar })}
+        { 'fixed top-0 backdrop-blur-3xl bg-gray-100/80 dark:bg-background/90 border-b border-gray-300/50 dark:border-border my-[0px]': navbar })}
     >
       <Container className="h-full flex items-center justify-between">
         <Link href="/">
           <Image
             src="/logo/logo.png"
             alt="Moon IT Logo"
-            width="150"
+            width={navbar ? "130" : "150"}
             height="60"
           />
         </Link>
