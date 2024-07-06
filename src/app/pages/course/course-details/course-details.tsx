@@ -9,6 +9,8 @@ import AdmissionForm from "../admission-form/admission-form";
 import Modal from "@/components/modal";
 import NumSpan from "@/components/num-span";
 import LineShapes from "@/components/shapes/line-shapes";
+import { variant2 } from "@/lib/animations/variants";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
 
 const CourseDetails = ({ course }: { course: CourseType }) => {
   const { name, description1, description2, fee, discount, image } = course;
@@ -56,14 +58,16 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
       </div>
 
       <div className="w-1/2 z-40">
-        <Image
-          className="w-full h-[350px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={image}
-          alt={name}
-        />
+        <ScrollAnimation variants={variant2}>
+          <Image
+            className="w-full h-[350px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
+            sizes="100vw"
+            width={0}
+            height={0}
+            src={image}
+            alt={name}
+          />
+        </ScrollAnimation>
       </div>
     </Container >
   );

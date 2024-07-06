@@ -7,6 +7,8 @@ import Image from "next/image";
 import GradientText from "@/components/gradient-text";
 import Link from "next/link";
 import LineShapes from "./line-shapes";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant2 } from "@/lib/animations/variants";
 
 const HeroSection = () => {
   return (

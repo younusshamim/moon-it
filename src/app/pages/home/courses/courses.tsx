@@ -9,6 +9,8 @@ import { FaArrowRight } from "react-icons/fa6";
 import Categories from "./categories";
 import CourseCard from "./course-card";
 import Link from "next/link";
+import { motion } from 'framer-motion'
+import TabsAnimation from "@/lib/animations/tabs-animation";
 
 const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0].name);
@@ -33,11 +35,13 @@ const Courses = () => {
           categories={categories}
         />
 
-        <div className="grid grid-cols-4 gap-x-5 gap-y-6">
-          {courses.map((course, index) => {
-            return <CourseCard course={course} key={course.name + index} />;
-          })}
-        </div>
+        <TabsAnimation selected={selectedCategory}>
+          <div className="grid grid-cols-4 gap-x-5 gap-y-6">
+            {courses.map((course, index) => {
+              return <CourseCard course={course} key={course.name + index} />;
+            })}
+          </div>
+        </TabsAnimation>
 
         <Link href="/courses">
           <PrimaryButton

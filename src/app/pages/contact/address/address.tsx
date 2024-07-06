@@ -1,6 +1,8 @@
 "use client";
 import Container from "@/components/container";
 import LineShapes from "@/components/shapes/line-shapes";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant1 } from "@/lib/animations/variants";
 import Image from "next/image";
 import React from "react";
 import { IoIosCall, IoIosTime } from "react-icons/io";
@@ -64,14 +66,16 @@ const Address = () => {
         </div>
 
         <div className="w-2/5 z-50">
-          <Image
-            className="w-full h-auto  hover:scale-[1.02] transition-all duration-500"
-            sizes="100vw"
-            src="/illustration/location (2).png"
-            width={0}
-            height={0}
-            alt="Address illustration"
-          />
+          <ScrollAnimation variants={variant1}>
+            <Image
+              className="w-full h-auto  hover:scale-[1.02] transition-all duration-500"
+              sizes="100vw"
+              src="/illustration/location (2).png"
+              width={0}
+              height={0}
+              alt="Address illustration"
+            />
+          </ScrollAnimation>
         </div>
       </div>
     </Container>

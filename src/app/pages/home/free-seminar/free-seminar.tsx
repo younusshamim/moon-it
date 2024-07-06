@@ -4,20 +4,24 @@ import GradientText from "@/components/gradient-text";
 import PrimaryButton from "@/components/primary-button";
 import { FaArrowRight } from "react-icons/fa6";
 import Image from "next/image";
+import { variant2 } from "@/lib/animations/variants";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
 
 const FreeSeminar = () => {
   return (
     <div className="bg-primary dark:bg-background2">
       <Container className="py-20 flex gap-20 items-center">
         <div className="w-1/2 ">
-          <Image
-            className="w-full h-[350px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
-            sizes="100vw"
-            width={0}
-            height={0}
-            src="/photo/seminar.jpg"
-            alt="Moon IT Seminar"
-          />
+          <ScrollAnimation variants={variant2}>
+            <Image
+              className="w-full h-[350px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
+              sizes="100vw"
+              width={0}
+              height={0}
+              src="/photo/seminar.jpg"
+              alt="Moon IT Seminar"
+            />
+          </ScrollAnimation>
         </div>
 
         <div className="w-1/2">

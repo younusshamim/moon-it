@@ -8,6 +8,8 @@ import ServiceOverview from "../pages/home/service-overview/service-overview";
 import Services from "../pages/home/services/services";
 import Navbar from "../shared/navbar/navbar";
 import { useTheme } from "next-themes";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant2 } from "@/lib/animations/variants";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -22,7 +24,10 @@ export default function Home() {
       >
         <Navbar />
         <HeroSection />
-        <ServiceOverview />
+
+        <ScrollAnimation variants={variant2}>
+          <ServiceOverview />
+        </ScrollAnimation>
       </div>
 
       <Courses />

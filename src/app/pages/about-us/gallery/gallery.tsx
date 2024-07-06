@@ -2,6 +2,7 @@
 import Container from "@/components/container";
 import PrimaryButton from "@/components/primary-button";
 import galleryImages from "@/data/gallery-images";
+import TabsAnimation from "@/lib/animations/tabs-animation";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -38,6 +39,7 @@ const Gallery = ({ showAll = false }: PropsTypes) => {
         </p>
 
         {/* categories display */}
+
         <div className="flex gap-8 border-b-2 border-b-border mb-8">
           {imageCategories.map((category, index) => {
             return (
@@ -58,22 +60,25 @@ const Gallery = ({ showAll = false }: PropsTypes) => {
           })}
         </div>
 
+
         {/* images display  */}
-        <div className="grid grid-cols-3 gap-8">
-          {slicedImages.map((item, index) => {
-            return (
-              <Image
-                className="w-full h-[250px] object-cover rounded-[30px] shadow-lg cursor-pointer hover:scale-105 duration-500"
-                key={item.image + index}
-                src={item.image}
-                height={0}
-                width={0}
-                sizes="100vw"
-                alt="Moon IT Training Institute"
-              />
-            );
-          })}
-        </div>
+        <TabsAnimation selected={selected.id}>
+          <div className="grid grid-cols-3 gap-8">
+            {slicedImages.map((item, index) => {
+              return (
+                <Image
+                  className="w-full h-[250px] object-cover rounded-[30px] shadow-lg cursor-pointer hover:scale-105 duration-500"
+                  key={item.image + index}
+                  src={item.image}
+                  height={0}
+                  width={0}
+                  sizes="100vw"
+                  alt="Moon IT Training Institute"
+                />
+              );
+            })}
+          </div>
+        </TabsAnimation>
 
         {filteredImages.length > 6 && !showAll && (
           <PrimaryButton

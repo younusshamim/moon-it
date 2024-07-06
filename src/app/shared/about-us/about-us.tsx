@@ -3,6 +3,8 @@ import GradientText from "@/components/gradient-text";
 import Image from "next/image";
 import React from "react";
 import LineShapes from "../../../components/shapes/line-shapes";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant2 } from "@/lib/animations/variants";
 
 const AboutUs = () => {
   return (
@@ -37,14 +39,16 @@ const AboutUs = () => {
         </div>
 
         <div className="w-1/2 z-40">
-          <Image
-            className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 dark:shadow-slate-700 rounded-card hover:scale-[1.02] transition-all duration-500"
-            sizes="100vw"
-            width={0}
-            height={0}
-            src="/photo/technical-school.jpg"
-            alt="Moon IT Seminar"
-          />
+          <ScrollAnimation variants={variant2}>
+            <Image
+              className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 dark:shadow-slate-700 rounded-card hover:scale-[1.02] transition-all duration-500"
+              sizes="100vw"
+              width={0}
+              height={0}
+              src="/photo/technical-school.jpg"
+              alt="Moon IT Seminar"
+            />
+          </ScrollAnimation>
         </div>
       </Container>
     </div>
