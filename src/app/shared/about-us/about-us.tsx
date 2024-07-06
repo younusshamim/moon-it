@@ -10,7 +10,7 @@ const AboutUs = () => {
       <LineShapes lightClassName="left-[500px]" />
 
       <Container className="pt-20 pb-10 flex gap-20 items-center">
-        <div className="w-1/2 z-50">
+        <div className="w-1/2 z-40">
           <p className="font-bold text-xl mb-1">প্রতিষ্ঠান সম্পর্কে কিছু কথা</p>
 
           <h2 className="text-4xl text-foreground-dark font-extrabold mb-4">
@@ -36,7 +36,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className="w-1/2 z-50">
+        <div className="w-1/2 z-40">
           <Image
             className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 dark:shadow-slate-700 rounded-card"
             sizes="100vw"

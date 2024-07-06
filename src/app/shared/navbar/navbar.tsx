@@ -15,14 +15,27 @@ import { useTheme } from "next-themes";
 const Navbar = () => {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
+  const [navbar, setNavbar] = useState(false)
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
+  const changeBackground: any = () => {
+    setNavbar(window.scrollY >= window.innerHeight ? true : false)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeBackground);
+    return () => window.removeEventListener('scroll', changeBackground);
+  }, []);
+
   return (
-    <nav>
-      <Container className="h-[100px] flex items-center justify-between">
+    <nav
+      className={cn('h-[75px] w-full z-50 transition-all duration-150 my-[15px]',
+        { 'fixed top-0 backdrop-blur-3xl bg-card/95 border-b border-border/50 dark:border-border my-[0px]': navbar })}
+    >
+      <Container className="h-full flex items-center justify-between">
         <Link href="/">
           <Image
             src="/logo/logo.png"
@@ -57,7 +70,7 @@ const Navbar = () => {
           </div>
 
           <Link href="/free-seminar">
-            <PrimaryButton>ফ্রি সেমিনার</PrimaryButton>
+            <PrimaryButton className="px-4 h-[40px]">ফ্রি সেমিনার</PrimaryButton>
           </Link>
         </div>
       </Container>

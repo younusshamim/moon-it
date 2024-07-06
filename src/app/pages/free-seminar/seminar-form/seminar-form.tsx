@@ -31,7 +31,7 @@ const SeminarForm = () => {
   })
 
   return (
-    <div className="w-3/5 p-10 z-50">
+    <div className="w-3/5 p-10 z-40">
       <h1 className="spacing text-3xl mb-[6px] font-black text-foreground-dark text-center">
         জয়েন <GradientText>ফ্রি সেমিনার</GradientText>
       </h1>

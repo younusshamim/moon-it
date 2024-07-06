@@ -26,7 +26,7 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
     <Container className="py-10 flex gap-20 relative">
       <LineShapes lightClassName="left-[350px]" />
 
-      <div className="w-1/2 z-50">
+      <div className="w-1/2 z-40">
         <h1 className="text-4xl text-foreground font-extrabold mb-4">
           {name}
         </h1>
@@ -55,7 +55,7 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
         </div >
       </div>
 
-      <div className="w-1/2 z-50">
+      <div className="w-1/2 z-40">
         <Image
           className="w-full h-[350px] object-cover object-center rounded-card shadow-lg "
           sizes="100vw"

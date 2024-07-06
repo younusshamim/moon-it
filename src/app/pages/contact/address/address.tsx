@@ -19,7 +19,7 @@ const Address = () => {
       <div className="flex items-center gap-10 relative">
         <LineShapes />
 
-        <div className="w-3/5 z-50">
+        <div className="w-3/5 z-40">
           <div className="grid grid-cols-2 gap-3">
             <div className="bg-red-50 dark:bg-card p-5 rounded-card flex flex-col justify-center">
               <h3 className="font-bold text-lg">ঠিকানা-</h3>
@@ -63,7 +63,7 @@ const Address = () => {
           </div>
         </div>
 
-        <div className="w-2/5 z-50">
+        <div className="w-2/5 z-40">
           <Image
             className="w-full h-auto"
             sizes="100vw"
