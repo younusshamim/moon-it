@@ -63,7 +63,7 @@ const Gallery = ({ showAll = false }: PropsTypes) => {
           {slicedImages.map((item, index) => {
             return (
               <Image
-                className="w-full h-[250px] object-cover rounded-[30px] shadow-lg cursor-pointer"
+                className="w-full h-[250px] object-cover rounded-[30px] shadow-lg cursor-pointer hover:scale-105 duration-500"
                 key={item.image + index}
                 src={item.image}
                 height={0}

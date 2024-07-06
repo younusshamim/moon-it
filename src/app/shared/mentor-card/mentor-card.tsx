@@ -4,7 +4,7 @@ import React from "react";
 
 const MentorCard = ({ mentor }: { mentor: MentorType }) => {
   return (
-    <div className="text-white bg-slate-800 bg-opacity-10 rounded-card shadow-lg">
+    <div className="hover:scale-[1.04] duration-500 text-white bg-slate-800 bg-opacity-10 rounded-card shadow-lg overflow-hidden">
       <Image
         className="w-full h-[200px] object-contain object-top rounded-t-card bg-sky-100 "
         sizes="100vw"

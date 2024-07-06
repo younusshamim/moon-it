@@ -67,7 +67,7 @@ const HeroSection = () => {
 
         <div className="w-full">
           <Image
-            className="w-full h-[400px] object-cover rounded-card shadow-lg shadow-slate-400 dark:shadow-slate-700"
+            className="w-full h-[450px] object-cover rounded-card shadow-lg shadow-gray-400 dark:shadow-gray-700 hover:scale-[1.03] transition-all duration-500"
             sizes="100vw"
             width={0}
             height={0}

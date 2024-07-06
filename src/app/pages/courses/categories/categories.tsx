@@ -15,19 +15,18 @@ const Categories = () => {
 
         <div className="grid grid-cols-4 gap-5">
           {categories.map((category, index) => (
-            <div
-              key={category.label + index}
-              className={"bg-background2 dark:bg-card shadow-sm p-8 rounded-card text-center"}
-            >
-              <Image
-                src={category.icon}
-                height={0}
-                width={0}
-                sizes="100vw"
-                className="w-[50px] h-auto object-contain mx-auto mb-2"
-                alt={category.label}
-              />
-              <p className="text-lg font-semibold">{category.label}</p>
+            <div key={category.label + index} className="bg-background2 dark:bg-card shadow-sm p-8 rounded-card text-center">
+              <div className="hover:scale-105 duration-500">
+                <Image
+                  src={category.icon}
+                  height={0}
+                  width={0}
+                  sizes="100vw"
+                  className="w-[50px] h-auto object-contain mx-auto mb-2"
+                  alt={category.label}
+                />
+                <p className="text-lg font-semibold">{category.label}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -17,21 +17,19 @@ const ServiceCard = ({ service, index }: PropsTypes) => {
 
   return (
     <div
-      className={cn(
-        "px-8 py-5 text-center border-border flex flex-col items-center gap-1",
-        classNames
-      )}
-    >
-      <Image
-        className="w-16 h-16 mb-1"
-        sizes="100vw"
-        width={0}
-        height={0}
-        src={service.image}
-        alt={service.title}
-      />
-      <h3 className="text-xl font-bold text-foreground-dark">{service.title}</h3>
-      <p>{service.description}</p>
+      className={cn("p-10 text-center border-border", classNames)} >
+      <div className="hover:scale-105 transition-all duration-500 flex flex-col items-center gap-1">
+        <Image
+          className="w-16 h-16 mb-1"
+          sizes="100vw"
+          width={0}
+          height={0}
+          src={service.image}
+          alt={service.title}
+        />
+        <h3 className="text-xl font-bold text-foreground-dark">{service.title}</h3>
+        <p>{service.description}</p>
+      </div>
     </div>
   );
 };

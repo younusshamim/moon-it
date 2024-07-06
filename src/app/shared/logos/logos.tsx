@@ -27,7 +27,7 @@ const Logos = () => {
         {logos.map((item, index) => (
           <Image
             key={index}
-            className="w-24 h-20 object-contain"
+            className="w-24 h-20 object-contain hover:scale-110 duration-500"
             sizes="100vw"
             width={0}
             height={0}
