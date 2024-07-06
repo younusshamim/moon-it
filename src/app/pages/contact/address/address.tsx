@@ -65,7 +65,7 @@ const Address = () => {
 
         <div className="w-2/5 z-50">
           <Image
-            className="w-full h-auto"
+            className="w-full h-auto  hover:scale-[1.02] transition-all duration-500"
             sizes="100vw"
             src="/illustration/location (2).png"
             width={0}

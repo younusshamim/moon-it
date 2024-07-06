@@ -13,7 +13,7 @@ type PropsTypes = {
 
 const CourseCard = ({ course, className }: PropsTypes) => {
   return (
-    <div className={cn("bg-background dark:bg-background2 rounded-card hover:scale-[1.04] transition-all duration-500", className)}>
+    <div className={cn("bg-background dark:bg-background2 rounded-card hover:scale-[1.02] transition-all duration-500", className)}>
       <Image
         className="w-full h-[150px] object-cover rounded-t-card"
         sizes="100vw"

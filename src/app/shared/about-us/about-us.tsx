@@ -38,7 +38,7 @@ const AboutUs = () => {
 
         <div className="w-1/2 z-40">
           <Image
-            className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 dark:shadow-slate-700 rounded-card"
+            className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 dark:shadow-slate-700 rounded-card hover:scale-[1.02] transition-all duration-500"
             sizes="100vw"
             width={0}
             height={0}

@@ -57,7 +57,7 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
 
       <div className="w-1/2 z-40">
         <Image
-          className="w-full h-[350px] object-cover object-center rounded-card shadow-lg "
+          className="w-full h-[350px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
           sizes="100vw"
           width={0}
           height={0}

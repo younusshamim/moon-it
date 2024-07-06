@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const SeminarImageWrap = () => {
     return (
-        <div className="w-2/5">
+        <div className="w-2/5 z-40">
             <Image
-                className="w-full h-[400px] object-cover object-center"
+                className="w-full h-[400px] object-cover object-center hover:scale-[1.02] transition-all duration-500"
                 sizes="100vw"
                 width={0}
                 height={0}

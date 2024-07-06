@@ -21,13 +21,9 @@ const Course = ({ params }: { params: { id: string; } }) => {
     <>
       <CourseDetails course={targetCourse} />
 
-      <div className="relative">
-        <Shape1 />
-
-        <Container className="pt-10 pb-20">
-          <ServicesSection servicesData={targetCourse?.services} />
-        </Container>
-      </div>
+      <Container className="pt-10 pb-20">
+        <ServicesSection servicesData={targetCourse?.services} />
+      </Container>
 
       <CourseMentors mentors={mentors} />
     </>
