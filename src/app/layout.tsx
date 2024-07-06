@@ -3,6 +3,7 @@ import "./globals.css";
 import { HindSiliguri } from "@/lib/fonts/fonts";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@/lib/config/theme-provider";
+import NextProgress from "@/components/next-progress";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,14 +16,24 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html
+      // 💡 Prevent next-themes hydration warning
+      suppressHydrationWarning
+      lang="en"
+    >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
 
-      <body>
+      <body
+        // 💡 Prevent hydration warnings caused by third-party extensions, such as Grammarly.
+        suppressHydrationWarning
+      >
         <ThemeProvider>
-          <div className={`${HindSiliguri.className} font-medium bg-background overflow-hidden`}>{children}</div>
+          <NextProgress />
+          <div className={`${HindSiliguri.className} font-medium bg-background overflow-hidden`}>
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
