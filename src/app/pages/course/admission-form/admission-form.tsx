@@ -9,11 +9,11 @@ import Image from "next/image";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ControlledSelect from "@/components/controlled-select";
-import { FormInputIcon } from "lucide-react";
 
 const AdmissionForm = () => {
   const methods = useForm<CreateAdmissionFormInput>({
     resolver: zodResolver(admissionFormSchema),
+    // defaultValues: aaaa 
   });
 
   const { register,
@@ -60,23 +60,29 @@ const AdmissionForm = () => {
           {...register("contactNo")}
           error={errors.contactNo?.message as string}
         />
-
         <ControlledSelect
-          name="courseId"
           label="আপনি যে কোর্সটি করতে চাচ্ছেন"
           placeholder="আপনি যে কোর্সটি করতে চাচ্ছেন"
+          name="courseId"
           options={courseOptions}
           control={control}
           error={errors.courseId?.message as string}
         />
-
         <Input
           label="ডিস্কাউন্টে কোর্স ফি"
           value={`${convertToBanglaNumber(1350)}/-`}
           inputClassName="disabled:opacity-100 font-sans"
           disabled
+          {...register("courseFee")}
+          error={errors.courseFee?.message as string}
         />
-        <Textarea label="আপনার ঠিকানা" placeholder="আপনার ঠিকানা লিখুন" className="col-span-2" />
+        <Textarea
+          label="আপনার ঠিকানা"
+          placeholder="আপনার ঠিকানা লিখুন"
+          className="col-span-2"
+          {...register("address")}
+          error={errors.address?.message as string}
+        />
 
         <PrimaryButton type="submit" className="col-span-2 mt-5">সাবমিট করুন</PrimaryButton>
       </form>
