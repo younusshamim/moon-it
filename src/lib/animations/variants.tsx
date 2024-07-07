@@ -31,11 +31,25 @@ export const variant2: Variants = {
     }
 };
 
+
 export const variant3: Variants = {
     offscreen: {
     },
     onscreen: {
         rotate: -5,
+        transition: {
+            type: "spring",
+            duration: 0.8,
+        },
+    }
+};
+
+export const variant4: Variants = {
+    offscreen: {
+        opacity: 0,
+    },
+    onscreen: {
+        opacity: 1,
         transition: {
             type: "spring",
             duration: 0.8,

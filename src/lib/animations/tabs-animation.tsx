@@ -5,7 +5,7 @@ import { cn } from '../utils';
 
 interface PropsType {
     children: JSX.Element;
-    selected: any
+    selected?: any
     className?: string;
 }
 
