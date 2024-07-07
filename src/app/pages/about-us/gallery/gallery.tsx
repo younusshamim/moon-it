@@ -1,12 +1,12 @@
 "use client";
 import Container from "@/components/container";
-import PrimaryButton from "@/components/primary-button";
 import galleryImages from "@/data/gallery-images";
 import TabsAnimation from "@/lib/animations/tabs-animation";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import React, { useState } from "react";
-import { RiArrowUpSLine, RiArrowDownSLine } from "react-icons/ri";
+import EmblaCarousel from "./embla-carousel";
+import { EmblaOptionsType } from "embla-carousel";
+import "./embla.css";
 
 const imageCategories = [
   { id: "lab", title: "প্রশিক্ষণের স্থান এবং স্টুডেন্টস" },
@@ -15,17 +15,15 @@ const imageCategories = [
   { id: "exam", title: "BTEB এক্সাম" },
 ];
 
-type PropsTypes = {
-  showAll?: boolean;
-}
-
-const Gallery = ({ showAll = false }: PropsTypes) => {
-  const [showMore, setShowMore] = useState(false);
+const Gallery = () => {
   const [selected, setSelected] = useState(imageCategories[0]);
   const filteredImages = galleryImages.filter(
     (item) => item.category === selected.id
   );
-  const slicedImages = (showMore || showAll) ? filteredImages : filteredImages.slice(0, 6);
+
+  const OPTIONS: EmblaOptionsType = {}
+  const SLIDE_COUNT = 10
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
   return (
     <div>
@@ -60,42 +58,9 @@ const Gallery = ({ showAll = false }: PropsTypes) => {
           })}
         </div>
 
-
-        {/* images display  */}
         <TabsAnimation selected={selected.id}>
-          <div className="grid grid-cols-3 gap-8">
-            {slicedImages.map((item, index) => {
-              return (
-                <Image
-                  className="w-full h-[250px] object-cover rounded-[30px] shadow-lg cursor-pointer hover:scale-105 duration-500"
-                  key={item.image + index}
-                  src={item.image}
-                  height={0}
-                  width={0}
-                  sizes="100vw"
-                  alt="Moon IT Training Institute"
-                />
-              );
-            })}
-          </div>
+          <EmblaCarousel filteredImages={filteredImages} options={OPTIONS} />
         </TabsAnimation>
-
-        {filteredImages.length > 6 && !showAll && (
-          <PrimaryButton
-            className="mx-auto mt-10"
-            size="lg"
-            onClick={() => setShowMore(!showMore)}
-            iconRight={
-              showMore ? (
-                <RiArrowUpSLine className="text-2xl" />
-              ) : (
-                <RiArrowDownSLine className="text-2xl" />
-              )
-            }
-          >
-            {showMore ? "কম দেখুন" : "আরও দেখুন"}
-          </PrimaryButton>
-        )}
       </Container>
     </div>
   );

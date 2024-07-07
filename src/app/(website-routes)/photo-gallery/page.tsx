@@ -8,7 +8,7 @@ const PhotoGallery = () => {
   return (
     <>
       <PageHeading label="ফটো গ্যালারী" />
-      <Gallery showAll={true} />
+      <Gallery />
     </>
   );
 };
