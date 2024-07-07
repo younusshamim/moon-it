@@ -1,27 +1,20 @@
-"use client"
+'use client';
 
-import * as React from "react"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
+import { ThemeProvider as NextThemeProvider } from 'next-themes';
 import { type ThemeProviderProps } from "next-themes/dist/types"
-import { useLayoutEffect, useState } from "react";
+import { useIsMounted } from '../hooks/use-is-mounted';
 
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-    const [mounted, setMounted] = useState(false)
-
-    useLayoutEffect(() => {
-        setMounted(true)
-    }, [])
-
-    if (!mounted) return <>{children}</>
+export function ThemeProvider({ children }: ThemeProviderProps) {
+    const isMounted = useIsMounted();
 
     return (
-        <NextThemesProvider
+        <NextThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
         >
-            {children}
-        </NextThemesProvider>
-    )
+            {isMounted && children}
+        </NextThemeProvider>
+    );
 }

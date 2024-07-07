@@ -13,12 +13,12 @@ const Layout = ({ children }: PropsTypes) => {
   const pathname = usePathname();
 
   return (
-    <>
+    <div className="overflow-hidden">
       <TopBar />
       {pathname !== "/" && <Navbar />}
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

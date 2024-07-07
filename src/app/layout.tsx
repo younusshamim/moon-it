@@ -28,12 +28,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         // 💡 Prevent hydration warnings caused by third-party extensions, such as Grammarly.
         suppressHydrationWarning
+        className={`${HindSiliguri.className} font-medium bg-background`}
       >
         <ThemeProvider>
           <NextProgress />
-          <div className={`${HindSiliguri.className} font-medium bg-background overflow-hidden`}>
-            {children}
-          </div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
