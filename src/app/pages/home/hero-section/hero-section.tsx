@@ -7,8 +7,7 @@ import Image from "next/image";
 import GradientText from "@/components/gradient-text";
 import Link from "next/link";
 import LineShapes from "./line-shapes";
-import ScrollAnimation from "@/lib/animations/scroll-animation";
-import { variant2 } from "@/lib/animations/variants";
+import { HeroCarousel } from "./hero-carousel";
 
 const HeroSection = () => {
   return (
@@ -68,14 +67,15 @@ const HeroSection = () => {
         </div>
 
         <div className="w-full z-40">
-          <Image
+          {/* <Image
             className="w-full h-[420px] object-cover rounded-card shadow-lg shadow-gray-400 dark:shadow-gray-700 hover:scale-[1.02] transition-all duration-500"
             sizes="100vw"
             width={0}
             height={0}
             src="/photo/protait1.jpg"
             alt="Moon IT Lab Computers"
-          />
+          /> */}
+          <HeroCarousel />
         </div>
       </Container>
     </div>
