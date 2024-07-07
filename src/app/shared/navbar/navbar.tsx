@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import NavContainer from "./nav-container";
 import { motion } from 'framer-motion'
+import { animation1 } from "@/lib/animations/animations";
 
 const Navbar = () => {
   const [fixedNavbar, setFixedNavbar] = useState(false)
@@ -19,8 +20,7 @@ const Navbar = () => {
 
   return fixedNavbar ? (
     <motion.nav
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { duration: 0.5 }, }}
+      {...animation1}
       className={cn('h-[75px] w-full z-50 fixed top-0 backdrop-blur-3xl bg-gray-100/80 dark:bg-background/90 border-b border-gray-300/50 dark:border-border')}
     >
       <NavContainer logoWidth={130} />

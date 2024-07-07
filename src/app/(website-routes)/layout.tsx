@@ -4,6 +4,8 @@ import Navbar from "@/app/shared/navbar/navbar";
 import TopBar from "@/app/shared/topbar/topbar";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
+import { motion } from 'framer-motion'
+import { animation2 } from "@/lib/animations/animations";
 
 type PropsTypes = {
   children: ReactNode;
@@ -13,12 +15,12 @@ const Layout = ({ children }: PropsTypes) => {
   const pathname = usePathname();
 
   return (
-    <div className="overflow-hidden">
+    <motion.div {...animation2} className="overflow-hidden">
       <TopBar />
       {pathname !== "/" && <Navbar />}
       {children}
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 
