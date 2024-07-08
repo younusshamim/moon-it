@@ -1,6 +1,7 @@
 "use client";
 
 import { GalleryImgType } from "@/lib/types/gallery";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 type PropType = {
@@ -25,7 +26,7 @@ export const Thumb: React.FC<PropType> = (props) => {
                 className="embla-thumbs__slide__number"
             >
                 <Image
-                    className="w-full h-full object-cover rounded-[30px] shadow-lg cursor-pointer"
+                    className={cn("w-full h-full object-cover rounded-card shadow-lg cursor-pointer border border-border", { 'border-primary-lighter border-2': selected })}
                     src={item.image}
                     height={0}
                     width={0}

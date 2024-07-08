@@ -21,10 +21,6 @@ const Gallery = () => {
     (item) => item.category === selected.id
   );
 
-  const OPTIONS: EmblaOptionsType = {}
-  const SLIDE_COUNT = 10
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
-
   return (
     <div>
       <Container className="py-20">
@@ -59,7 +55,7 @@ const Gallery = () => {
         </div>
 
         <TabsAnimation selected={selected.id}>
-          <EmblaCarousel filteredImages={filteredImages} options={OPTIONS} />
+          <EmblaCarousel filteredImages={filteredImages} />
         </TabsAnimation>
       </Container>
     </div>
