@@ -3,6 +3,8 @@ import GradientText from "@/components/gradient-text";
 import Container from "@/components/container";
 import servicesData from "../../../../data/services-data";
 import ServicesSection from "@/app/shared/services-section/services-section";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant1, } from "@/lib/animations/variants";
 
 const Services = () => {
   return (
@@ -15,7 +17,9 @@ const Services = () => {
           কেন মুন আইটি-তে আস্থা রাখবে?
         </p>
 
-        <ServicesSection servicesData={servicesData} />
+        <ScrollAnimation variants={variant1}>
+          <ServicesSection servicesData={servicesData} />
+        </ScrollAnimation>
       </Container>
     </div>
   );

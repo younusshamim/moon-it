@@ -3,6 +3,8 @@ import mentorList from "@/data/mentor-list";
 import React from "react";
 import MentorCard from "../../../shared/mentor-card/mentor-card";
 import Chairman from "../chairman/chairman";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant4 } from "@/lib/animations/variants";
 
 const Mentors = () => {
   return (

@@ -5,8 +5,9 @@ import TabsAnimation from "@/lib/animations/tabs-animation";
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 import EmblaCarousel from "./embla-carousel";
-import { EmblaOptionsType } from "embla-carousel";
 import "./embla.css";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant4 } from "@/lib/animations/variants";
 
 const imageCategories = [
   { id: "lab", title: "প্রশিক্ষণের স্থান এবং স্টুডেন্টস" },
@@ -54,9 +55,11 @@ const Gallery = () => {
           })}
         </div>
 
-        <TabsAnimation selected={selected.id}>
-          <EmblaCarousel filteredImages={filteredImages} />
-        </TabsAnimation>
+        <ScrollAnimation variants={variant4}>
+          <TabsAnimation selected={selected.id}>
+            <EmblaCarousel filteredImages={filteredImages} />
+          </TabsAnimation>
+        </ScrollAnimation>
       </Container>
     </div>
   );

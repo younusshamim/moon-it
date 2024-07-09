@@ -2,6 +2,8 @@ import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
 import MentorCard from "@/app/shared/mentor-card/mentor-card";
 import { MentorType } from "@/lib/types/mentor";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant1, } from "@/lib/animations/variants";
 
 const CourseMentors = ({ mentors }: { mentors: MentorType[] }) => {
   return (
@@ -11,13 +13,15 @@ const CourseMentors = ({ mentors }: { mentors: MentorType[] }) => {
           কোর্স ইনস্ট্রাক্টর
         </h2>
 
-        <div className="flex gap-8 justify-center">
-          {mentors.map((mentor, index) => (
-            <div className="w-[250px]" key={mentor.name + index}>
-              <MentorCard mentor={mentor} />
-            </div>
-          ))}
-        </div>
+        <ScrollAnimation variants={variant1}>
+          <div className="flex gap-8 justify-center">
+            {mentors.map((mentor, index) => (
+              <div className="w-[250px]" key={mentor.name + index}>
+                <MentorCard mentor={mentor} />
+              </div>
+            ))}
+          </div>
+        </ScrollAnimation>
       </Container>
     </div>
   );
