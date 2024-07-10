@@ -6,18 +6,17 @@ import React from "react";
 type PropsTypes = {
   service: ServiceType;
   index: number;
+  dataLength: number;
 }
 
-const ServiceCard = ({ service, index }: PropsTypes) => {
-  const borderRight =
-    (index === 0 || index === 1 || index === 3 || index === 4) && "border-r border-border";
-  const borderBottom =
-    (index === 0 || index === 1 || index === 2) && "border-b border-border";
-  const classNames = [borderRight, borderBottom];
-
+const ServiceCard = ({ service, index, dataLength }: PropsTypes) => {
   return (
     <div
-      className={cn("p-10 text-center border-border", classNames)} >
+      className={cn("p-10 text-center border-border",
+        { 'xl:border-r': (index + 1) % 3 !== 0 },
+        { 'xl:border-b': dataLength - 3 > index },
+        { 'border-t xl:border-t-0': index !== 0 },
+      )}>
       <div className="hover:scale-105 transition-all duration-500 flex flex-col items-center gap-1">
         <Image
           className="w-16 h-16 mb-1"

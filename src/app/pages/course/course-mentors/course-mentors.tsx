@@ -14,9 +14,9 @@ const CourseMentors = ({ mentors }: { mentors: MentorType[] }) => {
         </h2>
 
         <ScrollAnimation variants={variant1}>
-          <div className="flex gap-8 justify-center">
+          <div className="flex flex-col xl:flex-row gap-8 justify-center items-center">
             {mentors.map((mentor, index) => (
-              <div className="w-[250px]" key={mentor.name + index}>
+              <div className="w-full xl:w-[250px]" key={mentor.name + index}>
                 <MentorCard mentor={mentor} />
               </div>
             ))}

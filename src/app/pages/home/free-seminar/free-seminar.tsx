@@ -10,8 +10,8 @@ import ScrollAnimation from "@/lib/animations/scroll-animation";
 const FreeSeminar = () => {
   return (
     <div className="bg-primary dark:bg-background2">
-      <Container className="py-20 flex gap-20 items-center">
-        <div className="w-1/2 ">
+      <Container className="py-20 flex flex-col xl:flex-row gap-20 items-center">
+        <div className="w-full xl:w-1/2">
           <ScrollAnimation variants={variant2}>
             <Image
               className="w-full h-[350px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
@@ -24,7 +24,7 @@ const FreeSeminar = () => {
           </ScrollAnimation>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-full xl:w-1/2">
           <h2 className="text-4xl font-extrabold mb-3 text-slate-100">
             অংশ নিন ফ্রি সেমিনারে
           </h2>

@@ -8,6 +8,8 @@ import EmblaCarousel from "./embla-carousel";
 import "./embla.css";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
 import { variant4 } from "@/lib/animations/variants";
+import Tabs from "@/components/tabs";
+import getOptions from "@/lib/utils/get-options";
 
 const imageCategories = [
   { id: "lab", title: "প্রশিক্ষণের স্থান এবং স্টুডেন্টস" },
@@ -17,10 +19,11 @@ const imageCategories = [
 ];
 
 const Gallery = () => {
-  const [selected, setSelected] = useState(imageCategories[0]);
+  const [selected, setSelected] = useState<string | number>(imageCategories[0].id);
   const filteredImages = galleryImages.filter(
-    (item) => item.category === selected.id
+    (item) => item.category === selected
   );
+  const tabOptions = getOptions(imageCategories, "title", "id");
 
   return (
     <div>
@@ -33,30 +36,13 @@ const Gallery = () => {
           গ্যালারিতে।
         </p>
 
-        {/* categories display */}
-
-        <div className="flex gap-8 border-b-2 border-b-border mb-8">
-          {imageCategories.map((category, index) => {
-            return (
-              <p
-                key={category.id + index}
-                className={cn(
-                  "text-foreground-dark font-semibold cursor-pointer pb-2 px-2",
-                  {
-                    "text-primary font-bold border-b-2 border-primary":
-                      selected.id === category.id,
-                  }
-                )}
-                onClick={() => setSelected(category)}
-              >
-                {category.title}
-              </p>
-            );
-          })}
-        </div>
-
+        <Tabs
+          tabOptions={tabOptions}
+          selected={selected}
+          setSelected={setSelected}
+        />
         <ScrollAnimation variants={variant4}>
-          <TabsAnimation selected={selected.id}>
+          <TabsAnimation selected={selected}>
             <EmblaCarousel filteredImages={filteredImages} />
           </TabsAnimation>
         </ScrollAnimation>

@@ -25,24 +25,24 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
   const { discountEndDate, discountAmountText, feeAfterDiscount } = generateDiscount();
 
   return (
-    <Container className="py-10 flex gap-20 relative">
+    <Container className="py-10 flex flex-col xl:flex-row gap-20 relative">
       <LineShapes lightClassName="left-[350px]" />
 
-      <div className="w-1/2 z-40">
-        <h1 className="text-4xl text-foreground font-extrabold mb-4">
+      <div className="flex flex-col gap-5 w-full xl:w-1/2 z-40">
+        <h1 className="text-4xl text-foreground font-extrabold">
           {name}
         </h1>
-        <div className="text-justify flex flex-col gap-3 mb-7 text-[17px]">
+        <div className="text-justify flex flex-col gap-3 text-[17px]">
           <p>{description1}</p>
           <p>{description2}</p>
         </div>
 
-        <div>
-          <h3 className="text-2xl font-bold my-7">
+        <div className="flex flex-col gap-3 mt-5">
+          <h3 className="text-2xl font-bold">
             কোর্স ফি ৳ <NumSpan>{convertToBanglaNumber(fee)}</NumSpan> টাকা
           </h3>
 
-          <div className="flex items-center gap-5 mb-2">
+          <div className="flex items-center gap-5">
             <Modal
               triggerBtn={<PrimaryButton size="lg">ডিস্কাউন্টে ভর্তি হোন</PrimaryButton>}
             >
@@ -51,13 +51,14 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
 
             <h3 className="text-2xl font-bold text-primary-lighter">৳ <NumSpan>{feeAfterDiscount}</NumSpan> টাকা</h3>
           </div>
-          <p className="font-semibold text-[17px]">
+
+          <p className="font-semibold text-[17px] text-secondary">
             আগামী <NumSpan>{discountEndDate}</NumSpan> ইং তারিখ পর্যন্ত <NumSpan>{discountAmountText}</NumSpan> ডিস্কাউন্টে কোর্স ফি মাত্র ৳ <NumSpan>{feeAfterDiscount}</NumSpan>/- টাকা
           </p >
         </div >
       </div>
 
-      <div className="w-1/2 z-40">
+      <div className="w-full xl:w-1/2 z-40">
         <ScrollAnimation variants={variant2}>
           <Image
             className="w-full h-[350px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"

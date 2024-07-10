@@ -6,15 +6,15 @@ import React from "react";
 const Categories = () => {
   return (
     <Container className="py-10">
-      <p className="text-lg justify-center mb-5">
+      <p className="text-lg justify-center mb-10 xl:mb-5">
         প্রতিটি কোর্সের সিলেবাস ব্যাসিক টু এডভান্স লেভেল পর্যন্ত এমনভাবে
         সাজানো হয়েছে, যাতে আপনি কোর্স শেষে প্রতিটি টপিকে কাজ করার আত্মবিশ্বাস
         পান।
       </p>
 
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 xl:grid-cols-4 gap-3 xl:gap-5 overflow-y-auto">
         {categories.map((category, index) => (
-          <div key={category.label + index} className="bg-background2 dark:bg-card shadow-sm p-8 rounded-card text-center">
+          <div key={category.label + index} className="bg-background2 dark:bg-card shadow-sm p-5 xl:p-8 rounded-card text-center flex items-center justify-center">
             <div className="hover:scale-105 duration-500">
               <Image
                 src={category.icon}

@@ -15,13 +15,13 @@ const CategoryWiseCourses = () => {
         return (
           <div
             key={category.label + index}
-            className="bg-card shadow-sm p-10 rounded-card"
+            className="bg-card shadow-sm p-5 xl:p-10 rounded-card"
           >
-            <h1 className="text-4xl text-foreground-dark font-extrabold mb-5">
+            <h1 className="text-4xl text-foreground-dark font-extrabold mb-5 pt-3 xl:pt-0">
               {category.label}
             </h1>
 
-            <div className="grid grid-cols-4 gap-x-5 gap-y-6">
+            <div className="grid grid-cols-1 xl:grid-cols-4 gap-x-5 gap-y-6">
               {courses.map((course, index) => {
                 return <CourseCard course={course} key={course.name + index} />;
               })}

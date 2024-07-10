@@ -17,9 +17,9 @@ const Services = () => {
           কেন মুন আইটি-তে আস্থা রাখবে?
         </p>
 
-        <ScrollAnimation variants={variant1}>
-          <ServicesSection servicesData={servicesData} />
-        </ScrollAnimation>
+        {/* <ScrollAnimation variants={variant1}> */}
+        <ServicesSection servicesData={servicesData} />
+        {/* </ScrollAnimation> */}
       </Container>
     </div>
   );

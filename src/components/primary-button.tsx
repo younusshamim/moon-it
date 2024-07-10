@@ -30,7 +30,7 @@ const PrimaryButton = ({
         className,
         {
           "h-[35px] text-sm": size === 'sm',
-          "h-[50px] px-8 text-lg": size == 'lg',
+          "h-[50px] px-4 xl:px-8 text-base xl:text-lg": size == 'lg',
           "border border-primary-lighter bg-gradient-to-r from-primary to-primary-lighter text-transparent bg-clip-text":
             variant === 'outline',
         }

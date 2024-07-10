@@ -29,8 +29,8 @@ const AdmissionForm = () => {
   })
 
   return (
-    <div className="flex flex-col gap-12 px-10 py-5">
-      <div className="flex flex-col items-center">
+    <div className="flex flex-col gap-12 px-0 xl:px-10 py-5">
+      <div className="flex flex-col items-center text-center">
         <Image
           src="/logo/logo.png"
           alt="Moon IT"
@@ -39,10 +39,10 @@ const AdmissionForm = () => {
           width={0}
           sizes="100vw"
         />
-        <h1 className="text-3xl font-extrabold text-primary mb-1">
+        <h1 className="text-3xl font-extrabold text-primary mb-3 xl:mb-1">
           নিচের ফর্মটি সঠিক তথ্য দিয়ে পূরণ করুন
         </h1>
-        <h3 className="font-medium">
+        <h3 className="font-medium w-4/5 xl:w-full">
           ফর্মটি পূরণ করার পর আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন।
         </h3>
       </div>
@@ -61,8 +61,8 @@ const AdmissionForm = () => {
           error={errors.contactNo?.message as string}
         />
         <ControlledSelect
-          label="আপনি যে কোর্সটি করতে চাচ্ছেন"
-          placeholder="আপনি যে কোর্সটি করতে চাচ্ছেন"
+          label="যে কোর্সটি করতে চাচ্ছেন"
+          placeholder="যে কোর্সটি করতে চাচ্ছেন"
           name="courseId"
           options={courseOptions}
           control={control}

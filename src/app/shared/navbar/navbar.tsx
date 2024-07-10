@@ -21,12 +21,12 @@ const Navbar = () => {
   return fixedNavbar ? (
     <motion.nav
       {...animation1}
-      className={cn('h-[75px] w-full z-50 fixed top-0 backdrop-blur-3xl bg-gray-100/80 dark:bg-background/90 border-b border-gray-300/50 dark:border-border')}
+      className={cn('h-[75px] w-full z-50 fixed top-0 backdrop-blur-3xl bg-gray-100/80 dark:bg-background/90 border-b border-gray-300/50 dark:border-border hidden xl:block')}
     >
       <NavContainer logoWidth={130} />
     </motion.nav>
   ) : (
-    <nav className={cn('h-[100px] w-full transition-all')}>
+    <nav className={cn('h-[100px] w-full transition-all hidden xl:block')}>
       <NavContainer />
     </nav>
   )

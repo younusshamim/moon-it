@@ -8,7 +8,7 @@ type PropsTypes = {
 const PageHeading = ({ label }: PropsTypes) => {
   return (
     <Container>
-      <div className="bg-primary dark:bg-background2 text-white text-4xl text-center py-20 rounded-md flex gap-3 items-center justify-center my-5">
+      <div className="bg-primary dark:bg-background2 text-white text-4xl text-center py-14 xl:py-20 rounded-md flex gap-3 items-center justify-center my-5">
         <h1 className=" spacing font-black">{label}</h1>
         <IoCheckmarkCircle />
       </div>

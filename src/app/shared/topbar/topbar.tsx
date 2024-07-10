@@ -7,7 +7,7 @@ const TopBar = () => {
   return (
     <div className="bg-primary dark:bg-card text-primary-foreground border-b border-b-border">
       <Container className="h-10 flex justify-between items-center">
-        <div className="flex items-center gap-10  font-bold text-sm">
+        <div className="w-full flex items-center justify-between xl:justify-start gap-0 xl:gap-10  font-bold text-sm">
           <div className="flex items-center gap-2">
             <IoIosCall className="text-lg" />
             <p>01785-882381</p>
@@ -18,13 +18,6 @@ const TopBar = () => {
             <p>moon69032@gmail.com</p>
           </div>
         </div>
-
-        {/* <div
-          className="text-2xl cursor-pointer"
-          title={isLight ? "Dark Mode" : "Light Mood"}
-        >
-          {isLight ? <IoMdMoon /> : <MdSunny />}
-        </div> */}
       </Container>
     </div>
   );

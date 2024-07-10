@@ -6,17 +6,18 @@ import categories from "@/data/categories";
 import courseList from "@/data/course-list";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import Categories from "./categories";
 import CourseCard from "./course-card";
 import Link from "next/link";
-import { motion } from 'framer-motion'
 import TabsAnimation from "@/lib/animations/tabs-animation";
+import Tabs from "@/components/tabs";
+import getOptions from "@/lib/utils/get-options";
 
 const Courses = () => {
-  const [selectedCategory, setSelectedCategory] = useState(categories[0].name);
+  const [selectedCategory, setSelectedCategory] = useState<string | number>(categories[0].name);
   const courses = courseList.filter(
     (course) => course.category === selectedCategory
   );
+  const tabOptions = getOptions(categories, "label", "name");
 
   return (
     <div className="bg-card border-b border-border">
@@ -29,14 +30,14 @@ const Courses = () => {
           হয়েছে।
         </p>
 
-        <Categories
-          selectedCategory={selectedCategory}
-          setSelectedCategory={setSelectedCategory}
-          categories={categories}
+        <Tabs
+          tabOptions={tabOptions}
+          selected={selectedCategory}
+          setSelected={setSelectedCategory}
         />
 
         <TabsAnimation selected={selectedCategory}>
-          <div className="grid grid-cols-4 gap-x-5 gap-y-6">
+          <div className="grid grid-cols-1 xl:grid-cols-4 gap-x-5 gap-y-6">
             {courses.map((course, index) => {
               return <CourseCard course={course} key={course.name + index} />;
             })}

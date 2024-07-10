@@ -45,7 +45,7 @@ export function HeroCarousel() {
                     {images.map(item => (
                         <CarouselItem key={item.title}>
                             <Image
-                                className="w-full h-[420px] object-cover rounded-card"
+                                className="w-full h-[300px] xl:h-[420px] object-cover rounded-card"
                                 sizes="100vw"
                                 width={0}
                                 height={0}
