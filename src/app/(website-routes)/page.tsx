@@ -8,6 +8,7 @@ import ServiceOverview from "../pages/home/service-overview/service-overview";
 import Services from "../pages/home/services/services";
 import Navbar from "../shared/navbar/navbar";
 import { useTheme } from "next-themes";
+import AffilietedBy from "../pages/home/affilieted-by/affilieted-by";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -22,7 +23,8 @@ export default function Home() {
       >
         <Navbar />
         <HeroSection />
-        <ServiceOverview />
+        {/* <ServiceOverview /> */}
+        <AffilietedBy />
       </div>
 
       <Courses />

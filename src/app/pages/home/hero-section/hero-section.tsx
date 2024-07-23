@@ -57,7 +57,7 @@ const HeroSection = () => {
             </Link>
           </div>
 
-          <div className="flex items-center gap-2 xl:gap-4 z-40 ">
+          {/* <div className="flex items-center gap-2 xl:gap-4 z-40 ">
             <Image
               className="w-16 h-auto"
               sizes="100vw"
@@ -70,7 +70,7 @@ const HeroSection = () => {
               বাংলাদেশ কারিগরি শিক্ষা বোর্ড কর্তৃক অনুমোদিত আইটি ট্রেনিং
               ইনষ্টিটিউট।
             </h2>
-          </div>
+          </div> */}
         </div>
 
         <div className="w-full z-40">
