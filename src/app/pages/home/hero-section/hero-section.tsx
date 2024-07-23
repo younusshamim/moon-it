@@ -7,7 +7,14 @@ import Image from "next/image";
 import GradientText from "@/components/gradient-text";
 import Link from "next/link";
 import LineShapes from "./line-shapes";
-import { HeroCarousel } from "./hero-carousel";
+import { Carousel } from "@/components/carousel";
+import { CarouselItem } from "@/components/ui/carousel";
+
+const images = [
+  { img: '/photo/protait1.jpg', title: 'Protait' },
+  { img: '/photo/seminar.jpg', title: 'Seminar' },
+  { img: '/photo/technical-school.jpg', title: 'Technical School' },
+]
 
 const HeroSection = () => {
   return (
@@ -21,7 +28,7 @@ const HeroSection = () => {
             ফেনীর সেরা আইটি ট্রেনিং ইনষ্টিটিউটে
           </h2>
 
-          <h2 className="text-foreground-dark font-extrabold text-[40px] xl:text-[52px] leading-tight">
+          <h2 className="text-foreground-dark font-extrabold text-[40px] xl:text-[52px] leading-snug">
             নিজেকে গড়ে তুলুন <GradientText>আইটি এক্সপার্ট</GradientText> {""}
             ‍হিসেবে।
           </h2>
@@ -67,7 +74,20 @@ const HeroSection = () => {
         </div>
 
         <div className="w-full z-40">
-          <HeroCarousel />
+          <Carousel className="shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-card hover:scale-[1.02] transition-all duration-500" imgOverlaySlider={true}>
+            {images.map(item => (
+              <CarouselItem key={item.title}>
+                <Image
+                  className="w-full h-[300px] xl:h-[420px] object-cover rounded-card"
+                  sizes="100vw"
+                  width={0}
+                  height={0}
+                  src={item.img}
+                  alt={item.title}
+                />
+              </CarouselItem>
+            ))}
+          </Carousel>
         </div>
       </Container>
     </div>

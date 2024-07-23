@@ -37,13 +37,13 @@
   .embla-thumbs__viewport {
     overflow: hidden;
   }
-  .embla-thumbs__container {
+  /* .embla-thumbs__container {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-left: calc(var(--thumbs-slide-spacing) * -1);
     height: 500px;
-  }
+  } */
   .embla-thumbs__slide {
     flex: 0 0 22%;
     min-width: 0;
@@ -79,4 +79,11 @@
   }
   .embla-thumbs__slide--selected .embla-thumbs__slide__number {
     color: var(--text-body);
+  }
+
+  @media (max-width: 640px) {
+    .embla-thumbs {
+      --thumbs-slide-spacing: 0;
+      --thumbs-slide-height: 5rem;
+    }
   }

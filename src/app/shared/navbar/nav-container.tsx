@@ -4,25 +4,18 @@ import Container from "@/components/container";
 import Image from "next/image";
 import Link from "next/link";
 import PrimaryButton from "@/components/primary-button";
-import { IoMdMoon } from "react-icons/io";
-import { MdSunny } from "react-icons/md";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import navItems from "@/data/nav-items";
-import { useTheme } from "next-themes";
+// import MobileMenu from "./mobile-menu";
+import ThemeSwitcher from "./theme-switcher";
 
 type PropsType = {
     logoWidth?: number
 }
 
-const NavContainer = ({ logoWidth = 150 }: PropsType) => {
+const NavContainer = ({ logoWidth }: PropsType) => {
     const pathname = usePathname();
-    const { theme, setTheme } = useTheme();
-
-    const toggleTheme = () => {
-        setTheme(theme === 'light' ? 'dark' : 'light');
-    };
-
     return (
         <Container className="h-full flex items-center justify-between">
             <Link href="/">
@@ -34,7 +27,7 @@ const NavContainer = ({ logoWidth = 150 }: PropsType) => {
                 />
             </Link>
 
-            <div className="flex items-center gap-2">
+            <div className="hidden xl:flex items-center gap-2 ">
                 {navItems.map((item, index) => (
                     <Link
                         href={item.link}
@@ -50,18 +43,14 @@ const NavContainer = ({ logoWidth = 150 }: PropsType) => {
                     </Link>
                 ))}
 
-                <div
-                    className="text-2xl cursor-pointer mx-4"
-                    title={theme === 'light' ? "Dark Mode" : "Light Mode"}
-                    onClick={toggleTheme}
-                >
-                    {theme === 'light' ? <IoMdMoon /> : <MdSunny />}
-                </div>
+                <ThemeSwitcher />
 
                 <Link href="/free-seminar">
                     <PrimaryButton className="px-4 h-[40px]">ফ্রি সেমিনার</PrimaryButton>
                 </Link>
             </div>
+
+            {/* <MobileMenu /> */}
         </Container>
     );
 };

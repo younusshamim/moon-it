@@ -6,6 +6,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import { Thumb } from './embla-carousel-thumbs-button'
 import { GalleryImgType } from '@/lib/types/gallery';
 import Image from 'next/image';
+import useMediaQuery from '@/lib/hooks/use-media-query';
 
 type PropType = {
     filteredImages: GalleryImgType[]
@@ -13,13 +14,14 @@ type PropType = {
 const OPTIONS: EmblaOptionsType = {}
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
+    const isLargeScreen = useMediaQuery('(min-width: 640px)')
     const { filteredImages } = props
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(OPTIONS)
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
         containScroll: 'keepSnaps',
         dragFree: true,
-        axis: 'y'
+        axis: isLargeScreen ? 'y' : "x"
     })
 
     const onThumbClick = useCallback(
@@ -34,20 +36,20 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         if (!emblaMainApi || !emblaThumbsApi) return
         setSelectedIndex(emblaMainApi.selectedScrollSnap())
         emblaThumbsApi.scrollTo(emblaMainApi.selectedScrollSnap())
-    }, [emblaMainApi, emblaThumbsApi, setSelectedIndex])
+    }, [emblaMainApi, emblaThumbsApi, setSelectedIndex,])
 
     useEffect(() => {
         if (!emblaMainApi) return
         onSelect()
-
         emblaMainApi.on('select', onSelect).on('reInit', onSelect)
-    }, [emblaMainApi, onSelect])
+    }, [emblaMainApi, onSelect, isLargeScreen])
 
     return (
-        <div className="embla flex min-w-full gap-5">
-            <div className="embla-thumbs w-48">
-                <div className="embla-thumbs__viewport w-40" ref={emblaThumbsRef}>
-                    <div className="embla-thumbs__container">
+        <div className="embla flex flex-col-reverse xl:flex-row min-w-full gap-5">
+            <div className="embla-thumbs">
+                <div className="embla-thumbs__viewport w-full xl:w-40" ref={emblaThumbsRef}>
+                    {/*embla-thumbs__container  */}
+                    <div className="flex flex-row xl:flex-col gap-2.5 h-fit xl:h-[500px] xl:-ml-[12px]">
                         {filteredImages.map((item, index) => (
                             <Thumb
                                 key={index}
@@ -65,7 +67,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 <div className="embla__container">
                     {filteredImages.map((item, index) => (
                         <div className="embla__slide " key={index}>
-                            <div className="embla__slide__number min-h-[500px]">
+                            <div className="embla__slide__number xl:min-h-[500px]">
                                 <Image
                                     className="w-full h-full object-cover rounded-card shadow-lg cursor-pointer"
                                     key={item.image + index}
@@ -80,7 +82,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                     ))}
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

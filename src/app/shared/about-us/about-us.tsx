@@ -11,15 +11,15 @@ const AboutUs = () => {
     <div className="relative">
       <LineShapes lightClassName="left-[500px]" />
 
-      <Container className="pt-20 pb-10 flex flex-col-reverse xl:flex-row gap-20 items-center">
+      <Container className="pt-5 xl:pt-20 pb-10 flex flex-col-reverse xl:flex-row gap-20 items-center">
         <div className="w-full xl:w-1/2 z-40 flex flex-col gap-2">
           <p className="font-bold text-xl">প্রতিষ্ঠান সম্পর্কে কিছু কথা</p>
 
           <h2 className="text-4xl text-foreground-dark font-extrabold mb-4">
             <GradientText>
-              সাফল্যের <span className="font-sans">১৮</span> বছর
+              সাফল্যের <span className="font-sans">১৯</span> বছর
             </GradientText>{" "}
-            আইটি এক্সপার্ট তৈরির জগতে বিশ্বস্ত প্রতিষ্ঠান
+            আইটি এক্সপার্ট তৈরির জগতে ফেনীর বিশ্বস্ত প্রতিষ্ঠান
           </h2>
 
           <p className="text-justify">

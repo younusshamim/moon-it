@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const SeminarImageWrap = () => {
     return (
-        <div className="w-2/5 z-40">
+        <div className="w-full px-3 xl:p-0 xl:w-2/5 z-40">
             <ScrollAnimation variants={variant1}>
                 <Image
                     className="w-full h-[400px] object-cover object-center hover:scale-[1.02] transition-all duration-500"

@@ -12,17 +12,17 @@ import { MdEmail, MdAccessTime } from "react-icons/md";
 const Address = () => {
   return (
     <Container className="pt-10 pb-20">
-      <p className="text-lg justify-center">
+      <p className="text-lg justify-center text-center xl:text-left mb-5 xl:mb-0">
         যে কোনো প্রয়োজনে যোগাযোগ করতে সরাসরি আমাদের অফিস ভিজিট করতে পারেন।
         তাছাড়া হটলাইন নম্বরে কল করে জেনে নিতে পারেন ট্রেইনিং সংক্রান্ত যেকোনো
         তথ্য। এছাড়াও উল্লেখিত মেইলে কিংবা ফেসবুক ম্যাসেঞ্জারেও নক দিতে পারেন।
       </p>
 
-      <div className="flex items-center gap-10 relative">
+      <div className="flex flex-col-reverse xl:flex-row items-center gap-10 relative">
         <LineShapes />
 
-        <div className="w-3/5 z-50">
-          <div className="grid grid-cols-2 gap-5">
+        <div className="w-full xl:w-3/5 z-50">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
             <div className="hover:scale-105 duration-500 bg-red-50 dark:bg-card p-5 rounded-card flex flex-col justify-center shadow-sm">
               <h3 className="font-bold text-lg">ঠিকানা-</h3>
               <div className="flex gap-3 items-center mb-3">
@@ -65,7 +65,7 @@ const Address = () => {
           </div>
         </div>
 
-        <div className="w-2/5 z-50">
+        <div className="w-full xl:w-2/5 z-50">
           <ScrollAnimation variants={variant1}>
             <Image
               className="w-full h-auto  hover:scale-[1.02] transition-all duration-500"

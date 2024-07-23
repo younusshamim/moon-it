@@ -1,9 +1,5 @@
 import { z } from "zod";
-import {
-  englishRegex,
-  validateContactNo,
-  validateOptionalEmail,
-} from "./common-rules";
+import { englishRegex, validateContactNo } from "./common-rules";
 
 export const seminarFormSchema = z.object({
   id: z.number().optional(),
@@ -13,7 +9,7 @@ export const seminarFormSchema = z.object({
     .regex(englishRegex, { message: "নাম ইংরেজি ভাষায় হতে হবে" }),
   contactNo: validateContactNo,
   courseId: z.number({ message: "কোর্স সিলেক্ট করুন" }),
-  email: validateOptionalEmail,
+  education: z.string().optional(),
   address: z.string().optional(),
 });
 

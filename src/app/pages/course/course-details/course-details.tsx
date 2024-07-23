@@ -42,7 +42,7 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
             কোর্স ফি ৳ <NumSpan>{convertToBanglaNumber(fee)}</NumSpan> টাকা
           </h3>
 
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 xl:gap-5">
             <Modal
               triggerBtn={<PrimaryButton size="lg">ডিস্কাউন্টে ভর্তি হোন</PrimaryButton>}
             >

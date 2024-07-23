@@ -1,10 +1,14 @@
 import { CategoryType } from "@/lib/types/category";
 
 const categories: CategoryType[] = [
-  { label: "প্রফেশনাল আইটি কোর্স", icon: "/icons/it.png", name: "it" },
+  {
+    label: "প্রফেশনাল আইটি/কম্পিউটার কোর্স",
+    icon: "/icons/it.png",
+    name: "it",
+  },
   { label: "ল্যাঙ্গুয়েজ কোর্স", icon: "/icons/language.png", name: "language" },
   {
-    label: "এডভান্স সার্টিফিকেট কোর্স",
+    label: "এডভান্সড সার্টিফিকেট কোর্স",
     icon: "/icons/advance-course-module.png",
     name: "advanced",
   },

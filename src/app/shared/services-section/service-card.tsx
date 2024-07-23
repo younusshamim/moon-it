@@ -12,7 +12,7 @@ type PropsTypes = {
 const ServiceCard = ({ service, index, dataLength }: PropsTypes) => {
   return (
     <div
-      className={cn("p-10 text-center border-border",
+      className={cn("p-5 xl:p-10 text-center border-border",
         { 'xl:border-r': (index + 1) % 3 !== 0 },
         { 'xl:border-b': dataLength - 3 > index },
         { 'border-t xl:border-t-0': index !== 0 },

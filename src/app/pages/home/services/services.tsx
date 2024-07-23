@@ -10,12 +10,17 @@ const Services = () => {
   return (
     <div>
       <Container className="pt-20 pb-10">
-        <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-[6px]">
+        {/* <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-[6px]">
           আমাদের <GradientText>বিশেষ সেবা</GradientText>
         </h2>
         <p className="font-semibold mb-8 text-center">
           কেন মুন আইটি-তে আস্থা রাখবে?
-        </p>
+        </p> */}
+
+        <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-8">
+          কেন মুন আইটি-তে <GradientText>আস্থা রাখবে?</GradientText>
+        </h2>
+
 
         {/* <ScrollAnimation variants={variant1}> */}
         <ServicesSection servicesData={servicesData} />

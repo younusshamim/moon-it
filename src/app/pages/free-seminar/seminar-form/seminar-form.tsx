@@ -31,7 +31,7 @@ const SeminarForm = () => {
   })
 
   return (
-    <div className="w-3/5 p-10 z-40">
+    <div className="w-full xl:w-3/5 p-3 xl:p-10 z-40">
       <h1 className="spacing text-3xl mb-[6px] font-black text-foreground-dark text-center">
         জয়েন <GradientText>ফ্রি সেমিনার</GradientText>
       </h1>
@@ -63,10 +63,10 @@ const SeminarForm = () => {
           error={errors.courseId?.message as string}
         />
         <Input
-          label="ইমেইল" placeholder="ইমেইল লিখুন"
+          label="শিক্ষাগত যোগ্যতা" placeholder="শিক্ষাগত যোগ্যতা লিখুন"
           inputClassName="bg-white"
-          {...register("email")}
-          error={errors.email?.message as string}
+          {...register("education")}
+          error={errors.education?.message as string}
         />
         <Textarea
           label="আপনার ঠিকানা"
