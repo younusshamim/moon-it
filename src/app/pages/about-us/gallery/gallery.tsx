@@ -12,10 +12,17 @@ import Tabs from "@/components/tabs";
 import getOptions from "@/lib/utils/get-options";
 
 const imageCategories = [
-  { id: "lab", title: "প্রশিক্ষণের স্থান এবং স্টুডেন্টস" },
-  { id: "office", title: "অফিস" },
-  { id: "events", title: "ইভেন্টস" },
-  { id: "exam", title: "BTEB এক্সাম" },
+
+  { id: "students", title: "স্টুডেন্টস" },
+  // training/class/seminar/exam related jekono valo chobi 
+  { id: "institute", title: "ইনস্টিটিউট" },
+  { id: "campaign", title: "ক্যাম্পেইন" },
+  // job fair/ all fair related jekono valo chobi 
+  { id: "tour", title: "আনন্দ ভ্রমন" },
+  { id: "fairwell", title: "ফেয়ারওয়েল" },
+  { id: "program", title: "অনুষ্ঠান" },
+  { id: "social-works", title: "সামাজিক কর্মকান্ড" },
+  // jubo unnoyoner related jekono valo chobi 
 ];
 
 const Gallery = () => {

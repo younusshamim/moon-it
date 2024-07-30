@@ -25,17 +25,16 @@ const HeroSection = () => {
         <div className="w-full flex flex-col gap-7 z-40 items-center xl:items-start text-center xl:text-start">
           <h2 className="font-bold text-[17px] shadow-md rounded-btn w-fit px-3 py-1">
             <BsStars className="inline text-xl text-primary mr-1" />
-            ফেনীর সেরা আইটি ট্রেনিং ইনষ্টিটিউটে
+            ফেনীর সেরা ট্রেনিং ইনস্টিটিউটে
           </h2>
 
           <h2 className="text-foreground-dark font-extrabold text-[40px] xl:text-[52px] leading-snug">
-            নিজেকে গড়ে তুলুন <GradientText>আইটি এক্সপার্ট</GradientText> {""}
+            নিজেকে গড়ে তুলুন <GradientText>ইন্ডাস্ট্রি এক্সপার্ট</GradientText> {""}
             ‍হিসেবে।
           </h2>
 
           <h1 className="xl:text-justify xl:text-lg">
-            বৃহত্তর ফেনী/নোয়াখালীতে সর্বোচ্চ আসন ও ডিপার্টমেন্ট সমৃদ্ধ আইটি
-            ইনষ্টিটিউট। অভিজ্ঞ মেন্টর আর আপডেটেড কারিকুলাম নিয়ে ‘মুন আইটি’
+            মুন আইটি বৃহত্তর ফেনী/নোয়াখালীতে সর্বোচ্চ আসন ও ডিপার্টমেন্ট সমৃদ্ধ ট্রেনিং ইনস্টিটিউট। অভিজ্ঞ মেন্টর আর আপডেটেড কারিকুলাম নিয়ে ‘মুন আইটি’
             প্রস্তুত আপনার ক্যারিয়ার গড়ার অগ্রযাত্রায়।
           </h1>
 
@@ -68,7 +67,7 @@ const HeroSection = () => {
             />
             <h2 className="font-semibold w-full xl:w-2/4 text-left xl:text-justify text-sm xl:text-base">
               বাংলাদেশ কারিগরি শিক্ষা বোর্ড কর্তৃক অনুমোদিত আইটি ট্রেনিং
-              ইনষ্টিটিউট।
+              ইনস্টিটিউট।
             </h2>
           </div> */}
         </div>

@@ -18,7 +18,7 @@ const Services = () => {
         </p> */}
 
         <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-8">
-          কেন মুন আইটি-তে <GradientText>আস্থা রাখবে?</GradientText>
+          <GradientText> কেন আস্থা রাখবেন </GradientText> মুন আইটি-তে?
         </h2>
 
 

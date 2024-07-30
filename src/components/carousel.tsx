@@ -42,7 +42,7 @@ export function Carousel({ children, className, imgOverlaySlider = false, slider
             {imgOverlaySlider && <div className="flex gap-2 absolute bottom-3 left-1/2 transform -translate-x-1/2">
                 {Array.from({ length: count }).map((_, index) => (
                     <div
-                        key={index} className={cn('h-2 w-4 rounded-card bg-sky-200', { 'bg-primary-lighter w-6': current == index + 1 })}
+                        key={index} className={cn('h-2 w-4 rounded-card bg-white', { 'bg-primary-lighter w-6': current == index + 1 })}
                     >
                     </div>
                 ))}
@@ -51,7 +51,7 @@ export function Carousel({ children, className, imgOverlaySlider = false, slider
             {sliderDots && <div className="w-full justify-center flex gap-2 mt-5">
                 {Array.from({ length: count }).map((_, index) => (
                     <div
-                        key={index} className={cn('h-[6px] w-[6px] rounded-card bg-sky-200', { 'bg-primary-lighter ': current == index + 1 })}
+                        key={index} className={cn('h-[6px] w-[6px] rounded-card bg-white', { 'bg-primary-lighter ': current == index + 1 })}
                     >
                     </div>
                 ))}

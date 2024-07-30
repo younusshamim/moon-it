@@ -25,7 +25,7 @@ const AffilietedBy = () => {
           </p>
         </div>
 
-        <div className="w-3/4 grid grid-cols-2 gap-5  pr-10">
+        <div className="w-3/4 grid grid-cols-2 gap-5 pr-10">
           {affiliatedList.map((item, index) => (
             <div key={item.title + index} className="flex items-start gap-2 xl:gap-4 z-40 bg-background p-5 rounded-card">
               <Image

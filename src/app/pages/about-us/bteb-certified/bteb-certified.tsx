@@ -20,7 +20,7 @@ const BTEBCertified = () => {
 
         <div className="w-1/2">
           <h2 className="text-4xl text-foreground-dark font-extrabold mb-4 leading-snug">
-            ফেনীর অন্যতম BTEB সার্টিফাইড আইটি ট্রেনিং ইনষ্টিটিউট।
+            ফেনীর অন্যতম BTEB সার্টিফাইড আইটি ট্রেনিং ইনস্টিটিউট।
           </h2>
 
           <p className=" text-justify">
