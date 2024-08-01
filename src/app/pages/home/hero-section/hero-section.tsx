@@ -1,14 +1,13 @@
-import React from "react";
-import Container from "@/components/container";
-import PrimaryButton from "@/components/primary-button";
-import { MdOutlineComputer } from "react-icons/md";
-import { BsStars } from "react-icons/bs";
-import Image from "next/image";
-import GradientText from "@/components/gradient-text";
-import Link from "next/link";
-import LineShapes from "./line-shapes";
 import { Carousel } from "@/components/carousel";
+import Container from "@/components/container";
+import GradientText from "@/components/gradient-text";
+import PrimaryButton from "@/components/primary-button";
 import { CarouselItem } from "@/components/ui/carousel";
+import Image from "next/image";
+import Link from "next/link";
+import { BsStars } from "react-icons/bs";
+import { MdOutlineComputer } from "react-icons/md";
+import LineShapes from "./line-shapes";
 
 const images = [
   { img: '/photo/protait1.jpg', title: 'Protait' },

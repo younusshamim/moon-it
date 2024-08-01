@@ -170,7 +170,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যারের কাজ নিয়ে গঠিত।",
     category: "it",
-    image: "/courses/office-application.jpg",
+    image: "/Office-Application-Thumnail-.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [3, 2],
