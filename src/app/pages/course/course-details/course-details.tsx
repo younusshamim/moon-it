@@ -57,12 +57,10 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
         </div >
       </div>
 
-      {/* h-[334px] hobe right size */}
-
       <div className="w-full xl:w-1/2 z-40">
         <ScrollAnimation variants={variant2}>
           <Image
-            className="w-full h-[400px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
+            className="w-full h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
             sizes="100vw"
             width={0}
             height={0}

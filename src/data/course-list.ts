@@ -434,7 +434,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সের মাধ্যমে প্রচলিত আরবি শব্দভান্ডার, বেসিক ছরফ, বেসিক নাহু, বহুল পাঠিত কোরআনের ছোট সূরা গুলোর শাব্দিক বঙ্গানুবাদ, ছোট-বড় বাক্য গঠন সহ যেকোন পরিবেশে আরবি ভাষায় প্রেজেন্টেশনের দক্ষতা তৈরী হবে। ইনশাআল্লাহ।",
     category: "language",
-    image: "/courses/arabic-language.jpg",
+    image: "/Arabic-Thumnail-.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [10],
