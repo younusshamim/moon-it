@@ -1,10 +1,7 @@
-import React from "react";
-import GradientText from "@/components/gradient-text";
-import Container from "@/components/container";
-import servicesData from "../../../../data/services-data";
 import ServicesSection from "@/app/shared/services-section/services-section";
-import ScrollAnimation from "@/lib/animations/scroll-animation";
-import { variant1, } from "@/lib/animations/variants";
+import Container from "@/components/container";
+import GradientText from "@/components/gradient-text";
+import servicesData from "../../../../data/services-data";
 
 const Services = () => {
   return (
@@ -20,7 +17,6 @@ const Services = () => {
         <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-8">
           <GradientText> কেন আস্থা রাখবেন </GradientText> মুন আইটি-তে?
         </h2>
-
 
         {/* <ScrollAnimation variants={variant1}> */}
         <ServicesSection servicesData={servicesData} />

@@ -2,7 +2,6 @@
 import ControlledSelect from "@/components/controlled-select";
 import GradientText from "@/components/gradient-text";
 import PrimaryButton from "@/components/primary-button";
-import Select from "@/components/select";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import courseList from "@/data/course-list";

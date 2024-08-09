@@ -1,10 +1,9 @@
 import Container from "@/components/container";
 import Image from "next/image";
-import React from "react";
-import { FaFacebook } from "react-icons/fa6";
 import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
+import { FaFacebook } from "react-icons/fa6";
 import { IoIosCall } from "react-icons/io";
+import { IoLocationSharp } from "react-icons/io5";
 
 const Footer = () => {
   return (

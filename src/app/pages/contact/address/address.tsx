@@ -4,10 +4,9 @@ import LineShapes from "@/components/shapes/line-shapes";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
 import { variant1 } from "@/lib/animations/variants";
 import Image from "next/image";
-import React from "react";
-import { IoIosCall, IoIosTime } from "react-icons/io";
+import { IoIosCall } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
-import { MdEmail, MdAccessTime } from "react-icons/md";
+import { MdAccessTime, MdEmail } from "react-icons/md";
 
 const Address = () => {
   return (
@@ -21,7 +20,7 @@ const Address = () => {
       <div className="flex flex-col-reverse xl:flex-row items-center gap-10 relative">
         <LineShapes />
 
-        <div className="w-full xl:w-3/5 z-50">
+        <div className="w-full xl:w-3/5 z-40">
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
             <div className="hover:scale-105 duration-500 bg-red-50 dark:bg-card p-5 rounded-card flex flex-col justify-center shadow-sm">
               <h3 className="font-bold text-lg">ঠিকানা-</h3>
@@ -65,7 +64,7 @@ const Address = () => {
           </div>
         </div>
 
-        <div className="w-full xl:w-2/5 z-50">
+        <div className="w-full xl:w-2/5 z-40">
           <ScrollAnimation variants={variant1}>
             <Image
               className="w-full h-auto  hover:scale-[1.02] transition-all duration-500"

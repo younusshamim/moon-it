@@ -29,6 +29,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "সরকারি সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -39,12 +45,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "সরকারি সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -82,6 +82,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "সরকারি সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -92,12 +98,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "সরকারি সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "অনলাইন সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -135,6 +135,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "সরকারি সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -145,12 +151,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "সরকারি সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "প্র্যাকটিক্যাল সাইট সুপারভিশন",
@@ -188,6 +188,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "সরকারি সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -198,12 +204,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "সরকারি সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -241,6 +241,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "সরকারি সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -251,12 +257,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "সরকারি সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -294,6 +294,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে দক্ষতার সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -304,12 +310,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে দক্ষতার সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -347,6 +347,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "সরকারি সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -357,12 +363,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "সরকারি সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -399,6 +399,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে ভাষা দক্ষতার সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "আধুনিক ও স্ট্যান্ডার্ড কোর্স ক্যারিকুলাম",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আধুনিক ও স্ট্যান্ডার্ড ক্যারিকুলাম অনুযায়ী।",
@@ -409,12 +415,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে ভাষা দক্ষতার সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ",
@@ -452,6 +452,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে ভাষা দক্ষতার সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "আধুনিক ও স্ট্যান্ডার্ড কোর্স ক্যারিকুলাম",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আধুনিক ও স্ট্যান্ডার্ড ক্যারিকুলাম অনুযায়ী।",
@@ -462,12 +468,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে ভাষা দক্ষতার সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ",
@@ -504,6 +504,18 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ",
+        description:
+          "কোর্স শেষ হয়ে গেলেও স্টুডেন্টরা ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ পাবে।",
+        image: "/icons/unlimited-support.png",
+      },
+      {
+        title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে ভাষা দক্ষতার সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "আধুনিক ও স্ট্যান্ডার্ড কোর্স ক্যারিকুলাম",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আধুনিক ও স্ট্যান্ডার্ড ক্যারিকুলাম অনুযায়ী।",
@@ -514,18 +526,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে ভাষা দক্ষতার সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
-      },
-      {
-        title: "ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ",
-        description:
-          "কোর্স শেষ হয়ে গেলেও স্টুডেন্টরা ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ পাবে।",
-        image: "/icons/unlimited-support.png",
       },
     ],
   },
@@ -557,18 +557,6 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
-        title: "আধুনিক ও স্ট্যান্ডার্ড কোর্স ক্যারিকুলাম",
-        description:
-          "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আধুনিক ও স্ট্যান্ডার্ড ক্যারিকুলাম অনুযায়ী।",
-        image: "/icons/advance-course-module.png",
-      },
-      {
-        title: "ইন্ড্রাষ্ট্রি এক্সপার্ট ট্রেইনার",
-        description:
-          "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
-        image: "/icons/industry-expert.png",
-      },
-      {
         title: "জাপানিজ ভিসা প্রসেসিংয়ে সর্বোচ্চ সহযোগিতা",
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন সরাসরি, লাইভে।",
@@ -579,6 +567,18 @@ const courseList: CourseType[] = [
         description:
           "কোর্স শেষ হয়ে গেলেও স্টুডেন্টরা ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ পাবে।",
         image: "/icons/unlimited-support.png",
+      },
+      {
+        title: "আধুনিক ও স্ট্যান্ডার্ড কোর্স ক্যারিকুলাম",
+        description:
+          "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আধুনিক ও স্ট্যান্ডার্ড ক্যারিকুলাম অনুযায়ী।",
+        image: "/icons/advance-course-module.png",
+      },
+      {
+        title: "ইন্ড্রাষ্ট্রি এক্সপার্ট ট্রেইনার",
+        description:
+          "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
+        image: "/icons/industry-expert.png",
       },
     ],
   },
@@ -663,6 +663,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "BTEB সরকারি সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে BTEB সরকারি সার্টিফিকেট অর্জন ও NTRC শিক্ষক নিবন্ধন পরিক্ষার মাধ্যমে MPO শিক্ষক হওয়ার সুযোগ।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "BTEB বোর্ড কর্তৃক কোর্স ক্যারিকুলাম",
         description:
           "কারিগরি বোর্ড ও শিক্ষামন্ত্রনালয় কর্তৃক প্রণিত কোর্স ক্যারিকুলাম।",
@@ -673,12 +679,6 @@ const courseList: CourseType[] = [
         description:
           "দেশ সেরা বাচাইকৃত বাস্তব অভিজ্ঞতা সম্পন্ন শিক্ষকদের তত্বাবধানে ক্লাস করার ‍সুযোগ।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "BTEB সরকারি সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে BTEB সরকারি সার্টিফিকেট অর্জন ও NTRC শিক্ষক নিবন্ধন পরিক্ষার মাধ্যমে MPO শিক্ষক হওয়ার সুযোগ।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট",
@@ -715,6 +715,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "Industrial Attachment সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে Industrial Attachment সার্টিফিকেট অর্জনের সুযোগ, যা কর্মক্ষেত্রে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -725,12 +731,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "Industrial Attachment সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে Industrial Attachment সার্টিফিকেট অর্জনের সুযোগ, যা কর্মক্ষেত্রে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -767,6 +767,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "Industrial Attachment সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে Industrial Attachment সার্টিফিকেট অর্জনের সুযোগ, যা কর্মক্ষেত্রে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -777,12 +783,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "Industrial Attachment সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে Industrial Attachment সার্টিফিকেট অর্জনের সুযোগ, যা কর্মক্ষেত্রে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -819,6 +819,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "Industrial Attachment সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে Industrial Attachment সার্টিফিকেট অর্জনের সুযোগ, যা কর্মক্ষেত্রে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -829,12 +835,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "Industrial Attachment সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে Industrial Attachment সার্টিফিকেট অর্জনের সুযোগ, যা কর্মক্ষেত্রে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
@@ -872,6 +872,12 @@ const courseList: CourseType[] = [
         image: "/icons/advance-course-module.png",
       },
       {
+        title: "Industrial Attachment সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে Industrial Attachment সার্টিফিকেট অর্জনের সুযোগ, যা কর্মক্ষেত্রে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
         title: "এডভান্সড কোর্স মডিউল",
         description:
           "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
@@ -882,12 +888,6 @@ const courseList: CourseType[] = [
         description:
           "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
         image: "/icons/industry-expert.png",
-      },
-      {
-        title: "Industrial Attachment সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে Industrial Attachment সার্টিফিকেট অর্জনের সুযোগ, যা কর্মক্ষেত্রে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
       },
       {
         title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",

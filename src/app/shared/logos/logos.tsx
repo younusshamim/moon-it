@@ -1,10 +1,9 @@
 import Container from "@/components/container";
 import Image from "next/image";
-import React from "react";
 
 const Logos = () => {
   const logos = [
-    { label: "Moon IT 18 years anniversary", src: "/logo/18-Years-Logo.png" },
+    { label: "Moon IT Anniversary", src: "/logo/moon-aniversary.png" },
     {
       label: "Bangladesh Goverment",
       src: "/logo/BD_Government_Sea.png",
@@ -13,7 +12,14 @@ const Logos = () => {
       label: "Bangladesh Technical Education Board (BTEB)",
       src: "/logo/BTEB-Logo.png",
     },
-    { label: "Moon IT", src: "/logo/logo.png" },
+    {
+      label: "Prodhan Montrir Karjaloy",
+      src: "/logo/NSDA.png",
+    },
+    {
+      label: "Jubo Unnoyon",
+      src: "/logo/Jubo-unnoion.png",
+    },
     { label: "Moon Youth Socity", src: "/logo/MYS-LOGO.png" },
     {
       label: "Moon Language Club",
