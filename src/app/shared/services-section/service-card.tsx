@@ -1,7 +1,6 @@
 import { ServiceType } from "@/lib/types/service";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import React from "react";
 
 type PropsTypes = {
   service: ServiceType;

@@ -3,14 +3,13 @@ import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
 import affiliatedList from "@/data/affiliated-list";
 import Image from "next/image";
-
 const AffilietedBy = () => {
   return (
     <div className="pt-10 pb-14">
-      <Container className="p-10 flex items-center gap-10 bg-card rounded-card shadow-lg shadow-gray-200 dark:shadow-gray-700 border border-border">
-        <div className="w-1/4 pl-10">
+      <Container className="xl:p-10 flex flex-col xl:flex-row items-center xl:gap-10 bg-card rounded-card shadow-lg shadow-gray-200 dark:shadow-gray-900 border border-border ">
+        <div className="w-full mt-10 xl:mt-0 xl:w-1/4 pl-10 flex flex-col items-center xl:items-start">
           <Image
-            className="w-16 h-auto mb-3"
+            className="w-20 h-auto mb-3"
             sizes="100vw"
             width={0}
             height={0}
@@ -25,9 +24,9 @@ const AffilietedBy = () => {
           </p>
         </div>
 
-        <div className="w-3/4 grid grid-cols-2 gap-5 pr-10">
+        <div className="w-full xl:w-3/4 grid grid-cols-1 xl:grid-cols-2 gap-5 xl:pr-10 ">
           {affiliatedList.map((item, index) => (
-            <div key={item.title + index} className="flex items-start gap-2 xl:gap-4 z-40 bg-background p-5 rounded-card">
+            <div key={item.title + index} className="flex items-start gap-2 xl:gap-4 z-40 bg-background p-5 rounded-card hover:scale-[1.02] transition-all duration-500">
               <Image
                 className="w-16 h-auto"
                 sizes="100vw"

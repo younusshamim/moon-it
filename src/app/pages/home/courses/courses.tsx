@@ -2,15 +2,15 @@
 import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
 import PrimaryButton from "@/components/primary-button";
+import Tabs from "@/components/tabs";
 import categories from "@/data/categories";
 import courseList from "@/data/course-list";
+import TabsAnimation from "@/lib/animations/tabs-animation";
+import getOptions from "@/lib/utils/get-options";
+import Link from "next/link";
 import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import CourseCard from "./course-card";
-import Link from "next/link";
-import TabsAnimation from "@/lib/animations/tabs-animation";
-import Tabs from "@/components/tabs";
-import getOptions from "@/lib/utils/get-options";
 
 const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | number>(categories[0].name);
