@@ -1,28 +1,25 @@
 "use client";
 import Container from "@/components/container";
+import Tabs from "@/components/tabs";
 import galleryImages from "@/data/gallery-images";
+import ScrollAnimation from "@/lib/animations/scroll-animation";
 import TabsAnimation from "@/lib/animations/tabs-animation";
-import { cn } from "@/lib/utils";
-import React, { useState } from "react";
+import { variant4 } from "@/lib/animations/variants";
+import { useIsMounted } from "@/lib/hooks/use-is-mounted";
+import useMediaQuery from "@/lib/hooks/use-media-query";
+import getOptions from "@/lib/utils/get-options";
+import { useState } from "react";
 import EmblaCarousel from "./embla-carousel";
 import "./embla.css";
-import ScrollAnimation from "@/lib/animations/scroll-animation";
-import { variant4 } from "@/lib/animations/variants";
-import Tabs from "@/components/tabs";
-import getOptions from "@/lib/utils/get-options";
 
 const imageCategories = [
-
   { id: "students", title: "স্টুডেন্টস" },
-  // training/class/seminar/exam related jekono valo chobi 
   { id: "institute", title: "ইনস্টিটিউট" },
   { id: "campaign", title: "ক্যাম্পেইন" },
-  // job fair/ all fair related jekono valo chobi 
   { id: "tour", title: "আনন্দ ভ্রমন" },
   { id: "fairwell", title: "ফেয়ারওয়েল" },
   { id: "program", title: "অনুষ্ঠান" },
   { id: "social-works", title: "সামাজিক কর্মকান্ড" },
-  // jubo unnoyoner related jekono valo chobi 
 ];
 
 const Gallery = () => {
@@ -31,6 +28,8 @@ const Gallery = () => {
     (item) => item.category === selected
   );
   const tabOptions = getOptions(imageCategories, "title", "id");
+  const isLargeScreen = useMediaQuery('(min-width: 640px)')
+  const mounted = useIsMounted()
 
   return (
     <div>
@@ -48,11 +47,14 @@ const Gallery = () => {
           selected={selected}
           setSelected={setSelected}
         />
-        <ScrollAnimation variants={variant4}>
-          <TabsAnimation selected={selected}>
-            <EmblaCarousel filteredImages={filteredImages} />
-          </TabsAnimation>
-        </ScrollAnimation>
+
+        {mounted && (
+          <ScrollAnimation variants={variant4}>
+            <TabsAnimation selected={selected}>
+              <EmblaCarousel filteredImages={filteredImages} isLargeScreen={isLargeScreen} />
+            </TabsAnimation>
+          </ScrollAnimation>
+        )}
       </Container>
     </div>
   );

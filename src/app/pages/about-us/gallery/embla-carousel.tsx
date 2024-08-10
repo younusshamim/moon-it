@@ -1,21 +1,21 @@
 "use client";
 
-import { useState, useEffect, useCallback } from 'react'
-import { EmblaOptionsType } from 'embla-carousel'
-import useEmblaCarousel from 'embla-carousel-react'
-import { Thumb } from './embla-carousel-thumbs-button'
 import { GalleryImgType } from '@/lib/types/gallery';
+import { EmblaOptionsType } from 'embla-carousel';
+import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
-import useMediaQuery from '@/lib/hooks/use-media-query';
+import { useCallback, useEffect, useState } from 'react';
+import { Thumb } from './embla-carousel-thumbs-button';
 
 type PropType = {
     filteredImages: GalleryImgType[]
+    isLargeScreen: boolean
 }
 const OPTIONS: EmblaOptionsType = {}
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-    const isLargeScreen = useMediaQuery('(min-width: 640px)')
-    const { filteredImages } = props
+    // const isLargeScreen = useMediaQuery('(min-width: 640px)')
+    const { filteredImages, isLargeScreen } = props
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(OPTIONS)
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
