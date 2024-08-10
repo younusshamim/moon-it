@@ -1,7 +1,7 @@
-import * as React from "react"
-import { Select as ShadcnSelect, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "./ui/select"
-import { cn } from "@/lib/utils";
 import { OptionType } from "@/lib/types/option-type";
+import { cn } from "@/lib/utils";
+import * as React from "react";
+import { SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue, Select as ShadcnSelect } from "./ui/select";
 
 type SelectProps = React.ComponentProps<typeof ShadcnSelect>;
 interface PropsTypes extends React.SelectHTMLAttributes<HTMLInputElement> {
@@ -18,7 +18,7 @@ const Select = ({ label, placeholder = "", options, className, inputClassName, e
         <div className={cn("flex flex-col gap-1", className)}>
             <label className="text-sm">{label}</label>
 
-            <ShadcnSelect {...props}>
+            <ShadcnSelect {...props} >
                 <SelectTrigger className={cn('dark:bg-card border-border px-2 xl:p-3', inputClassName, { 'border-2 border-red-500': error })}>
                     <SelectValue placeholder={placeholder} />
                 </SelectTrigger>

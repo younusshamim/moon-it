@@ -9,7 +9,7 @@ export const seminarFormSchema = z.object({
     .regex(englishRegex, { message: "নাম ইংরেজি ভাষায় হতে হবে" }),
   contactNo: validateContactNo,
   courseId: z.number({ message: "কোর্স সিলেক্ট করুন" }),
-  education: z.string().optional(),
+  attendPosibility: z.string({ message: "সিলেক্ট করুন" }),
   address: z.string().optional(),
 });
 

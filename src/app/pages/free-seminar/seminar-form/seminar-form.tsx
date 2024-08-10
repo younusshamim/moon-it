@@ -4,9 +4,12 @@ import GradientText from "@/components/gradient-text";
 import PrimaryButton from "@/components/primary-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import attendPosibility from "@/data/attend-posibility";
 import courseList from "@/data/course-list";
 import { CreateSeminarFormInput, seminarFormSchema } from "@/lib/validators/seminar-form.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useSearchParams } from "next/navigation";
+import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 const SeminarForm = () => {
@@ -19,7 +22,19 @@ const SeminarForm = () => {
     handleSubmit,
     control,
     watch,
+    getValues,
     formState: { errors }, } = methods;
+
+  const searchParams = useSearchParams()
+  const selectedCourseId = getValues('courseId')
+
+  useEffect(() => {
+    if (selectedCourseId) {
+      const params = new URLSearchParams()
+      params.set('courseId', selectedCourseId.toString())
+    }
+  }, [selectedCourseId])
+
 
   // handler 
   const onSubmit: SubmitHandler<CreateSeminarFormInput> = (data: CreateSeminarFormInput) => console.log(data)
@@ -27,6 +42,9 @@ const SeminarForm = () => {
   // data 
   const courseOptions = courseList.map(course => {
     return { label: course.name, value: course.id.toString() }
+  })
+  const attendPosibilityOptions = attendPosibility.map(item => {
+    return { label: item, value: item }
   })
 
   return (
@@ -60,12 +78,17 @@ const SeminarForm = () => {
           options={courseOptions}
           control={control}
           error={errors.courseId?.message as string}
+          defaultValue={courseOptions.find(course => course.value == searchParams.get('courseId'))?.value}
+          isSetParams={true}
         />
-        <Input
-          label="শিক্ষাগত যোগ্যতা" placeholder="শিক্ষাগত যোগ্যতা লিখুন"
-          inputClassName="bg-white"
-          {...register("education")}
-          error={errors.education?.message as string}
+        <ControlledSelect
+          label="অংশগ্রহনের সম্ভাবনা"
+          placeholder="সেমিনারে অংশগ্রহনের সম্ভাবনা"
+          name="attendPosibility"
+          options={attendPosibilityOptions}
+          control={control}
+          error={errors.attendPosibility?.message as string}
+          isValueString={true}
         />
         <Textarea
           label="আপনার ঠিকানা"

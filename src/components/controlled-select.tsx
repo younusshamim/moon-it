@@ -1,6 +1,9 @@
+"use client"
+
+import { OptionType } from "@/lib/types/option-type";
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Controller } from "react-hook-form";
 import Select from "./select";
-import { OptionType } from "@/lib/types/option-type";
 
 type PropsTypes = {
     control: any;
@@ -11,9 +14,29 @@ type PropsTypes = {
     className?: string;
     inputClassName?: string;
     error?: string;
+    defaultValue?: string;
+    isValueString?: boolean;
+    isSetParams?: boolean;
 }
 
-const ControlledSelect = ({ control, name, options, label, placeholder, error, ...props }: PropsTypes) => {
+const ControlledSelect = ({ control, name, options, label, placeholder, error, defaultValue, isValueString, isSetParams, ...props }: PropsTypes) => {
+    const searchParams = useSearchParams();
+    const pathname = usePathname();
+    const { replace } = useRouter();
+
+    const handleValueChange = (selected: any, onChange: (value: string) => void) => {
+        onChange(isValueString ? selected.toString() : parseInt(selected))
+
+        if (isSetParams) {
+            console.log({ selected });
+
+
+            const params = new URLSearchParams(searchParams);
+            params.set(name, selected);
+            replace(`${pathname}?${params.toString()}`);
+        }
+    }
+
     return (
         <Controller
             control={control}
@@ -22,11 +45,12 @@ const ControlledSelect = ({ control, name, options, label, placeholder, error, .
                 return (
                     <Select
                         value={options.find(option => option.value == value)?.value}
-                        onValueChange={(selected) => onChange(parseInt(selected))}
+                        onValueChange={(selected) => handleValueChange(selected, onChange)}
                         label={label}
                         options={options}
                         placeholder={placeholder}
                         error={error}
+                        defaultValue={defaultValue}
                         {...props}
                     />
                 )
