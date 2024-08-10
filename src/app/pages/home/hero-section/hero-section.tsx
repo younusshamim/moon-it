@@ -21,8 +21,8 @@ const HeroSection = () => {
       <LineShapes />
 
       <Container className="py-9 flex flex-col xl:flex-row items-center justify-between gap-16 xl:gap-28">
-        <div className="w-full flex flex-col gap-7 z-40 items-center xl:items-start text-center xl:text-start">
-          <h2 className="font-bold text-[17px] shadow-md rounded-btn w-fit px-3 py-1">
+        <div className="w-full flex flex-col gap-4 xl:gap-7 z-40 items-center xl:items-start text-center xl:text-start">
+          <h2 className="font-bold text-[17px] shadow-md dark:bg-background2 rounded-btn w-fit px-3 pt-2 pb-1">
             <BsStars className="inline text-xl text-primary mr-1" />
             ফেনীর সেরা ট্রেনিং ইনস্টিটিউটে
           </h2>
