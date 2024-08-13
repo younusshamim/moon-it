@@ -11,7 +11,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সটি বিজনেজ কার্ড, আইডি কার্ড, লগো ডিজাইন, ব্রোশিওর ডিজাইন, ক্যালেন্ডার ডিজাইন, লেটারহেড, ফ্লায়ার কার্ড ও মকাপ ডিজাইন সহ প্রায় ৫০টি প্রজেক্ট ডিজাইনের সমন্বয়ে গঠিত।",
     category: "it",
-    image: "/courses/graphics-design1.jpg",
+    image: "/courses/Graphic-Design.jpg",
     fee: 20000,
     discount: { type: "taka", amount: 5000, endDate: "29/06/2024" },
     metorIds: [1, 2],
@@ -64,7 +64,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সটি Search Engine Optimization, Search Engine Marketing এবং Social Media Marketing সহ একটি Business গ্রোও করার সকল নিয়ম ও অনলাইন আয়ের কলাকৌশল নিয়ে গঠিত।",
     category: "it",
-    image: "/courses/digital-marketing.jpg",
+    image: "/courses/Digital-Marketing.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [4],
@@ -117,7 +117,7 @@ const courseList: CourseType[] = [
     description2:
       "AutoCAD সফটওয়্যারটি Civil ও Architecture ইঞ্জিনিয়ারদের জন্য বিল্ডিং ডিজাইনিংয়ের ক্ষেত্রে  খুবই গুরুত্বপূর্ণ একটি সফটওয়্যার। এ ছাড়াও Mechanical ও Electrical ইঞ্জিনিয়াররাও ব্যবহার করে থাকে।",
     category: "it",
-    image: "/courses/autocad-design2.jpg",
+    image: "/courses/AutoCAD.jpg",
     fee: 20000,
     discount: { type: "taka", amount: 3000, endDate: "29/06/2024" },
     metorIds: [5],
@@ -156,6 +156,59 @@ const courseList: CourseType[] = [
         title: "প্র্যাকটিক্যাল সাইট সুপারভিশন",
         description:
           "সফটওয়্যারে কাজের পাশাপাশি ইন্জিনিয়ারের সাথে প্র্যাকটিক্যাল সাইট সুপারভিশনের সুযোগ।",
+        image: "/icons/unlimited-support.png",
+      },
+    ],
+  },
+  {
+    id: 5,
+    name: "কম্পিউটার আইটি সাপোর্ট সার্ভিসেস",
+    title:
+      "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যার, নেটওয়াকিং, এসেম্বলিং, ডি-এসেম্বলিং ও ট্রাবলসুটিং ইত্যাদি কাজ নিয়ে গঠিত।",
+    description1:
+      "বর্তমান সময়ের ইন্ডাস্ট্রি ও নিয়োগ কর্তারা খুঁজছেন আইটিতে দক্ষ পেশাজীবি। আর সেই চাহিদাকে সঙ্গী করে দেশীয় ও আন্তর্জাতিক অঙ্গনে জনপ্রিয় হয়ে উঠেছে Computer IT Support কোর্সটি।",
+    description2:
+      "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যার, নেটওয়াকিং, এসেম্বলিং, ডি-এসেম্বলিং ও ট্রাবলসুটিং ইত্যাদি কাজ নিয়ে গঠিত।",
+    category: "it",
+    image: "/courses/IT-Support.jpg",
+    fee: 20000,
+    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    metorIds: [2, 3],
+    services: [
+      {
+        title: "কোর্সের সময়কাল ৬ মাস",
+        description:
+          "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
+        image: "/icons/industry-expert.png",
+      },
+      {
+        title: "সপ্তাহে ৩ দিন ক্লাস",
+        description:
+          "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
+        image: "/icons/advance-course-module.png",
+      },
+      {
+        title: "সরকারি সার্টিফিকেট অর্জন",
+        description:
+          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
+        image: "/icons/bteb-certificate.png",
+      },
+      {
+        title: "এডভান্সড কোর্স মডিউল",
+        description:
+          "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
+        image: "/icons/advance-course-module.png",
+      },
+      {
+        title: "ইন্ড্রাষ্ট্রি এক্সপার্ট ট্রেইনার",
+        description:
+          "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
+        image: "/icons/industry-expert.png",
+      },
+      {
+        title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
+        description:
+          "কোর্স শেষেও ইনস্ট্রাক্টর থেকে পাবেন সর্বোচ্চ সাপোর্ট ও আনলিমিটেড প্র্যাক্টিস সুবিধা।",
         image: "/icons/unlimited-support.png",
       },
     ],
@@ -214,59 +267,6 @@ const courseList: CourseType[] = [
     ],
   },
   {
-    id: 5,
-    name: "কম্পিউটার আইটি সাপোর্ট সার্ভিসেস",
-    title:
-      "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যার, নেটওয়াকিং, এসেম্বলিং, ডি-এসেম্বলিং ও ট্রাবলসুটিং ইত্যাদি কাজ নিয়ে গঠিত।",
-    description1:
-      "বর্তমান সময়ের ইন্ডাস্ট্রি ও নিয়োগ কর্তারা খুঁজছেন আইটিতে দক্ষ পেশাজীবি। আর সেই চাহিদাকে সঙ্গী করে দেশীয় ও আন্তর্জাতিক অঙ্গনে জনপ্রিয় হয়ে উঠেছে Computer IT Support কোর্সটি।",
-    description2:
-      "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যার, নেটওয়াকিং, এসেম্বলিং, ডি-এসেম্বলিং ও ট্রাবলসুটিং ইত্যাদি কাজ নিয়ে গঠিত।",
-    category: "it",
-    image: "/courses/it-support.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
-    metorIds: [2, 3],
-    services: [
-      {
-        title: "কোর্সের সময়কাল ৬ মাস",
-        description:
-          "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
-      },
-      {
-        title: "সপ্তাহে ৩ দিন ক্লাস",
-        description:
-          "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
-      },
-      {
-        title: "সরকারি সার্টিফিকেট অর্জন",
-        description:
-          "সফলভাবে কোর্স সম্পন্ন করে সরকারি সার্টিফিকেট অর্জনের সুযোগ, যা দেশ-বিদেশে অধিক গ্রহনযোগ্য।",
-        image: "/icons/bteb-certificate.png",
-      },
-      {
-        title: "এডভান্সড কোর্স মডিউল",
-        description:
-          "প্রতিটি কোর্সের সিলেবাস বেসিক টু এডভান্সড লেভেল পর্যন্ত সাজানো হয়েছে আন্তর্জাতিক ক্যারিকুলাম অনুযায়ী।",
-        image: "/icons/advance-course-module.png",
-      },
-      {
-        title: "ইন্ড্রাষ্ট্রি এক্সপার্ট ট্রেইনার",
-        description:
-          "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন হাতে-কলমে।",
-        image: "/icons/industry-expert.png",
-      },
-      {
-        title: "আনলিমিটেড সাপোর্ট এন্ড প্র্যাক্টিস",
-        description:
-          "কোর্স শেষেও ইনস্ট্রাক্টর থেকে পাবেন সর্বোচ্চ সাপোর্ট ও আনলিমিটেড প্র্যাক্টিস সুবিধা।",
-        image: "/icons/unlimited-support.png",
-      },
-    ],
-  },
-  {
     id: 6,
     name: "নেটওয়ার্কিং (CCNA, MTCNA)",
     title:
@@ -276,7 +276,7 @@ const courseList: CourseType[] = [
     description2:
       "বেসিক নেটওয়ার্কিং থেকে শুরু করে সহ  Routing Protocol, Switching Protocol, সহ Server Mantainace এর বেশ কিছু প্রটোকল নিয়ে এ কোর্সটি সাজানো হয়েছে।",
     category: "it",
-    image: "/courses/networking.jpg",
+    image: "/courses/Networking.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [1],
@@ -329,7 +329,7 @@ const courseList: CourseType[] = [
     description2:
       "এই কোর্সটিতে HTML, CSS, JavaScript, jQuery, Bootstrap, Tailwind CSS, PHP, Laravel, MySQL ব্যাসিক টু এডভান্স শেখানো হবে এবং প্রফেশনাল কিছু ওয়েব সাইট তৈরি করার মাধ্যমে কোর্সটি সম্পন্ন করা হবে।",
     category: "it",
-    image: "/courses/digital-marketing.jpg",
+    image: "/courses/Web-Design.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [6],
@@ -381,7 +381,7 @@ const courseList: CourseType[] = [
       "ইংরেজিতে সাবলীলভাবে কথা বলতে পারা এই যুগে একটি গুরুত্বপূর্ণ দক্ষতা ও স্মার্টনেস। স্পোকেন ইংলিশ স্কিল থাকলে জীবনের প্রতিটি পর্যায়েই এগিয়ে থাকা যায়। পড়াশোনা, ক্যারিয়ার, প্রতিযোগিতামূলক পরীক্ষা, বিদেশে উচ্চশিক্ষা, এমনকি বিদেশ ভ্রমণের ক্ষেত্রে ও ইংরেজি বলার বা ইংরেজির সঠিক উচ্চারণের দক্ষতা অর্জন বেশ জরুরি।",
     description2: "",
     category: "language",
-    image: "/courses/spoken-english.jpg",
+    image: "/courses/Spoken-English-Language.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [7],
@@ -486,7 +486,7 @@ const courseList: CourseType[] = [
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     description2: "",
     category: "language",
-    image: "/courses/korean-language.jpg",
+    image: "/courses/Korean-Language.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [8],
@@ -539,7 +539,7 @@ const courseList: CourseType[] = [
     description2:
       "মুন আইটি’তে জাপানিজ ভাষার দুটি কোর্স L-N5/ L-N4 চলমান রয়েছে। একবারে হিরাগানা, কাতাগানা বর্ণমালা থেকে শুরু করে  সহজ ও সাবলিল ভাবে বাংলা ভাষার মাধ্যমে জাপানিজ ভাষা ও জাপানিজ সংস্কৃতি শিখোনো হয়।",
     category: "language",
-    image: "/courses/japanese-language.jpg",
+    image: "/courses/Japanese-Language.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [9],
@@ -592,7 +592,7 @@ const courseList: CourseType[] = [
     description2:
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     category: "advanced",
-    image: "/courses/1-year-course.jpg",
+    image: "/courses/Fine-Arts.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [],
@@ -645,7 +645,7 @@ const courseList: CourseType[] = [
     description2:
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     category: "advanced",
-    image: "/courses/1-year-course.jpg",
+    image: "/courses/ICT.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [],

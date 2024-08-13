@@ -3,17 +3,12 @@ import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
 import PrimaryButton from "@/components/primary-button";
 import { CarouselItem } from "@/components/ui/carousel";
+import { heroImages } from "@/data/focused-images";
 import Image from "next/image";
 import Link from "next/link";
 import { BsStars } from "react-icons/bs";
 import { MdOutlineComputer } from "react-icons/md";
 import LineShapes from "./line-shapes";
-
-const images = [
-  { img: '/photo/protait1.jpg', title: 'Protait' },
-  { img: '/photo/seminar.jpg', title: 'Seminar' },
-  { img: '/photo/technical-school.jpg', title: 'Technical School' },
-]
 
 const HeroSection = () => {
   return (
@@ -72,16 +67,16 @@ const HeroSection = () => {
         </div>
 
         <div className="w-full z-40">
-          <Carousel className="shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-card hover:scale-[1.02] transition-all duration-500" imgOverlaySlider={true}>
-            {images.map(item => (
-              <CarouselItem key={item.title}>
+          <Carousel imgOverlaySlider={true}>
+            {heroImages.map((item, index) => (
+              <CarouselItem key={index}>
                 <Image
-                  className="w-full h-[300px] xl:h-[420px] object-cover rounded-card"
+                  className="w-full h-[380px] xl:h-[420px] object-cover rounded-card"
                   sizes="100vw"
                   width={0}
                   height={0}
-                  src={item.img}
-                  alt={item.title}
+                  src={item}
+                  alt={'Moon IT'}
                 />
               </CarouselItem>
             ))}

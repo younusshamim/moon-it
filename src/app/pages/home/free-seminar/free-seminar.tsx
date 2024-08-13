@@ -1,11 +1,10 @@
-import React from "react";
 import Container from "@/components/container";
-import GradientText from "@/components/gradient-text";
 import PrimaryButton from "@/components/primary-button";
-import { FaArrowRight } from "react-icons/fa6";
-import Image from "next/image";
-import { variant2 } from "@/lib/animations/variants";
+import { seminarImage } from "@/data/focused-images";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
+import { variant2 } from "@/lib/animations/variants";
+import Image from "next/image";
+import { FaArrowRight } from "react-icons/fa6";
 
 const FreeSeminar = () => {
   return (
@@ -18,7 +17,7 @@ const FreeSeminar = () => {
               sizes="100vw"
               width={0}
               height={0}
-              src="/photo/seminar.jpg"
+              src={seminarImage}
               alt="Moon IT Seminar"
             />
           </ScrollAnimation>

@@ -67,7 +67,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 <div className="embla__container">
                     {filteredImages.map((item, index) => (
                         <div className="embla__slide " key={index}>
-                            <div className="embla__slide__number xl:min-h-[500px]">
+                            <div className="embla__slide__number xl:min-h-[550px]">
                                 <Image
                                     className="w-full h-full object-cover rounded-card shadow-lg cursor-pointer"
                                     key={item.image + index}

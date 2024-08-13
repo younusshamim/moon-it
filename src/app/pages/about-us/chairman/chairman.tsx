@@ -1,4 +1,5 @@
 import Container from "@/components/container";
+import { chairmanImage } from "@/data/focused-images";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
 import { variant3 } from "@/lib/animations/variants";
 import Image from "next/image";
@@ -9,15 +10,16 @@ const Chairman = () => {
       <div className="w-[calc(100%-50px)] xl:w-1/2 flex justify-start xl:justify-end relative">
         <ScrollAnimation variants={variant3} className="z-10">
           <Image
-            className="w-full xl:w-[350px] h-[350px] xl:h-[400px] object-cover object-center rounded-card  border-white border-4 shadow-lg"
+            className="w-full h-[350px] xl:h-[400px] object-cover object-center rounded-card  border-white border-4 shadow-lg"
             sizes="100vw"
             width={0}
             height={0}
-            src="/instructor/yousuf.jpg"
-            alt="Moon IT Seminar"
+            src={chairmanImage}
+            alt="Yousuf Shahin - Chairman of Moon IT"
           />
         </ScrollAnimation>
-        <div className="w-full xl:w-[350px] h-[350px] xl:h-[400px] bg-primary-lighter dark:bg-background rounded-card absolute top-7 -right-5 xl:top-10 xl:-right-10 z-0 border-white border-4 shadow-lg"></div>
+
+        <div className="w-[90%] xl:w-[80%] h-[350px] xl:h-[400px] bg-primary-lighter dark:bg-background rounded-card absolute top-7 -right-5 xl:top-10 xl:-right-10 z-0 border-white border-4 shadow-lg"></div>
       </div>
 
       <div className="w-full xl:w-1/2  text-white">

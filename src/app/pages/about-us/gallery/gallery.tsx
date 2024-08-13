@@ -1,6 +1,7 @@
 "use client";
 import Container from "@/components/container";
 import Tabs from "@/components/tabs";
+import imageCategories from "@/data/gallery-categories";
 import galleryImages from "@/data/gallery-images";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
 import TabsAnimation from "@/lib/animations/tabs-animation";
@@ -12,15 +13,6 @@ import { useState } from "react";
 import EmblaCarousel from "./embla-carousel";
 import "./embla.css";
 
-const imageCategories = [
-  { id: "students", title: "স্টুডেন্টস" },
-  { id: "institute", title: "ইনস্টিটিউট" },
-  { id: "campaign", title: "ক্যাম্পেইন" },
-  { id: "tour", title: "আনন্দ ভ্রমন" },
-  { id: "fairwell", title: "ফেয়ারওয়েল" },
-  { id: "program", title: "অনুষ্ঠান" },
-  { id: "social-works", title: "সামাজিক কর্মকান্ড" },
-];
 
 const Gallery = () => {
   const [selected, setSelected] = useState<string | number>(imageCategories[0].id);

@@ -1,7 +1,8 @@
+import { Carousel } from "@/components/carousel";
 import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
-import ScrollAnimation from "@/lib/animations/scroll-animation";
-import { variant2 } from "@/lib/animations/variants";
+import { CarouselItem } from "@/components/ui/carousel";
+import { aboutImages } from "@/data/focused-images";
 import Image from "next/image";
 import LineShapes from "../../../components/shapes/line-shapes";
 
@@ -36,7 +37,7 @@ const AboutUs = () => {
         </div>
 
         <div className="w-full xl:w-1/2 z-40">
-          <ScrollAnimation variants={variant2}>
+          {/* <ScrollAnimation variants={variant2}>
             <Image
               className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 dark:shadow-slate-700 rounded-card hover:scale-[1.02] transition-all duration-500"
               sizes="100vw"
@@ -45,10 +46,25 @@ const AboutUs = () => {
               src="/photo/technical-school.jpg"
               alt="Moon IT Seminar"
             />
-          </ScrollAnimation>
+          </ScrollAnimation> */}
+
+          <Carousel imgOverlaySlider={true}>
+            {aboutImages.map((item, index) => (
+              <CarouselItem key={index}>
+                <Image
+                  className="w-full h-[380px] xl:h-[400px] object-cover rounded-card"
+                  sizes="100vw"
+                  width={0}
+                  height={0}
+                  src={item}
+                  alt={'Moon IT'}
+                />
+              </CarouselItem>
+            ))}
+          </Carousel>
         </div>
-      </Container>
-    </div>
+      </Container >
+    </div >
   );
 };
 

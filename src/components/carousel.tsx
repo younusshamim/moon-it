@@ -1,9 +1,8 @@
 'use client'
-import { useEffect, useRef, useState } from "react"
-import { CarouselNext, CarouselPrevious, type CarouselApi } from "@/components/ui/carousel"
-import Autoplay from "embla-carousel-autoplay"
-import { Carousel as MyCarousel, CarouselContent, } from "@/components/ui/carousel"
+import { CarouselContent, Carousel as MyCarousel, type CarouselApi } from "@/components/ui/carousel"
 import { cn } from "@/lib/utils"
+import Autoplay from "embla-carousel-autoplay"
+import { useEffect, useRef, useState } from "react"
 
 type PropsTypes = {
     children: React.ReactNode
@@ -26,7 +25,7 @@ export function Carousel({ children, className, imgOverlaySlider = false, slider
     }, [api])
 
     return (
-        <div className="relative ">
+        <div className="relative shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-card hover:scale-[1.02] transition-all duration-500">
             <MyCarousel
                 setApi={setApi}
                 plugins={[plugin.current]}
@@ -42,7 +41,7 @@ export function Carousel({ children, className, imgOverlaySlider = false, slider
             {imgOverlaySlider && <div className="flex gap-2 absolute bottom-3 left-1/2 transform -translate-x-1/2">
                 {Array.from({ length: count }).map((_, index) => (
                     <div
-                        key={index} className={cn('h-2 w-4 rounded-card bg-white', { 'bg-primary-lighter w-6': current == index + 1 })}
+                        key={index} className={cn('h-2 w-2 rounded-card bg-white', { 'bg-primary-lighter w-4': current == index + 1 })}
                     >
                     </div>
                 ))}
