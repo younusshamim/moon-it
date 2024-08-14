@@ -11,7 +11,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সটি বিজনেজ কার্ড, আইডি কার্ড, লগো ডিজাইন, ব্রোশিওর ডিজাইন, ক্যালেন্ডার ডিজাইন, লেটারহেড, ফ্লায়ার কার্ড ও মকাপ ডিজাইন সহ প্রায় ৫০টি প্রজেক্ট ডিজাইনের সমন্বয়ে গঠিত।",
     category: "it",
-    image: "/courses/Graphic-Design.jpg",
+    image: "/courses/graphic-design.jpg",
     fee: 20000,
     discount: { type: "taka", amount: 5000, endDate: "29/06/2024" },
     metorIds: [1, 2],
@@ -64,7 +64,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সটি Search Engine Optimization, Search Engine Marketing এবং Social Media Marketing সহ একটি Business গ্রোও করার সকল নিয়ম ও অনলাইন আয়ের কলাকৌশল নিয়ে গঠিত।",
     category: "it",
-    image: "/courses/Digital-Marketing.jpg",
+    image: "/courses/digital-marketing.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [4],
@@ -117,7 +117,7 @@ const courseList: CourseType[] = [
     description2:
       "AutoCAD সফটওয়্যারটি Civil ও Architecture ইঞ্জিনিয়ারদের জন্য বিল্ডিং ডিজাইনিংয়ের ক্ষেত্রে  খুবই গুরুত্বপূর্ণ একটি সফটওয়্যার। এ ছাড়াও Mechanical ও Electrical ইঞ্জিনিয়াররাও ব্যবহার করে থাকে।",
     category: "it",
-    image: "/courses/AutoCAD.jpg",
+    image: "/courses/auto-cad.jpg",
     fee: 20000,
     discount: { type: "taka", amount: 3000, endDate: "29/06/2024" },
     metorIds: [5],
@@ -170,7 +170,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যার, নেটওয়াকিং, এসেম্বলিং, ডি-এসেম্বলিং ও ট্রাবলসুটিং ইত্যাদি কাজ নিয়ে গঠিত।",
     category: "it",
-    image: "/courses/IT-Support.jpg",
+    image: "/courses/it-support.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [2, 3],
@@ -223,7 +223,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যারের কাজ নিয়ে গঠিত।",
     category: "it",
-    image: "/Office-Application-Thumnail-.jpg",
+    image: "/courses/office-application.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [3, 2],
@@ -276,7 +276,7 @@ const courseList: CourseType[] = [
     description2:
       "বেসিক নেটওয়ার্কিং থেকে শুরু করে সহ  Routing Protocol, Switching Protocol, সহ Server Mantainace এর বেশ কিছু প্রটোকল নিয়ে এ কোর্সটি সাজানো হয়েছে।",
     category: "it",
-    image: "/courses/Networking.jpg",
+    image: "/courses/networking.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [1],
@@ -329,7 +329,7 @@ const courseList: CourseType[] = [
     description2:
       "এই কোর্সটিতে HTML, CSS, JavaScript, jQuery, Bootstrap, Tailwind CSS, PHP, Laravel, MySQL ব্যাসিক টু এডভান্স শেখানো হবে এবং প্রফেশনাল কিছু ওয়েব সাইট তৈরি করার মাধ্যমে কোর্সটি সম্পন্ন করা হবে।",
     category: "it",
-    image: "/courses/Web-Design.jpg",
+    image: "/courses/web-design.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [6],
@@ -381,7 +381,7 @@ const courseList: CourseType[] = [
       "ইংরেজিতে সাবলীলভাবে কথা বলতে পারা এই যুগে একটি গুরুত্বপূর্ণ দক্ষতা ও স্মার্টনেস। স্পোকেন ইংলিশ স্কিল থাকলে জীবনের প্রতিটি পর্যায়েই এগিয়ে থাকা যায়। পড়াশোনা, ক্যারিয়ার, প্রতিযোগিতামূলক পরীক্ষা, বিদেশে উচ্চশিক্ষা, এমনকি বিদেশ ভ্রমণের ক্ষেত্রে ও ইংরেজি বলার বা ইংরেজির সঠিক উচ্চারণের দক্ষতা অর্জন বেশ জরুরি।",
     description2: "",
     category: "language",
-    image: "/courses/Spoken-English-Language.jpg",
+    image: "/courses/spoken-english.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [7],
@@ -434,7 +434,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সের মাধ্যমে প্রচলিত আরবি শব্দভান্ডার, বেসিক ছরফ, বেসিক নাহু, বহুল পাঠিত কোরআনের ছোট সূরা গুলোর শাব্দিক বঙ্গানুবাদ, ছোট-বড় বাক্য গঠন সহ যেকোন পরিবেশে আরবি ভাষায় প্রেজেন্টেশনের দক্ষতা তৈরী হবে। ইনশাআল্লাহ।",
     category: "language",
-    image: "/Arabic-Thumnail-.jpg",
+    image: "/courses/arabic.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [10],
@@ -486,7 +486,7 @@ const courseList: CourseType[] = [
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     description2: "",
     category: "language",
-    image: "/courses/Korean-Language.jpg",
+    image: "/courses/korean-language.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [8],
@@ -539,7 +539,7 @@ const courseList: CourseType[] = [
     description2:
       "মুন আইটি’তে জাপানিজ ভাষার দুটি কোর্স L-N5/ L-N4 চলমান রয়েছে। একবারে হিরাগানা, কাতাগানা বর্ণমালা থেকে শুরু করে  সহজ ও সাবলিল ভাবে বাংলা ভাষার মাধ্যমে জাপানিজ ভাষা ও জাপানিজ সংস্কৃতি শিখোনো হয়।",
     category: "language",
-    image: "/courses/Japanese-Language.jpg",
+    image: "/courses/japanese-language.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [9],
@@ -592,7 +592,7 @@ const courseList: CourseType[] = [
     description2:
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     category: "advanced",
-    image: "/courses/Fine-Arts.jpg",
+    image: "/courses/fine-arts.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [],
@@ -645,7 +645,7 @@ const courseList: CourseType[] = [
     description2:
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     category: "advanced",
-    image: "/courses/ICT.jpg",
+    image: "/courses/ict.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [],

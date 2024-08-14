@@ -1,13 +1,36 @@
 import { GalleryImgType } from "@/lib/types/gallery";
+import {
+  aboutImages,
+  chairmanImage,
+  heroImages,
+  seminarImage,
+} from "./focused-images";
 
-const galleryImages: GalleryImgType[] = [
+const heroImagesList = heroImages.map((item) => {
+  return {
+    image: item,
+    category: "students-institute",
+  };
+});
+const aboutImagesList = aboutImages.map((item) => {
+  return {
+    image: item,
+    category: "students-institute",
+  };
+});
+const seminarImageObj = {
+  image: seminarImage,
+  category: "students-institute",
+};
+const chairmanImageObj = {
+  image: chairmanImage,
+  category: "students-institute",
+};
+
+const galleryImageList: GalleryImgType[] = [
   // students-institute
   {
     image: "/images/students-institute/image (2).jpeg",
-    category: "students-institute",
-  },
-  {
-    image: "/images/students-institute/image (2).png",
     category: "students-institute",
   },
   {
@@ -19,10 +42,6 @@ const galleryImages: GalleryImgType[] = [
     category: "students-institute",
   },
   {
-    image: "/images/students-institute/image (4).jpg",
-    category: "students-institute",
-  },
-  {
     image: "/images/students-institute/image (5).jpeg",
     category: "students-institute",
   },
@@ -30,7 +49,6 @@ const galleryImages: GalleryImgType[] = [
     image: "/images/students-institute/image (8).jpg",
     category: "students-institute",
   },
-
   {
     image: "/images/students-institute/image (1).jpeg",
     category: "students-institute",
@@ -44,33 +62,11 @@ const galleryImages: GalleryImgType[] = [
     category: "students-institute",
   },
   {
-    image: "/images/students-institute/image (11).jpg",
-    category: "students-institute",
-  },
-  {
     image: "/images/students-institute/image (16).jpg",
     category: "students-institute",
   },
   {
-    image: "/images/students-institute/image (2).jpg",
-    category: "students-institute",
-  },
-  {
-    image: "/images/students-institute/image (3).jpg",
-    category: "students-institute",
-  },
-  {
     image: "/images/students-institute/image (3).png",
-    category: "students-institute",
-  },
-
-  {
-    image: "/images/students-institute/image (4).png",
-    category: "students-institute",
-  },
-
-  {
-    image: "/images/students-institute/image (5).jpg",
     category: "students-institute",
   },
   {
@@ -93,34 +89,12 @@ const galleryImages: GalleryImgType[] = [
     image: "/images/students-institute/image (7).png",
     category: "students-institute",
   },
-
   {
     image: "/images/students-institute/image (8).png",
     category: "students-institute",
   },
   {
-    image: "/images/students-institute/image (9).jpg",
-    category: "students-institute",
-  },
-  {
-    image: "/images/students-institute/image (10).jpg",
-    category: "students-institute",
-  },
-
-  {
-    image: "/images/students-institute/image (12).jpg",
-    category: "students-institute",
-  },
-  {
-    image: "/images/students-institute/image (13).jpg",
-    category: "students-institute",
-  },
-  {
     image: "/images/students-institute/image (14).jpg",
-    category: "students-institute",
-  },
-  {
-    image: "/images/students-institute/image (15).jpg",
     category: "students-institute",
   },
 
@@ -148,6 +122,14 @@ const galleryImages: GalleryImgType[] = [
 
   // social-works
   { image: "/images/social-works/scocial.jpeg", category: "social-works" },
+];
+
+const galleryImages = [
+  ...heroImagesList,
+  ...galleryImageList,
+  ...aboutImagesList,
+  chairmanImageObj,
+  seminarImageObj,
 ];
 
 export default galleryImages;

@@ -1,18 +1,19 @@
 export const heroImages = [
-  "/images/focused-images/hero (4).jpg",
-  "/images/focused-images/about (6).jpg",
-  "/images/focused-images/hero (2).jpg",
-  "/images/focused-images/hero (1).jpg",
-  "/images/focused-images/hero (5).jpg",
-  "/images/focused-images/hero (6).jpg",
+  "/images/focused-images/hero1.jpg",
+  "/images/focused-images/hero2.jpg",
+  "/images/focused-images/hero3.jpg",
+  "/images/focused-images/hero4.jpg",
+  "/images/focused-images/hero5.jpg",
+  "/images/focused-images/hero6.jpg",
 ];
 
 export const aboutImages = [
-  "/images/focused-images/about (4).jpg",
-  "/images/focused-images/hero (3).jpg",
-  "/images/focused-images/about (1).jpg",
-  "/images/focused-images/about (2).png",
+  "/images/focused-images/hero8.jpg",
+  "/images/focused-images/hero14.jpg",
+  "/images/focused-images/hero10.png",
+  "/images/focused-images/hero9.jpg",
+  "/images/focused-images/hero12.png",
 ];
 
-export const seminarImage = "/images/focused-images/seminar.jpg";
+export const seminarImage = "/images/focused-images/hero7.jpg";
 export const chairmanImage = "/instructors/chairman.jpg";
