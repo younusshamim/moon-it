@@ -1,6 +1,7 @@
 "use client";
 import ControlledSelect from "@/components/controlled-select";
 import GradientText from "@/components/gradient-text";
+import FormSubmittedModal from "@/components/modals/form-submitted-modal";
 import PrimaryButton from "@/components/primary-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -9,10 +10,12 @@ import courseList from "@/data/course-list";
 import { CreateSeminarFormInput, seminarFormSchema } from "@/lib/validators/seminar-form.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 
 const SeminarForm = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   // hooks 
   const methods = useForm<CreateSeminarFormInput>({
     resolver: zodResolver(seminarFormSchema),
@@ -37,8 +40,9 @@ const SeminarForm = () => {
 
 
   // handler 
-  const onSubmit: SubmitHandler<CreateSeminarFormInput> = (data: CreateSeminarFormInput) => console.log(data)
-
+  const onSubmit: SubmitHandler<CreateSeminarFormInput> = (data: CreateSeminarFormInput) => {
+    setIsOpen(true);
+  }
   // data 
   const courseOptions = courseList.map(course => {
     return { label: course.name, value: course.id.toString() }
@@ -49,6 +53,8 @@ const SeminarForm = () => {
 
   return (
     <div className="w-full xl:w-3/5 p-3 xl:p-10 z-40">
+      <FormSubmittedModal isOpen={isOpen} setIsOpen={setIsOpen} />
+
       <h1 className="spacing text-3xl mb-[6px] font-black text-foreground-dark text-center">
         জয়েন <GradientText>ফ্রি সেমিনার</GradientText>
       </h1>

@@ -1,21 +1,30 @@
+import { cn } from '@/lib/utils';
 import { ReactNode } from 'react';
 import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
-import { cn } from '@/lib/utils';
 
 type PropsTypes = {
-    triggerBtn: ReactNode;
+    isOpen?: boolean;
+    setIsOpen?: (isOpen: boolean) => void;
+    triggerBtn?: ReactNode;
     children: ReactNode;
     className?: string;
+    size?: 'sm' | 'md' | 'lg';
 }
 
-const Modal = ({ triggerBtn, children, className }: PropsTypes) => {
+const Modal = ({ isOpen, setIsOpen, triggerBtn, children, className, size }: PropsTypes) => {
     return (
-        <Dialog>
-            < DialogTrigger asChild >
-                {triggerBtn}
-            </DialogTrigger >
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
+            {triggerBtn && (
+                < DialogTrigger asChild >
+                    {triggerBtn}
+                </DialogTrigger >
+            )}
 
-            <DialogContent className={cn("max-w-screen-md max-h-screen overflow-y-auto border-border", className)}>
+            <DialogContent className={cn("max-w-screen-md max-h-screen overflow-y-auto border-border", className, {
+                'max-w-screen-sm': size === 'sm',
+                'max-w-screen-md': size === 'md',
+                'max-w-screen-lg': size === 'lg',
+            })}>
                 {children}
             </DialogContent>
         </Dialog >

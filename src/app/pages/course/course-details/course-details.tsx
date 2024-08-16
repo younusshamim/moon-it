@@ -1,6 +1,5 @@
 "use client";
 import Container from "@/components/container";
-import Modal from "@/components/modal";
 import NumSpan from "@/components/num-span";
 import PrimaryButton from "@/components/primary-button";
 import LineShapes from "@/components/shapes/line-shapes";
@@ -9,11 +8,13 @@ import { variant2 } from "@/lib/animations/variants";
 import { CourseType } from "@/lib/types/course";
 import { convertToBanglaNumber } from "@/lib/utils";
 import Image from "next/image";
-import AdmissionForm from "../admission-form/admission-form";
+import { useState } from "react";
+import AdmissionFormModal from "../admission-form-modal/admission-form-modal";
 
 const CourseDetails = ({ course }: { course: CourseType }) => {
   const { name, description1, description2, fee, discount, image } = course;
   const { type, amount, endDate } = discount;
+  const [modalOpen, setModalOpen] = useState(false);
 
   const generateDiscount = () => {
     const discountEndDate = convertToBanglaNumber(endDate);
@@ -42,11 +43,11 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
           </h3>
 
           <div className="flex items-center gap-3 xl:gap-5">
-            <Modal
-              triggerBtn={<PrimaryButton size="lg">ডিস্কাউন্টে ভর্তি হোন</PrimaryButton>}
-            >
-              <AdmissionForm />
-            </Modal>
+            <AdmissionFormModal isOpen={modalOpen} setIsOpen={setModalOpen} />
+
+            <PrimaryButton size="lg" onClick={() => setModalOpen(true)}>
+              ডিস্কাউন্টে ভর্তি হোন
+            </PrimaryButton>
 
             <h3 className="text-2xl font-bold text-primary-lighter">৳ <NumSpan>{feeAfterDiscount}</NumSpan> টাকা</h3>
           </div>
