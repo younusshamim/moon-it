@@ -1,13 +1,14 @@
 'use client';
 
 import Container from "@/components/container";
+import PrimaryButton from "@/components/primary-button";
+import navItems from "@/data/nav-items";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import PrimaryButton from "@/components/primary-button";
 import { usePathname } from "next/navigation";
-import { cn } from "@/lib/utils";
-import navItems from "@/data/nav-items";
 // import MobileMenu from "./mobile-menu";
+import MobileMenu from "./mobile-menu";
 import ThemeSwitcher from "./theme-switcher";
 
 type PropsType = {
@@ -50,7 +51,7 @@ const NavContainer = ({ logoWidth }: PropsType) => {
                 </Link>
             </div>
 
-            {/* <MobileMenu /> */}
+            <MobileMenu />
         </Container>
     );
 };

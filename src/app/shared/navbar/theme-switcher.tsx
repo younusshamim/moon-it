@@ -1,5 +1,4 @@
 import { useTheme } from 'next-themes';
-import React from 'react';
 import { IoMdMoon } from 'react-icons/io';
 import { MdSunny } from 'react-icons/md';
 

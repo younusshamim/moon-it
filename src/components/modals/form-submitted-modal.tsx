@@ -9,7 +9,7 @@ type PropsTypes = {
 
 const FormSubmittedModal = ({ isOpen, setIsOpen }: PropsTypes) => {
     return (
-        <Modal isOpen={isOpen} setIsOpen={setIsOpen} className='py-14 w-[600px]'>
+        <Modal isOpen={isOpen} setIsOpen={setIsOpen} className='py-14 xl:w-[600px]'>
             <div className="flex flex-col items-center text-center">
                 <Image
                     src="/logo/logo.png"
@@ -24,12 +24,12 @@ const FormSubmittedModal = ({ isOpen, setIsOpen }: PropsTypes) => {
                     <h1 className="text-6xl font-extrabold text-primary">
                         অভিনন্দন!
                     </h1>
-                    <h3 className="font-extrabold text-3xl">
+                    <h3 className="font-extrabold text-2xl xl:text-3xl">
                         রেজিস্ট্রেশনটি সফলভাবে সম্পন্ন হয়েছে।
                     </h3>
                 </div>
 
-                <h3 className="font-bold text-xl text-secondary">
+                <h3 className="font-bold xl:text-xl text-secondary">
                     [শীঘ্রই আমাদের প্রতিনিধি আপনার সাথে যোগাযোগ করবেন]
                 </h3>
             </div>
