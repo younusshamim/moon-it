@@ -26,7 +26,7 @@ const AffilietedBy = () => {
 
         <div className="w-full xl:w-3/4 grid grid-cols-1 xl:grid-cols-2 gap-5 xl:pr-10 ">
           {affiliatedList.map((item, index) => (
-            <div key={item.title + index} className="flex items-start gap-2 xl:gap-4 z-40 bg-background p-5 rounded-card hover:scale-[1.02] transition-all duration-500">
+            <div key={item.title + index} className="flex items-start gap-2 xl:gap-4 z-40 bg-background p-5 rounded-card hover:scale-[1.02] transition-all duration-500 ">
               <Image
                 className="w-16 h-auto"
                 sizes="100vw"
@@ -37,11 +37,17 @@ const AffilietedBy = () => {
               />
 
               <div className="space-y-1">
-                <h2 className="font-bold xl:w-2/4 text-sm xl:text-base text-primary">
-                  <GradientText>{item.title}</GradientText>
-                </h2>
+                <a href={item.website} target="_blank" rel="noopener noreferrer">
+                  <h2 className="font-bold xl:w-2/4 text-sm xl:text-base text-primary cursor-pointer">
+                    <GradientText>{item.title}</GradientText>
+                  </h2>
+                </a>
+
                 <p className="text-gray-700">{item.description}</p>
-                <p className="text-secondary">[{item.affiliatedNo}]</p>
+                <a href={item.pdf} target="_blank" rel="noopener noreferrer">
+                  <p className="text-secondary">[{item.affiliatedNo}]</p>
+                </a>
+
               </div>
             </div>
           ))}

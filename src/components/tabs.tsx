@@ -5,11 +5,12 @@ type PropsType = {
     tabOptions: OptionType[];
     selected: string | number;
     setSelected: (item: string | number) => void;
+    className?: string;
 };
 
-const Tabs = ({ tabOptions, selected, setSelected }: PropsType) => {
+const Tabs = ({ tabOptions, selected, setSelected, className }: PropsType) => {
     return (
-        <div className="flex gap-5 xl:gap-8 border-b-2 border-b-border mb-7 overflow-x-auto">
+        <div className={cn("flex gap-5 xl:gap-8 border-b-2 border-b-border mb-7 overflow-x-auto", className)}>
             {tabOptions.map((tab, index) => {
                 return (
                     <p

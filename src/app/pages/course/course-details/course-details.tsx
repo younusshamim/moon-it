@@ -24,7 +24,7 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
   const { discountEndDate, discountAmountText, feeAfterDiscount } = generateDiscount();
 
   return (
-    <Container className="py-10 flex flex-col xl:flex-row gap-20 relative">
+    <Container className="pb-10 xl:py-10 flex flex-col-reverse xl:flex-row gap-10 xl:gap-20 relative">
       <LineShapes lightClassName="left-[350px]" />
 
       <div className="flex flex-col gap-5 w-full xl:w-1/2 z-40">
@@ -60,7 +60,7 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
       <div className="w-full xl:w-1/2 z-40">
         <ScrollAnimation variants={variant2}>
           <Image
-            className="w-full h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
+            className="w-full xl:h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
             sizes="100vw"
             width={0}
             height={0}

@@ -4,6 +4,7 @@ import { seminarImage } from "@/data/focused-images";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
 import { variant2 } from "@/lib/animations/variants";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 const FreeSeminar = () => {
@@ -32,13 +33,15 @@ const FreeSeminar = () => {
             সেমিনারে অংশগ্রহনের মাধ্যমে কোর্স কারিকুলাম, কোর্স মডিউল ও ক্যারিয়ার নিয়ে বিস্তারিত জানার সুযোগ থাকবে ইন্ডাস্ট্রি এক্সপার্টদের থেকে। উপস্থিত এক্সপার্ট কাউন্সেলরের সাথে কথা বলে সহজেই উপযুক্ত কোর্স বেছে নিতে পারেন এবং নিজের অজানা সব প্রশ্নের উত্তর নিতে পারবেন সহজেই।
           </p>
 
-          <PrimaryButton
-            size="lg"
-            className="mt-7 border-white text-white"
-            iconRight={<FaArrowRight className="text-white" />}
-          >
-            জয়েন ফ্রি সেমিনার
-          </PrimaryButton>
+          <Link href="/free-seminar">
+            <PrimaryButton
+              size="lg"
+              className="mt-7 border-white text-white"
+              iconRight={<FaArrowRight className="text-white" />}
+            >
+              জয়েন ফ্রি সেমিনার
+            </PrimaryButton>
+          </Link>
         </div>
       </Container>
     </div>

@@ -20,13 +20,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৪-৬ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "সরকারি সার্টিফিকেট অর্জন",
@@ -73,13 +73,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৩-৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "সরকারি সার্টিফিকেট অর্জন",
@@ -126,13 +126,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৪-৬ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "সরকারি সার্টিফিকেট অর্জন",
@@ -179,13 +179,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৬ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "সরকারি সার্টিফিকেট অর্জন",
@@ -232,13 +232,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৩/৬ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "সরকারি সার্টিফিকেট অর্জন",
@@ -285,13 +285,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ২ দিন ক্লাস",
         description:
           "সপ্তাহে ২দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
@@ -338,13 +338,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৬ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "সরকারি সার্টিফিকেট অর্জন",
@@ -390,13 +390,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৩-৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
@@ -443,13 +443,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "কোর্স শেষে থাকছে দক্ষতার সার্টিফিকেট",
@@ -495,13 +495,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩-৫ দিন ক্লাস",
         description:
           "প্রতিটি ক্লাস সপ্তাহে ৩-৫দিন ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ",
@@ -548,19 +548,19 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৪-৬ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "জাপানিজ ভিসা প্রসেসিংয়ে সর্বোচ্চ সহযোগিতা",
         description:
-          "স্কিল ডেভেলপ করুন ইন্ডাস্ট্রির সেরা এক্সপার্টদের সাথে, প্রশ্ন করুন আর শিখে নিন সরাসরি, লাইভে।",
-        image: "/icons/bteb-certificate.png",
+          "পরিপূর্ণভাবে কোর্স সম্পন্নকারী প্রশিক্ষণার্থীদের জাপানি ভিসা প্রসেসিংয়ে সর্বোচ্চ সহযোগিতা প্রদান করা হবে।",
+        image: "/icons/nirborjoggo-institute.png",
       },
       {
         title: "ক্লাবে আনলিমিটেড প্র্যাক্টিসের সুযোগ",
@@ -595,19 +595,19 @@ const courseList: CourseType[] = [
     image: "/courses/fine-arts-new.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
-    metorIds: [],
+    metorIds: [12],
     services: [
       {
         title: "কোর্সের সময়কাল ১ বছর",
         description:
           "BTEB এর অধীনে ১ বছরে ২ টি সেমিস্টার, প্রতি সেমিস্টার ৬ মাস করে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "ফ্রাইডে শিফট ক্লাস",
         description:
           "চাকুরিজীবি ও ব্যাবসায়ীদের সুবিধার্থে বন্ধের দিনে অনলাইন/অফলাইন ক্লাস সুবিধা।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "BTEB বোর্ড কর্তৃক কোর্স ক্যারিকুলাম",
@@ -648,19 +648,19 @@ const courseList: CourseType[] = [
     image: "/courses/ict-new.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
-    metorIds: [],
+    metorIds: [11],
     services: [
       {
         title: "কোর্সের সময়কাল ১ বছর",
         description:
           "BTEB এর অধীনে ১ বছরে ২ টি সেমিস্টার, প্রতি সেমিস্টার ৬ মাস করে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "ফ্রাইডে শিফট ক্লাস",
         description:
           "চাকুরিজীবি ও ব্যাবসায়ীদের সুবিধার্থে বন্ধের দিনে অনলাইন/অফলাইন ক্লাস সুবিধা।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "BTEB সরকারি সার্টিফিকেট অর্জন",
@@ -706,13 +706,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৩-৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "Industrial Attachment সার্টিফিকেট অর্জন",
@@ -758,13 +758,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৩-৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "Industrial Attachment সার্টিফিকেট অর্জন",
@@ -810,13 +810,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৩-৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "Industrial Attachment সার্টিফিকেট অর্জন",
@@ -863,13 +863,13 @@ const courseList: CourseType[] = [
         title: "কোর্সের সময়কাল ৩-৪ মাস",
         description:
           "এছাড়াও এক জন স্টুডেন্ট কোর্সের সিলেবাস কমপ্লিট হওয়া পর‌্যন্ত কাজ/প্রাক্টিসের সুযোগ পাবে।",
-        image: "/icons/industry-expert.png",
+        image: "/icons/schedule.png",
       },
       {
         title: "সপ্তাহে ৩ দিন ক্লাস",
         description:
           "সপ্তাহে ৩দিন প্রতিটি ক্লাস ২ঘন্টা করে অনুষ্ঠিত হবে। এছাড়াও গ্রুপ ভিত্তিক অনলাইন সাপোর্ট থাকবে।",
-        image: "/icons/advance-course-module.png",
+        image: "/icons/timetable.png",
       },
       {
         title: "Industrial Attachment সার্টিফিকেট অর্জন",

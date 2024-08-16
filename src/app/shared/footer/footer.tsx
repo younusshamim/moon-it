@@ -1,9 +1,11 @@
 import Container from "@/components/container";
 import Image from "next/image";
-import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
+import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
-import { IoIosCall } from "react-icons/io";
+import { IoIosCall, IoLogoYoutube } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
+
 
 const Footer = () => {
   return (
@@ -23,8 +25,15 @@ const Footer = () => {
 
             <p className="font-bold mb-2">কমিউনিটি -এর সাথে কানেক্টেড থাকতে</p>
             <div className="flex gap-3 text-3xl">
-              <FaFacebook className="cursor-pointer rounded-full" />
-              <FaInstagramSquare className="cursor-pointer rounded-full" />
+              <a href="https://www.facebook.com/moon69032" target="_blank" rel="noopener noreferrer">
+                <FaFacebook className="cursor-pointer rounded-full" />
+              </a>
+
+              <a href="https://www.youtube.com/@MoonITFeni" target="_blank" rel="noopener noreferrer">
+                <IoLogoYoutube className="cursor-pointer rounded-full" />
+              </a>
+
+              {/* <FaInstagramSquare className="cursor-pointer rounded-full" /> */}
               <FaLinkedin className="cursor-pointer rounded-full" />
             </div>
           </div>
@@ -51,11 +60,18 @@ const Footer = () => {
           <div className="hidden xl:block">
             <h3 className="font-bold text-xl mb-2">কুইক লিংক-</h3>
             <div className="flex flex-col gap-1">
-              <p className="cursor-pointer">ফটো গ্যালারী</p>
-              <p className="cursor-pointer">জয়েন ফ্রি সেমিনার</p>
-              <p className="cursor-pointer">সব কোর্স</p>
-              <p className="cursor-pointer">আমাদের সম্পর্কে</p>
-              {/* <p className="cursor-pointer">যোগাযোগ</p> */}
+              <p className="cursor-pointer">
+                <Link href="/free-seminar">জয়েন ফ্রি সেমিনার</Link>
+              </p>
+              <p className="cursor-pointer">
+                <Link href="/courses">সব কোর্স</Link>
+              </p>
+              <p className="cursor-pointer">
+                <Link href="/about-us">আমাদের সম্পর্কে</Link>
+              </p>
+              <p className="cursor-pointer">
+                <Link href="/contact">যোগাযোগ</Link>
+              </p>
             </div>
           </div>
 

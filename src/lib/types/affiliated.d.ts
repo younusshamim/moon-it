@@ -3,4 +3,6 @@ export interface AffiliatedType {
   title: string;
   description: string;
   affiliatedNo: string;
+  website?: string;
+  pdf?: string;
 }

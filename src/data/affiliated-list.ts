@@ -7,6 +7,8 @@ const affiliatedList: AffiliatedType[] = [
     description:
       "গনপ্রজাতন্ত্রী বাংলাদেশ সরকারের কারিগরি শিক্ষাবোর্ড কর্তৃক অনুমোদিত।",
     affiliatedNo: "BTEB কোড- ৬৯০৩২",
+    website: "https://bteb.gov.bd/",
+    pdf: "/affiliated-pdf/bteb.pdf",
   },
   {
     icon: "/logo/BD_Government_Sea.png",
@@ -14,6 +16,9 @@ const affiliatedList: AffiliatedType[] = [
     description:
       "গনপ্রজাতন্ত্রী বাংলাদেশ সরকারের শিক্ষা মন্ত্রনালয় কর্তৃক অনুমোদিত।",
     affiliatedNo: "স্বারক নং- ৫৭.০০.০০০০.০৫৩.২৯.০০৮.২২.১২৯",
+    website:
+      "https://tmed.portal.gov.bd/site/moedu_office_order/7eb204d5-3ee8-4fc3-90c5-e3ac91120593",
+    pdf: "https://tmed.portal.gov.bd/site/moedu_office_order/7eb204d5-3ee8-4fc3-90c5-e3ac91120593",
   },
   {
     icon: "/logo/NSDA.png",
@@ -21,6 +26,8 @@ const affiliatedList: AffiliatedType[] = [
     description:
       "গনপ্রজাতন্ত্রী বাংলাদেশ সরকারের প্রধানমন্ত্রীর কার্যালয় (NSDA) কর্তৃক অনুমোদিত।",
     affiliatedNo: "রেজিস্ট্রেশন নং- STP-FEN-000874",
+    website: "https://nsda.gov.bd/",
+    pdf: "/affiliated-pdf/nsda.pdf",
   },
   {
     icon: "/logo/Jubo-unnoion.png",
@@ -28,6 +35,8 @@ const affiliatedList: AffiliatedType[] = [
     description:
       "গনপ্রজাতন্ত্রী বাংলাদেশ সরকারের যুব উন্নয়ন অধিদপ্তর কর্তৃক অনুমোদিত।",
     affiliatedNo: "নিবন্ধন নং- যুউঅ/ফেনী-৬৬",
+    website: "https://dyd.gov.bd/",
+    pdf: "/affiliated-pdf/jubo-unnoyon.pdf",
   },
 ];
 
