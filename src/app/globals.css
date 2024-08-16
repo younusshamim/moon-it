@@ -40,7 +40,7 @@
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
 
-  --border: 214.3 31.8% 91.4%;
+  --border: 228 0% 90%;
   --input: 214.3 31.8% 91.4%;
   --ring: 222.2 84% 4.9%;
 
@@ -56,7 +56,8 @@
   --foreground: 228, 26%, 96%; /* #F3F4F8 */
   --foreground-dark:  0, 0%, 98%; /* #FAFAFA */
 
-  --border: 224 27 19%; /* #252c40 */
+ /*  --border: 224 27 19%; #252c40 */
+  --border: 220 42 20%; 
   /* 248, 250, 252, .08 */
 }
 

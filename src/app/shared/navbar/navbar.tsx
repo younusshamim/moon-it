@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import NavContainer from "./nav-container";
-import { motion } from 'framer-motion'
 import { animation1 } from "@/lib/animations/animations";
 import useMediaQuery from "@/lib/hooks/use-media-query";
+import { cn } from "@/lib/utils";
+import { motion } from 'framer-motion';
+import { useEffect, useState } from "react";
+import NavContainer from "./nav-container";
 
 const Navbar = () => {
   const [fixedNavbar, setFixedNavbar] = useState(false)
@@ -23,7 +23,7 @@ const Navbar = () => {
   return fixedNavbar ? (
     <motion.nav
       {...animation1}
-      className={cn('h-[75px] w-full z-50 fixed top-0 backdrop-blur-3xl bg-gray-100/80 dark:bg-background/90 border-b border-gray-300/50 dark:border-border')}
+      className={cn('h-[75px] w-full z-50 fixed top-0 backdrop-blur-3xl bg-gray-100/80 dark:bg-background/90 border-b border-border')}
     >
       <NavContainer logoWidth={isLargeScreen ? 130 : 120} />
     </motion.nav>
