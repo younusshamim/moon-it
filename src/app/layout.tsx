@@ -1,9 +1,9 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { HindSiliguri } from "@/lib/fonts/fonts";
-import { ReactNode } from "react";
-import { ThemeProvider } from "@/lib/config/theme-provider";
 import NextProgress from "@/components/next-progress";
+import { ThemeProvider } from "@/lib/config/theme-provider";
+import { HindSiliguri } from "@/lib/fonts/fonts";
+import { Inter } from "next/font/google";
+import { ReactNode } from "react";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 

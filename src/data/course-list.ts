@@ -11,7 +11,7 @@ const courseList: CourseType[] = [
     description2:
       "এ কোর্সটি বিজনেজ কার্ড, আইডি কার্ড, লগো ডিজাইন, ব্রোশিওর ডিজাইন, ক্যালেন্ডার ডিজাইন, লেটারহেড, ফ্লায়ার কার্ড ও মকাপ ডিজাইন সহ প্রায় ৫০টি প্রজেক্ট ডিজাইনের সমন্বয়ে গঠিত।",
     category: "it",
-    image: "/courses/graphic-design.jpg",
+    image: "/courses/graphic-design-new.jpg",
     fee: 20000,
     discount: { type: "taka", amount: 5000, endDate: "29/06/2024" },
     metorIds: [1, 2],
@@ -329,7 +329,7 @@ const courseList: CourseType[] = [
     description2:
       "এই কোর্সটিতে HTML, CSS, JavaScript, jQuery, Bootstrap, Tailwind CSS, PHP, Laravel, MySQL ব্যাসিক টু এডভান্স শেখানো হবে এবং প্রফেশনাল কিছু ওয়েব সাইট তৈরি করার মাধ্যমে কোর্সটি সম্পন্ন করা হবে।",
     category: "it",
-    image: "/courses/web-design.jpg",
+    image: "/courses/web-design-new.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [6],
@@ -592,7 +592,7 @@ const courseList: CourseType[] = [
     description2:
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     category: "advanced",
-    image: "/courses/fine-arts.jpg",
+    image: "/courses/fine-arts-new.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [],
@@ -645,7 +645,7 @@ const courseList: CourseType[] = [
     description2:
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     category: "advanced",
-    image: "/courses/ict.jpg",
+    image: "/courses/ict-new.jpg",
     fee: 20000,
     discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
     metorIds: [],
