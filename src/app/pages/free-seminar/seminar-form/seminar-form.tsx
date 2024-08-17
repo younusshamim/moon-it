@@ -63,7 +63,7 @@ const SeminarForm = () => {
         বিস্তারিত আপনাকে জানিয়ে দিবেন।
       </p>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="xl:grid xl:grid-cols-2 space-y-4 xl:gap-5">
         <Input
           label="আপনার নাম (Only English)"
           placeholder="ইংরেজিতে আপনার নাম লিখুন"

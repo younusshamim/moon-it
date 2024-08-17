@@ -25,11 +25,11 @@ export function Carousel({ children, className, imgOverlaySlider = false, slider
     }, [api])
 
     return (
-        <div className="relative shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-card hover:scale-[1.02] transition-all duration-500">
+        <div className={cn("relative shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-card hover:scale-[1.02] transition-all duration-500", className)}>
             <MyCarousel
                 setApi={setApi}
                 plugins={[plugin.current]}
-                className={cn("w-full", className)}
+                className={cn("w-full",)}
                 onMouseEnter={plugin.current.stop}
                 onMouseLeave={plugin.current.reset}
             >
