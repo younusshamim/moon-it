@@ -31,7 +31,7 @@
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
 
-  --muted: 210 40% 96.1%;
+  --muted: 228 0% 90%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
   --accent: 210 40% 96.1%;
@@ -57,10 +57,7 @@
   --foreground: 228, 26%, 96%; /* #F3F4F8 */
   --foreground-dark:  0, 0%, 98%; /* #FAFAFA */
 
- /*  --border: 224 27 19%; #252c40 */
-  /* --border: 220 42 16%;  */
-  --border: 4 100 34%; 
-  /* 248, 250, 252, .08 */
+  --muted: 220 42% 16%;
 }
 
 .embla {

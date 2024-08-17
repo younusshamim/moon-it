@@ -92,7 +92,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr className="border border-border my-10" />
+        <hr className="border border-muted my-10" />
 
         <p className="text-center">
           কপিরাইট ©{new Date().getFullYear()} মুন আইটি ট্রেইনিং ইনস্টিটিউট।

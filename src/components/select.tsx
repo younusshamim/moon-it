@@ -19,11 +19,11 @@ const Select = ({ label, placeholder = "", options, className, inputClassName, e
             <label className="text-sm">{label}</label>
 
             <ShadcnSelect {...props} >
-                <SelectTrigger className={cn('dark:bg-card border-border px-2 xl:p-3', inputClassName, { 'border-2 border-red-500': error })}>
+                <SelectTrigger className={cn('dark:bg-card border-muted px-2 xl:p-3', inputClassName, { 'border-2 border-red-500': error })}>
                     <SelectValue placeholder={placeholder} />
                 </SelectTrigger>
 
-                <SelectContent className="border-border dark:bg-gray-800 dark:text-white">
+                <SelectContent className="border-muted dark:bg-gray-800 dark:text-white">
                     <SelectGroup>
                         {options.map((item, index) => (
                             <SelectItem value={item.value} key={index}>

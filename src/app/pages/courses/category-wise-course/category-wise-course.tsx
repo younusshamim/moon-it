@@ -21,7 +21,7 @@ const CategoryWiseCourses = ({ courseRef }: PropsType) => {
             className="bg-card shadow-sm p-5 xl:p-10 rounded-card"
             ref={(el) => { courseRef.current[category.name] = el; }}
           >
-            <h1 className="text-4xl text-foreground-dark font-extrabold mb-5 pt-3 xl:pt-0">
+            <h1 className="text-4xl text-primary-lighter font-extrabold mb-5 pt-3 xl:pt-0">
               {category.label}
             </h1>
 

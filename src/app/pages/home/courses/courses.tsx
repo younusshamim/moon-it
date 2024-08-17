@@ -20,7 +20,7 @@ const Courses = () => {
   const tabOptions = getOptions(categories, "label", "name");
 
   return (
-    <div className="bg-card border-b border-border">
+    <div className="bg-card border-b border-muted">
       <Container className="py-20">
         <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-[6px]">
           অসাধারন <GradientText>কোর্স সমূহ</GradientText>

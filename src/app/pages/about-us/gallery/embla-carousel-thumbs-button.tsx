@@ -26,7 +26,7 @@ export const Thumb: React.FC<PropType> = (props) => {
                 className="embla-thumbs__slide__number"
             >
                 <Image
-                    className={cn("w-full h-full object-cover rounded-card shadow-lg cursor-pointer border border-border", { 'border-primary-lighter border-2': selected })}
+                    className={cn("w-full h-full object-cover rounded-card shadow-lg cursor-pointer border border-muted", { 'border-primary-lighter border-2': selected })}
                     src={item.image}
                     height={0}
                     width={0}

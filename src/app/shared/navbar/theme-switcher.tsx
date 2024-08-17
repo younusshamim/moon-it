@@ -15,7 +15,7 @@ const ThemeSwitcher = () => {
             title={theme === 'light' ? "Dark Mode" : "Light Mode"}
             onClick={toggleTheme}
         >
-            {theme === 'light' ? <IoMdMoon /> : <MdSunny />}
+            {theme === 'light' ? <MdSunny /> : <IoMdMoon />}
         </div>
     );
 };

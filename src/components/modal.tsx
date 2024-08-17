@@ -20,7 +20,7 @@ const Modal = ({ isOpen, setIsOpen, triggerBtn, children, className, size }: Pro
                 </DialogTrigger >
             )}
 
-            <DialogContent className={cn("max-w-screen-md max-h-screen overflow-y-auto border-border", className, {
+            <DialogContent className={cn("max-w-screen-md max-h-screen overflow-y-auto border-muted", className, {
                 'max-w-screen-sm': size === 'sm',
                 'max-w-screen-md': size === 'md',
                 'max-w-screen-lg': size === 'lg',
