@@ -52,8 +52,8 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
             <h3 className="text-2xl font-bold text-primary-lighter">৳ <NumSpan>{feeAfterDiscount}</NumSpan> টাকা</h3>
           </div>
 
-          <p className="font-semibold text-[17px] text-secondary">
-            আগামী <NumSpan>{discountEndDate}</NumSpan> ইং তারিখ পর্যন্ত <NumSpan>{discountAmountText}</NumSpan> ডিস্কাউন্টে কোর্স ফি মাত্র ৳ <NumSpan>{feeAfterDiscount}</NumSpan>/- টাকা
+          <p className="font-semibold text-[17px] text-secondary mt-1">
+            [আগামী <NumSpan>{discountEndDate}</NumSpan> ইং তারিখ পর্যন্ত <NumSpan>{discountAmountText}</NumSpan> ডিস্কাউন্টে কোর্স ফি মাত্র ৳ <NumSpan>{feeAfterDiscount}</NumSpan>/- টাকা]
           </p >
         </div >
       </div>
