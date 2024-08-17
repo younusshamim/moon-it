@@ -1,7 +1,6 @@
 import navItems from '@/data/nav-items';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { FiMenu } from "react-icons/fi";
 import ThemeSwitcher from './theme-switcher';
 
 
@@ -13,7 +12,7 @@ const MobileMenu = () => {
         <div className="block xl:hidden relative">
             <div className='flex items-center gap-2'>
                 <ThemeSwitcher />
-                <FiMenu className='text-[26px]' onClick={() => setNavOpen(!navOpen)} />
+                {/* <FiMenu className='text-[26px]' onClick={() => setNavOpen(!navOpen)} /> */}
 
                 {navOpen && (
                     <div className='absolute bg-card w-full left-0 top-10'>
