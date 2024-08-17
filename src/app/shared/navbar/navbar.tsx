@@ -23,13 +23,13 @@ const Navbar = () => {
   return fixedNavbar ? (
     <motion.nav
       {...animation1}
-      className={cn('h-[75px] w-full z-50 fixed top-0 backdrop-blur-3xl bg-gray-100/80 dark:bg-background/90 border-b border-muted')}
+      className={cn('py-[15px] w-full z-50 fixed top-0 bg-[#FAFAFA]/80 dark:bg-[#0B1221]/80 backdrop-blur-3xl border-b border-muted ')}
     >
       <NavContainer logoWidth={isLargeScreen ? 130 : 120} />
     </motion.nav>
   ) : (
-    <nav className={cn('h-[75px] xl:h-[100px] mb-6 xl:mb-0 w-full transition-all bg-gray-100/80 dark:bg-background/90 xl:bg-transparent z-50')}>
-      <NavContainer logoWidth={isLargeScreen ? 150 : 130} />
+    <nav className={cn('py-[15px] xl:py-[25px] sticky top-0 mb-6 xl:mb-0 w-full transition-all z-50 ')}>
+      <NavContainer logoWidth={isLargeScreen ? 150 : 130} mobileNavClassNames="bg-gradient-to-b from-transparent to-card shadow-md" />
     </nav>
   )
 };

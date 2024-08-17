@@ -1,17 +1,15 @@
 'use client';
-
+import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
 import { useTheme } from 'next-themes';
-import NextTopLoader from 'nextjs-toploader';
 
 export default function NextProgress() {
   const { theme, setTheme } = useTheme();
-
   return (
-    <NextTopLoader
+    <ProgressBar
+      height="4px"
       color={theme === 'dark' ? "#00a5e8" : '#f89a4d'}
-      showSpinner={false}
-      crawlSpeed={100}
-      speed={100}
+      options={{ showSpinner: false }}
+      shallowRouting
     />
   );
 }
