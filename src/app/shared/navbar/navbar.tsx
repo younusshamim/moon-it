@@ -21,12 +21,15 @@ const Navbar = () => {
   }, []);
 
   return fixedNavbar ? (
-    <motion.nav
-      {...animation1}
-      className={cn('py-[15px] w-full z-50 fixed top-0 backdrop-blur-3xl border-b border-muted ')}
-    >
-      <NavContainer logoWidth={isLargeScreen ? 130 : 120} />
-    </motion.nav>
+    <div>
+      <div className="h-full w-full absolute blur-md"></div>
+      <motion.nav
+        {...animation1}
+        className={cn('py-[15px] w-full z-50 fixed top-0 backdrop-blur-3xl border-b border-muted ')}
+      >
+        <NavContainer logoWidth={isLargeScreen ? 130 : 120} />
+      </motion.nav>
+    </div>
   ) : (
     <nav className={cn('py-[15px] xl:py-[25px] sticky top-0 mb-6 xl:mb-0 w-full transition-all z-50 ')}>
       <NavContainer logoWidth={isLargeScreen ? 150 : 130} mobileNavClassNames="bg-gradient-to-b from-transparent to-card shadow-md" />
