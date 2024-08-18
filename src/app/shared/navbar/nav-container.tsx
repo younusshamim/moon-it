@@ -72,25 +72,23 @@ const NavContainer = ({ logoWidth, mobileNavClassNames }: PropsType) => {
                     </Link>
                 </div>
 
-
                 {/* ---- mobile menu ----  */}
                 <div className="flex items-center gap-2 xl:hidden">
                     <ThemeSwitcher />
                     {navOpen
-                        ? <IoCloseSharp className='text-[30px]' onClick={navbarToggle} />
+                        ? <IoCloseSharp className='text-[26px]' onClick={navbarToggle} />
                         : <FiMenu className='text-[26px]' onClick={navbarToggle} />
                     }
                 </div>
             </Container>
 
-
             {navOpen && (
-                <Container className={cn("space-y-3 mt-5 py-5 pl-5 ", mobileNavClassNames)}>
+                <Container className={cn("space-y-4 mt-5 py-5 pl-5 ", mobileNavClassNames)}>
                     {navItems.map((item, index) => (
                         <div
                             key={item.name + index} onClick={() => handleNavigate(item.link)} className={cn("", { 'text-primary-lighter': pathname === item.link })}
                         >
-                            <span className="font-semibold text-lg">{item.name}</span>
+                            <span className="font-semibold">{item.name}</span>
                         </div>
                     ))}
                 </Container>
