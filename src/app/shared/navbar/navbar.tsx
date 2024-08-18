@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="h-full w-full absolute blur-md"></div>
       <motion.nav
         {...animation1}
-        className={cn('py-[15px] w-full z-50 fixed top-0 backdrop-blur-3xl border-b border-muted ')}
+        className={cn('py-[15px] w-full z-50 fixed top-0 backdrop-blur-3xl border-b border-muted bg-background2')}
       >
         <NavContainer logoWidth={isLargeScreen ? 130 : 120} />
       </motion.nav>
