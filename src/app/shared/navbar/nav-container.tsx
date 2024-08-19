@@ -24,9 +24,6 @@ const NavContainer = ({ logoWidth, mobileNavClassNames }: PropsType) => {
     const [navOpen, setNavOpen] = useState(false)
     const router = useRouter()
 
-    console.log(pathname);
-
-
     const navbarToggle = () => {
         setNavOpen(!navOpen)
     }

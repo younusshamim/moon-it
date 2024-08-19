@@ -15,22 +15,18 @@ type PropsTypes = {
     inputClassName?: string;
     error?: string;
     defaultValue?: string;
-    isValueString?: boolean;
     isSetParams?: boolean;
 }
 
-const ControlledSelect = ({ control, name, options, label, placeholder, error, defaultValue, isValueString, isSetParams, ...props }: PropsTypes) => {
+const ControlledSelect = ({ control, name, options, label, placeholder, error, defaultValue, isSetParams, ...props }: PropsTypes) => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
 
     const handleValueChange = (selected: any, onChange: (value: string) => void) => {
-        onChange(isValueString ? selected.toString() : parseInt(selected))
+        onChange(!isNaN(Number(selected)) ? Number(selected) : selected)
 
         if (isSetParams) {
-            console.log({ selected });
-
-
             const params = new URLSearchParams(searchParams);
             params.set(name, selected);
             replace(`${pathname}?${params.toString()}`);

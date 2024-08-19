@@ -1,5 +1,6 @@
 "use client";
 import Container from "@/components/container";
+import FormSubmittedModal from "@/components/modals/form-submitted-modal";
 import NumSpan from "@/components/num-span";
 import PrimaryButton from "@/components/primary-button";
 import LineShapes from "@/components/shapes/line-shapes";
@@ -14,7 +15,8 @@ import AdmissionFormModal from "../admission-form-modal/admission-form-modal";
 const CourseDetails = ({ course }: { course: CourseType }) => {
   const { name, description1, description2, fee, discount, image } = course;
   const { type, amount, endDate } = discount;
-  const [modalOpen, setModalOpen] = useState(false);
+  const [formModal, setFormModal] = useState(false);
+  const [submittedModal, setSubmittedModal] = useState(false)
 
   const generateDiscount = () => {
     const discountEndDate = convertToBanglaNumber(endDate);
@@ -43,9 +45,10 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
           </h3>
 
           <div className="flex items-center gap-3 xl:gap-5">
-            <AdmissionFormModal isOpen={modalOpen} setIsOpen={setModalOpen} />
+            <AdmissionFormModal isOpen={formModal} setIsOpen={setFormModal} setSubmittedModal={setSubmittedModal} />
+            <FormSubmittedModal isOpen={submittedModal} setIsOpen={setSubmittedModal} />
 
-            <PrimaryButton size="lg" onClick={() => setModalOpen(true)}>
+            <PrimaryButton size="lg" onClick={() => setFormModal(true)}>
               ডিস্কাউন্টে ভর্তি হোন
             </PrimaryButton>
 

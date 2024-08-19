@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { englishRegex, validateContactNo } from "./common-rules";
 
-export const seminarFormSchema = z.object({
+export const seminarSchema = z.object({
   id: z.number().optional(),
   name: z
     .string()
@@ -13,5 +13,4 @@ export const seminarFormSchema = z.object({
   address: z.string().optional(),
 });
 
-export type CreateSeminarFormInput = z.infer<typeof seminarFormSchema>;
-export type SeminarFormType = Required<CreateSeminarFormInput>;
+export type SeminarType = z.infer<typeof seminarSchema>;

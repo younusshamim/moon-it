@@ -1,34 +1,55 @@
+"use client"
+
 import ControlledSelect from "@/components/controlled-select";
 import Modal from "@/components/modal";
 import PrimaryButton from "@/components/primary-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import courseList from "@/data/course-list";
+import { onAdmission } from "@/lib/actions/admission.action";
 import { convertToBanglaNumber } from "@/lib/utils";
-import { admissionFormSchema, CreateAdmissionFormInput } from "@/lib/validators/admission-form.schema";
+import { AdmissionType, admissionSchema } from "@/lib/validators/admission.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
+import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 
 type PropsTypes = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
+  setSubmittedModal: (isOpen: boolean) => void;
   className?: string;
 }
 
-const AdmissionFormModal = ({ isOpen, setIsOpen }: PropsTypes) => {
-  const methods = useForm<CreateAdmissionFormInput>({
-    resolver: zodResolver(admissionFormSchema),
-    // defaultValues: aaaa,
+const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal }: PropsTypes) => {
+  const [submitted, setSubmitted] = useState(false)
+  const courseFee = 1350;
+
+  const methods = useForm<AdmissionType>({
+    defaultValues: { courseFee: convertToBanglaNumber(courseFee), },
+    resolver: zodResolver(admissionSchema),
   });
 
-  const { register,
+  const {
+    register,
     handleSubmit,
     control,
     watch,
-    formState: { errors }, } = methods;
+    reset,
+    formState: { errors, isSubmitting, },
+  } = methods;
 
-  const onSubmit: SubmitHandler<CreateAdmissionFormInput> = (data: CreateAdmissionFormInput) => console.log(data)
+  const onSubmit: SubmitHandler<AdmissionType> = async (data: AdmissionType) => {
+    const response = await onAdmission(data);
+    if (response?.error) {
+      toast.error(response.error);
+    } else {
+      reset();
+      setIsOpen(false);
+      setSubmittedModal(true);
+    }
+  }
 
   const courseOptions = courseList.map(course => {
     return { label: course.name, value: course.id.toString() }
@@ -54,6 +75,8 @@ const AdmissionFormModal = ({ isOpen, setIsOpen }: PropsTypes) => {
           </h3>
         </div>
 
+
+
         <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-4 xl:gap-5">
           <Input
             label="আপনার নাম (Only English)"
@@ -77,7 +100,6 @@ const AdmissionFormModal = ({ isOpen, setIsOpen }: PropsTypes) => {
           />
           <Input
             label="ডিস্কাউন্টে কোর্স ফি"
-            value={`${convertToBanglaNumber(1350)}/-`}
             inputClassName="disabled:opacity-100 font-sans"
             disabled
             {...register("courseFee")}
@@ -91,7 +113,13 @@ const AdmissionFormModal = ({ isOpen, setIsOpen }: PropsTypes) => {
             error={errors.address?.message as string}
           />
 
-          <PrimaryButton type="submit" className="col-span-2 mt-5">সাবমিট করুন</PrimaryButton>
+          <PrimaryButton
+            type="submit"
+            className="col-span-2 mt-5"
+            disabled={isSubmitting}
+          >
+            সাবমিট করুন
+          </PrimaryButton>
         </form>
       </div>
     </Modal>
