@@ -6,22 +6,23 @@ import PrimaryButton from "@/components/primary-button";
 import LineShapes from "@/components/shapes/line-shapes";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
 import { variant2 } from "@/lib/animations/variants";
-import { CourseType } from "@/lib/types/course";
 import { convertToBanglaNumber } from "@/lib/utils";
+import { CourseType } from "@/types/course";
 import Image from "next/image";
 import { useState } from "react";
 import AdmissionFormModal from "../admission-form-modal/admission-form-modal";
 
 const CourseDetails = ({ course }: { course: CourseType }) => {
   const { name, description1, description2, fee, discount, image } = course;
-  const { type, amount, endDate } = discount;
+  const { type, value, endDate } = discount || { type: '', value: 0, endDate: '' };
+
   const [formModal, setFormModal] = useState(false);
   const [submittedModal, setSubmittedModal] = useState(false)
 
   const generateDiscount = () => {
     const discountEndDate = convertToBanglaNumber(endDate);
-    const discountAmountText = formatDiscountAmount(type, amount);
-    const feeAfterDiscount = convertToBanglaNumber(calculateFeeAfterDiscount(fee, type, amount));
+    const discountAmountText = formatDiscountAmount(type, value);
+    const feeAfterDiscount = convertToBanglaNumber(calculateFeeAfterDiscount(fee, type, value));
     return { discountEndDate, discountAmountText, feeAfterDiscount };
   };
   const { discountEndDate, discountAmountText, feeAfterDiscount } = generateDiscount();
@@ -80,9 +81,9 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
 export default CourseDetails;
 
 
-const calculateFeeAfterDiscount = (fee: number, type: string, amount: number) => {
-  return type === 'taka' ? fee - amount : fee - (fee * amount / 100);
+const calculateFeeAfterDiscount = (fee: number, type: string, value: number) => {
+  return type === 'amount' ? fee - value : fee - (fee * value / 100);
 };
-const formatDiscountAmount = (type: string, amount: number) => {
-  return type === 'taka' ? `${convertToBanglaNumber(amount)}/-` : `${convertToBanglaNumber(amount)}%`;
+const formatDiscountAmount = (type: string, value: number) => {
+  return type === 'amount' ? `${convertToBanglaNumber(value)}/-` : `${convertToBanglaNumber(value)}%`;
 };

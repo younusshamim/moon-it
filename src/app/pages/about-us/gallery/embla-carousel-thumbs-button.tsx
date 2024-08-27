@@ -1,7 +1,7 @@
 "use client";
 
-import { GalleryImgType } from "@/lib/types/gallery";
 import { cn } from "@/lib/utils";
+import { GalleryImgType } from "@/types/gallery";
 import Image from "next/image";
 
 type PropType = {

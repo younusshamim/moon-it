@@ -1,9 +1,8 @@
-import Container from "@/components/container";
-import GradientText from "@/components/gradient-text";
 import MentorCard from "@/app/shared/mentor-card/mentor-card";
-import { MentorType } from "@/lib/types/mentor";
+import Container from "@/components/container";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
 import { variant1, } from "@/lib/animations/variants";
+import { MentorType } from "@/types/mentor";
 
 const CourseMentors = ({ mentors }: { mentors: MentorType[] }) => {
   return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { GalleryImgType } from '@/lib/types/gallery';
+import { GalleryImgType } from '@/types/gallery';
 import { EmblaOptionsType } from 'embla-carousel';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';

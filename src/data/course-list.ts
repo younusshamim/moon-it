@@ -1,4 +1,4 @@
-import { CourseType } from "@/lib/types/course";
+import { CourseType } from "@/types/course";
 
 const courseList: CourseType[] = [
   {
@@ -12,8 +12,8 @@ const courseList: CourseType[] = [
       "এ কোর্সটি বিজনেজ কার্ড, আইডি কার্ড, লগো ডিজাইন, ব্রোশিওর ডিজাইন, ক্যালেন্ডার ডিজাইন, লেটারহেড, ফ্লায়ার কার্ড ও মকাপ ডিজাইন সহ প্রায় ৫০টি প্রজেক্ট ডিজাইনের সমন্বয়ে গঠিত।",
     category: "it",
     image: "/courses/graphic-design-new.jpg",
-    fee: 20000,
-    discount: { type: "taka", amount: 5000, endDate: "29/06/2024" },
+    fee: 14500,
+    discount: { type: "amount", value: 6000, endDate: "20/09/2024" },
     metorIds: [1, 2],
     services: [
       {
@@ -65,8 +65,8 @@ const courseList: CourseType[] = [
       "এ কোর্সটি Search Engine Optimization, Search Engine Marketing এবং Social Media Marketing সহ একটি Business গ্রোও করার সকল নিয়ম ও অনলাইন আয়ের কলাকৌশল নিয়ে গঠিত।",
     category: "it",
     image: "/courses/digital-marketing.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 12500,
+    discount: { type: "amount", value: 5000, endDate: "20/09/2024" },
     metorIds: [4],
     services: [
       {
@@ -118,8 +118,8 @@ const courseList: CourseType[] = [
       "AutoCAD সফটওয়্যারটি Civil ও Architecture ইঞ্জিনিয়ারদের জন্য বিল্ডিং ডিজাইনিংয়ের ক্ষেত্রে  খুবই গুরুত্বপূর্ণ একটি সফটওয়্যার। এ ছাড়াও Mechanical ও Electrical ইঞ্জিনিয়াররাও ব্যবহার করে থাকে।",
     category: "it",
     image: "/courses/auto-cad.jpg",
-    fee: 20000,
-    discount: { type: "taka", amount: 3000, endDate: "29/06/2024" },
+    fee: 12500,
+    discount: { type: "amount", value: 5000, endDate: "20/09/2024" },
     metorIds: [5],
     services: [
       {
@@ -171,8 +171,8 @@ const courseList: CourseType[] = [
       "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যার, নেটওয়াকিং, এসেম্বলিং, ডি-এসেম্বলিং ও ট্রাবলসুটিং ইত্যাদি কাজ নিয়ে গঠিত।",
     category: "it",
     image: "/courses/it-support.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 10500,
+    discount: { type: "amount", value: 2000, endDate: "20/09/2024" },
     metorIds: [2, 3],
     services: [
       {
@@ -224,8 +224,8 @@ const courseList: CourseType[] = [
       "এ কোর্সটি ইংরেজি টাইপিং, বাংলা টাইপিং সহ  Ms Word, Ms Excel, Ms Power Point,  Ms Access ও বেসিক হার্ডওয়্যার, সফটওয়্যারের কাজ নিয়ে গঠিত।",
     category: "it",
     image: "/courses/office-application.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 7500,
+    discount: { type: "amount", value: 2000, endDate: "20/09/2024" },
     metorIds: [3, 2],
     services: [
       {
@@ -277,8 +277,8 @@ const courseList: CourseType[] = [
       "বেসিক নেটওয়ার্কিং থেকে শুরু করে সহ  Routing Protocol, Switching Protocol, সহ Server Mantainace এর বেশ কিছু প্রটোকল নিয়ে এ কোর্সটি সাজানো হয়েছে।",
     category: "it",
     image: "/courses/networking.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 12500,
+    discount: { type: "amount", value: 4000, endDate: "20/09/2024" },
     metorIds: [1],
     services: [
       {
@@ -330,8 +330,8 @@ const courseList: CourseType[] = [
       "এই কোর্সটিতে HTML, CSS, JavaScript, jQuery, Bootstrap, Tailwind CSS, PHP, Laravel, MySQL ব্যাসিক টু এডভান্স শেখানো হবে এবং প্রফেশনাল কিছু ওয়েব সাইট তৈরি করার মাধ্যমে কোর্সটি সম্পন্ন করা হবে।",
     category: "it",
     image: "/courses/web-design-new.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 12500,
+    discount: { type: "amount", value: 4000, endDate: "20/09/2024" },
     metorIds: [6],
     services: [
       {
@@ -382,8 +382,8 @@ const courseList: CourseType[] = [
     description2: "",
     category: "language",
     image: "/courses/spoken-english.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 6500,
+    discount: { type: "percentage", value: 50, endDate: "20/09/2024" },
     metorIds: [7],
     services: [
       {
@@ -435,8 +435,8 @@ const courseList: CourseType[] = [
       "এ কোর্সের মাধ্যমে প্রচলিত আরবি শব্দভান্ডার, বেসিক ছরফ, বেসিক নাহু, বহুল পাঠিত কোরআনের ছোট সূরা গুলোর শাব্দিক বঙ্গানুবাদ, ছোট-বড় বাক্য গঠন সহ যেকোন পরিবেশে আরবি ভাষায় প্রেজেন্টেশনের দক্ষতা তৈরী হবে। ইনশাআল্লাহ।",
     category: "language",
     image: "/courses/arabic.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 9500,
+    discount: { type: "percentage", value: 50, endDate: "20/09/2024" },
     metorIds: [10],
     services: [
       {
@@ -487,8 +487,8 @@ const courseList: CourseType[] = [
     description2: "",
     category: "language",
     image: "/courses/korean-language.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 15000,
+    discount: { type: "amount", value: 5000, endDate: "20/09/2024" },
     metorIds: [8],
     services: [
       {
@@ -541,7 +541,7 @@ const courseList: CourseType[] = [
     category: "language",
     image: "/courses/japanese-language.jpg",
     fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    discount: { type: "amount", value: 5000, endDate: "20/09/2024" },
     metorIds: [9],
     services: [
       {
@@ -593,8 +593,8 @@ const courseList: CourseType[] = [
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     category: "advanced",
     image: "/courses/fine-arts-new.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 0,
+    discount: null,
     metorIds: [12],
     services: [
       {
@@ -646,8 +646,8 @@ const courseList: CourseType[] = [
       "বাংলাদেশিদের কোরিয়ান ভাষা শিখার প্রধান কারন হচ্ছে কোরিয়াতে গিয়ে চাকরি করা অথবা পড়াশুনা করা। প্রযুক্তির দিক থেকে যে দেশ গুলো পৃথিবীতে শীর্ষে তার মধ্যে কোরিয়া অন্যতম। কোরিয়া হচ্ছে প্রযুক্তিগত দিক দিয়ে পুরো বিশ্বের গুরু। সেক্ষেত্রে কোরিয়ান ভাষা শিখে খুব সহজেই কোরিয়াতে গিয়ে আপনি পড়াশোনা এবং ভালো বেতনে চাকরি করতে পারবেন।",
     category: "advanced",
     image: "/courses/ict-new.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 0,
+    discount: null,
     metorIds: [11],
     services: [
       {
@@ -698,8 +698,8 @@ const courseList: CourseType[] = [
     description2: "",
     category: "industrial",
     image: "/courses/diploma-industrial.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 0,
+    discount: null,
     metorIds: [],
     services: [
       {
@@ -750,8 +750,8 @@ const courseList: CourseType[] = [
     description2: "",
     category: "industrial",
     image: "/courses/diploma-industrial.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 0,
+    discount: null,
     metorIds: [],
     services: [
       {
@@ -802,8 +802,8 @@ const courseList: CourseType[] = [
     description2: "",
     category: "industrial",
     image: "/courses/diploma-industrial.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 0,
+    discount: null,
     metorIds: [],
     services: [
       {
@@ -855,8 +855,8 @@ const courseList: CourseType[] = [
       "শিক্ষা জীবনে যারা Diploma Engineering বা B.sc Engineering এ পড়েন, তাদের ৯০% ই চাকুরী ক্ষেত্রে বিভিন্ন Technical ইন্ডাস্ট্রিতে কাজ করেন, আর এই সব প্রতিষ্ঠানে কাজ করার পূর্বে তাদেরকে প্রাকটিক্যাল নলেজ অর্জনের জন্য কোনো না কোনো প্রতিষ্ঠানে একাডেমিক ক্যারিকুলাম অনুযায়ী Internship করতে হয়। আর Internship এর এই Course টাকে বলা হয় Industrial Attachment বা Industrial Training. এ কোর্সে মূলত, Computer Science, Civil, Architecture ও Electrical ইঞ্জিনিয়ারদের একাডেমিক ক্যারিকুলাম অনুযায়ী ট্রেনিং করানো হবে। ",
     category: "industrial",
     image: "/courses/diploma-industrial.jpg",
-    fee: 20000,
-    discount: { type: "perc", amount: 30, endDate: "29/06/2024" },
+    fee: 0,
+    discount: null,
     metorIds: [],
     services: [
       {

@@ -1,5 +1,5 @@
-import { OptionType } from "@/lib/types/option-type";
 import { cn } from "@/lib/utils";
+import { OptionType } from "@/types/option-type";
 
 type PropsType = {
     tabOptions: OptionType[];

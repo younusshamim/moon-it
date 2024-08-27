@@ -1,4 +1,4 @@
-import { GalleryImgType } from "@/lib/types/gallery";
+import { GalleryImgType } from "@/types/gallery";
 import {
   aboutImages,
   chairmanImage,

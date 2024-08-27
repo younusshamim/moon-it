@@ -1,7 +1,7 @@
 'use client';
 
+import useMediaQuery from "@/hooks/use-media-query";
 import { animation1 } from "@/lib/animations/animations";
-import useMediaQuery from "@/lib/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { motion } from 'framer-motion';
 import { useEffect, useState } from "react";

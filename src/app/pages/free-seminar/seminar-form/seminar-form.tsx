@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import attendPosibility from "@/data/attend-posibility";
 import courseList from "@/data/course-list";
-import { CreateSeminarFormInput, seminarFormSchema } from "@/lib/validators/seminar-form.schema";
+import { seminarSchema, SeminarType } from "@/schemas/zod/seminar.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,8 +17,8 @@ const SeminarForm = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   // hooks 
-  const methods = useForm<CreateSeminarFormInput>({
-    resolver: zodResolver(seminarFormSchema),
+  const methods = useForm<SeminarType>({
+    resolver: zodResolver(seminarSchema),
   });
 
   const { register,
@@ -40,7 +40,7 @@ const SeminarForm = () => {
 
 
   // handler 
-  const onSubmit: SubmitHandler<CreateSeminarFormInput> = (data: CreateSeminarFormInput) => {
+  const onSubmit: SubmitHandler<SeminarType> = (data: SeminarType) => {
     setIsOpen(true);
   }
   // data 
@@ -94,7 +94,6 @@ const SeminarForm = () => {
           options={attendPosibilityOptions}
           control={control}
           error={errors.attendPosibility?.message as string}
-          isValueString={true}
         />
         <Textarea
           label="আপনার ঠিকানা"

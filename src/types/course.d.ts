@@ -1,10 +1,10 @@
 import { ServiceType } from "./service";
 
-interface DiscountType {
-  type: string;
-  amount: number;
+type DiscountType = {
+  type: "amount" | "percentage";
+  value: number;
   endDate: string;
-}
+} | null;
 
 export interface CourseType {
   id: number;

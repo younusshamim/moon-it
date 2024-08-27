@@ -1,6 +1,6 @@
 "use client"
 
-import { OptionType } from "@/lib/types/option-type";
+import { OptionType } from "@/types/option-type";
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Controller } from "react-hook-form";
 import Select from "./select";

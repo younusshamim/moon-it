@@ -1,4 +1,4 @@
-import { OptionType } from "../types/option-type";
+import { OptionType } from "../../types/option-type";
 
 const getOptions = (
   list: any[],

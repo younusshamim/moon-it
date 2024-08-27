@@ -6,14 +6,17 @@ import PrimaryButton from "@/components/primary-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import courseList from "@/data/course-list";
-import { onAdmission } from "@/lib/actions/admission.action";
 import { convertToBanglaNumber } from "@/lib/utils";
-import { AdmissionType, admissionSchema } from "@/lib/validators/admission.schema";
+import initialState from "@/lib/utils/inital-state";
+import { AdmissionModel } from "@/models/admission.model";
+import { BaseResponseModel } from "@/models/base";
+import { admissionSchema } from "@/schemas/zod/admission.schema";
+import { onAdmission } from "@/services/admission.service";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import { useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
-import { toast } from "react-hot-toast";
+import { useEffect, useState } from "react";
+import { useFormState, useFormStatus } from "react-dom";
+import { FieldPath, useForm } from "react-hook-form";
 
 type PropsTypes = {
   isOpen: boolean;
@@ -26,30 +29,61 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal }: PropsTypes
   const [submitted, setSubmitted] = useState(false)
   const courseFee = 1350;
 
-  const methods = useForm<AdmissionType>({
+  const methods = useForm<any>({
+    mode: "all",
     defaultValues: { courseFee: convertToBanglaNumber(courseFee), },
     resolver: zodResolver(admissionSchema),
   });
 
+  const [state, formAction] = useFormState<BaseResponseModel<null>, FormData>(onAdmission, initialState);
+  const { pending } = useFormStatus();
+
   const {
     register,
-    handleSubmit,
     control,
-    watch,
-    reset,
-    formState: { errors, isSubmitting, },
+    formState: { isValid, errors },
+    setError
   } = methods;
 
-  const onSubmit: SubmitHandler<AdmissionType> = async (data: AdmissionType) => {
-    const response = await onAdmission(data);
-    if (response?.error) {
-      toast.error(response.error);
-    } else {
-      reset();
-      setIsOpen(false);
-      setSubmittedModal(true);
+  useEffect(() => {
+    if (!state) {
+      return;
     }
-  }
+    if (state.status === "error") {
+      state.errors?.forEach((error) => {
+        setError(error.path as FieldPath<AdmissionModel>, {
+          message: error.message,
+        });
+      });
+    }
+    if (state.status === "success") {
+      alert(state.message);
+    }
+  }, [state, setError]);
+
+  // const onSubmit: SubmitHandler<AdmissionType> = async (data: AdmissionType) => {
+  //   try {
+  //     const response = await onAdmission(data);
+
+  //     reset();
+  //     setIsOpen(false);
+  //     setSubmitted(true);
+  //   } catch (error) {
+  //     // console.error("Error:", error);
+  //     // toast.error(error instanceof Error ? error.message : "An unknown error occurred");
+  //     toast.error("An unknown error occurred");
+  //   }
+
+  // try {
+  //   const response = await onAdmission(data);
+
+  //   reset();
+  //   setIsOpen(false);
+  //   setSubmittedModal(true);
+  // } catch (error) {
+  //   console.log('hi...', error);
+  //   toast.error(error?.message ?? '');
+  // }
 
   const courseOptions = courseList.map(course => {
     return { label: course.name, value: course.id.toString() }
@@ -75,9 +109,7 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal }: PropsTypes
           </h3>
         </div>
 
-
-
-        <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-2 gap-4 xl:gap-5">
+        <form action={formAction} className="grid grid-cols-2 gap-4 xl:gap-5">
           <Input
             label="আপনার নাম (Only English)"
             placeholder="ইংরেজিতে আপনার নাম লিখুন"
@@ -116,7 +148,7 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal }: PropsTypes
           <PrimaryButton
             type="submit"
             className="col-span-2 mt-5"
-            disabled={isSubmitting}
+            disabled={pending || !isValid}
           >
             সাবমিট করুন
           </PrimaryButton>

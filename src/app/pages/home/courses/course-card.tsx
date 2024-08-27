@@ -1,6 +1,6 @@
 import PrimaryButton from "@/components/primary-button";
-import { CourseType } from "@/lib/types/course";
 import { cn } from "@/lib/utils";
+import { CourseType } from "@/types/course";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";

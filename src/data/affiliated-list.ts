@@ -1,4 +1,4 @@
-import { AffiliatedType } from "@/lib/types/affiliated";
+import { AffiliatedType } from "@/types/affiliated";
 
 const affiliatedList: AffiliatedType[] = [
   {

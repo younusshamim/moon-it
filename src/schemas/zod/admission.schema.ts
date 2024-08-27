@@ -12,4 +12,4 @@ export const admissionSchema = z.object({
   address: z.string().optional(),
 });
 
-export type AdmissionType = z.infer<typeof admissionSchema>;
+// export type AdmissionType = z.infer<typeof admissionSchema>;

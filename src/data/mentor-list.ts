@@ -1,4 +1,4 @@
-import { MentorType } from "@/lib/types/mentor";
+import { MentorType } from "@/types/mentor";
 
 const mentorList: MentorType[] = [
   {

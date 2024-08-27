@@ -1,5 +1,5 @@
-import { ServiceType } from "@/lib/types/service";
 import { cn } from "@/lib/utils";
+import { ServiceType } from "@/types/service";
 import Image from "next/image";
 
 type PropsTypes = {
