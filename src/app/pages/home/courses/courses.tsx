@@ -1,22 +1,24 @@
 "use client";
+import { Carousel } from "@/components/carousel";
 import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
 import PrimaryButton from "@/components/primary-button";
 import Tabs from "@/components/tabs";
+import { CarouselItem } from "@/components/ui/carousel";
 import categories from "@/data/categories";
 import courseList from "@/data/course-list";
 import TabsAnimation from "@/lib/animations/tabs-animation";
 import getOptions from "@/lib/utils/get-options";
 import Link from "next/link";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import CourseCard from "./course-card";
 
 const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | number>(categories[0].name);
-  const courses = courseList.filter(
+  const courses = useMemo(() => courseList.filter(
     (course) => course.category === selectedCategory
-  );
+  ), [selectedCategory]);
   const tabOptions = getOptions(categories, "label", "name");
 
   return (
@@ -36,12 +38,20 @@ const Courses = () => {
         />
 
         <TabsAnimation selected={selectedCategory}>
-          <div className="grid grid-cols-1 xl:grid-cols-4 gap-x-5 gap-y-6">
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
             {courses.map((course, index) => {
               return <CourseCard course={course} key={course.name + index} />;
             })}
           </div>
         </TabsAnimation>
+
+        <Carousel key={selectedCategory} sliderDots={true} className="block md:hidden" dotsClassName="bg-gray-500">
+          {courses.map((course, index) => (
+            <CarouselItem key={course.name + index} className="basis-4/5 sm:basis-1/2">
+              <CourseCard course={course} />
+            </CarouselItem>
+          ))}
+        </Carousel>
 
         <Link href="/courses">
           <PrimaryButton

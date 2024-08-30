@@ -46,7 +46,7 @@ const NavContainer = ({ logoWidth, mobileNavClassNames }: PropsType) => {
                     />
                 </Link>
 
-                <div className="hidden xl:flex items-center gap-2 ">
+                <div className="hidden lg:flex items-center gap-2 ">
                     {navItems.map((item, index) => (
                         <Link
                             href={item.link}
@@ -70,7 +70,7 @@ const NavContainer = ({ logoWidth, mobileNavClassNames }: PropsType) => {
                 </div>
 
                 {/* ---- mobile menu ----  */}
-                <div className="flex items-center gap-2 xl:hidden">
+                <div className="flex items-center gap-2 lg:hidden">
                     <ThemeSwitcher />
                     {navOpen
                         ? <IoCloseSharp className='text-[26px]' onClick={navbarToggle} />

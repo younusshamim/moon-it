@@ -21,15 +21,13 @@ const Mentors = () => {
           ))}
         </div>
 
-        <div className="block xl:hidden">
-          <Carousel sliderDots={true} className="shadow-none">
-            {mentorList.map((mentor, index) => (
-              <CarouselItem key={mentor.name + index} className="basis-1/2 ">
-                <MentorCard mentor={mentor} />
-              </CarouselItem>
-            ))}
-          </Carousel>
-        </div>
+        <Carousel className="block xl:hidden" sliderDots={true} >
+          {mentorList.map((mentor, index) => (
+            <CarouselItem key={mentor.name + index} className="basis-1/2 ">
+              <MentorCard mentor={mentor} />
+            </CarouselItem>
+          ))}
+        </Carousel>
       </Container>
     </div>
   );

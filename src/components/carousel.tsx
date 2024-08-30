@@ -9,9 +9,10 @@ type PropsTypes = {
     className?: string
     imgOverlaySlider?: boolean
     sliderDots?: boolean
+    dotsClassName?: string
 }
 
-export function Carousel({ children, className, imgOverlaySlider = false, sliderDots = false }: PropsTypes) {
+export function Carousel({ children, className, dotsClassName, imgOverlaySlider = false, sliderDots = false }: PropsTypes) {
     const [api, setApi] = useState<CarouselApi>()
     const [current, setCurrent] = useState(0)
     const [count, setCount] = useState(0)
@@ -25,7 +26,7 @@ export function Carousel({ children, className, imgOverlaySlider = false, slider
     }, [api])
 
     return (
-        <div className={cn("relative shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-card hover:scale-[1.02] transition-all duration-500", className)}>
+        <div className={cn("relative shadow-lg shadow-gray-400 dark:shadow-gray-700 rounded-card hover:scale-[1.02] transition-all duration-500", className, { 'shadow-none': sliderDots })}>
             <MyCarousel
                 setApi={setApi}
                 plugins={[plugin.current]}
@@ -50,7 +51,7 @@ export function Carousel({ children, className, imgOverlaySlider = false, slider
             {sliderDots && <div className="w-full justify-center flex gap-2 mt-5">
                 {Array.from({ length: count }).map((_, index) => (
                     <div
-                        key={index} className={cn('h-[6px] w-[6px] rounded-card bg-white', { 'bg-primary-lighter ': current == index + 1 })}
+                        key={index} className={cn('h-[6px] w-[6px] rounded-card bg-white', dotsClassName, { 'bg-primary-lighter ': current == index + 1 })}
                     >
                     </div>
                 ))}

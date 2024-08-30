@@ -15,42 +15,42 @@ const HeroSection = () => {
     <div className="relative">
       <LineShapes />
 
-      <Container className="py-9 flex flex-col xl:flex-row items-center justify-between gap-16 xl:gap-28">
-        <div className="w-full flex flex-col gap-4 xl:gap-7 z-40 items-center xl:items-start text-center xl:text-start">
+      <Container className="py-9 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-28">
+        <div className="w-full flex flex-col gap-4 lg:gap-7 z-40 items-center lg:items-start text-center lg:text-start">
           <h2 className="font-bold text-[17px] shadow-md dark:bg-background2 rounded-btn w-fit px-3 pt-2 pb-1">
             <BsStars className="inline text-xl text-primary mr-1" />
             ফেনীর সেরা ট্রেনিং ইনস্টিটিউটে
           </h2>
 
-          <h2 className="text-foreground-dark font-extrabold text-[40px] xl:text-[52px] leading-snug">
+          <h2 className="text-foreground-dark font-extrabold text-[40px] lg:text-[52px] leading-snug">
             নিজেকে গড়ে তুলুন <GradientText>ইন্ডাস্ট্রি এক্সপার্ট</GradientText> {""}
             ‍হিসেবে।
           </h2>
 
-          <h1 className="xl:text-justify xl:text-lg">
+          <h1 className="lg:text-justify lg:text-lg">
             মুন আইটি বৃহত্তর ফেনী/নোয়াখালীতে সর্বোচ্চ আসন ও ডিপার্টমেন্ট সমৃদ্ধ ট্রেনিং ইনস্টিটিউট। অভিজ্ঞ মেন্টর আর আপডেটেড কারিকুলাম নিয়ে ‘মুন আইটি’
             প্রস্তুত আপনার ক্যারিয়ার গড়ার অগ্রযাত্রায়।
           </h1>
 
-          <div className="flex gap-4 z-40 w-full xl:w-fit">
-            <Link href="free-seminar" className="w-1/2 xl:w-fit">
-              <PrimaryButton size="lg" iconRight={<MdOutlineComputer />} className="w-full xl:w-fit">
+          <div className="flex gap-4 z-40 w-full lg:w-fit">
+            <Link href="free-seminar" className="w-1/2 lg:w-fit">
+              <PrimaryButton size="lg" iconRight={<MdOutlineComputer />} className="w-full lg:w-fit">
                 ফ্রি সেমিনার
               </PrimaryButton>
             </Link>
 
-            <Link href="courses" className="w-1/2 xl:w-fit">
+            <Link href="courses" className="w-1/2 lg:w-fit">
               <PrimaryButton
                 iconRight={<MdOutlineComputer className="text-primary" />}
                 variant="outline"
-                size="lg" className="w-full xl:w-fit"
+                size="lg" className="w-full lg:w-fit"
               >
                 সব কোর্স
               </PrimaryButton>
             </Link>
           </div>
 
-          {/* <div className="flex items-center gap-2 xl:gap-4 z-40 ">
+          {/* <div className="flex items-center gap-2 lg:gap-4 z-40 ">
             <Image
               className="w-16 h-auto"
               sizes="100vw"
@@ -59,7 +59,7 @@ const HeroSection = () => {
               src="/logo/BTEB-Logo.png"
               alt="Bangladesh Technical Education Board (BTEB)"
             />
-            <h2 className="font-semibold w-full xl:w-2/4 text-left xl:text-justify text-sm xl:text-base">
+            <h2 className="font-semibold w-full lg:w-2/4 text-left lg:text-justify text-sm lg:text-base">
               বাংলাদেশ কারিগরি শিক্ষা বোর্ড কর্তৃক অনুমোদিত আইটি ট্রেনিং
               ইনস্টিটিউট।
             </h2>
@@ -71,7 +71,7 @@ const HeroSection = () => {
             {heroImages.map((item, index) => (
               <CarouselItem key={index}>
                 <Image
-                  className="w-full h-[380px] xl:h-[420px] object-cover rounded-card"
+                  className="w-full h-[380px] lg:h-[420px] object-cover rounded-card"
                   sizes="100vw"
                   width={0}
                   height={0}

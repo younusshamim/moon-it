@@ -1,3 +1,4 @@
+import { useLgScreen, useMdScreenOnly, useSmScreenOnly, useXsScreenOnly } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { ServiceType } from "@/types/service";
 import Image from "next/image";
@@ -9,12 +10,20 @@ type PropsTypes = {
 }
 
 const ServiceCard = ({ service, index, dataLength }: PropsTypes) => {
+  const lgScreen = useLgScreen()
+  const mdScreenOnly = useMdScreenOnly()
+  const smScreenOnly = useSmScreenOnly()
+  const xsScreenOnly = useXsScreenOnly()
+
   return (
     <div
-      className={cn("p-5 xl:p-10 text-center border-muted",
-        { 'xl:border-r': (index + 1) % 3 !== 0 },
-        { 'xl:border-b': dataLength - 3 > index },
-        { 'border-t xl:border-t-0': index !== 0 },
+      className={cn("p-5 lg:p-10 text-center border-muted",
+        { 'lg:border-r': (index + 1) % 3 !== 0 && lgScreen },
+        { 'md:border-r': index % 2 == 0 && mdScreenOnly },
+
+        { 'lg:border-b': dataLength - 3 > index && lgScreen },
+        { 'border-b': dataLength - 2 > index && mdScreenOnly },
+        { 'border-b': dataLength - 1 > index && (smScreenOnly || xsScreenOnly) },
       )}>
       <div className="hover:scale-105 transition-all duration-500 flex flex-col items-center gap-1">
         <Image
