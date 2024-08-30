@@ -7,27 +7,47 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import attendPosibility from "@/data/attend-posibility";
 import courseList from "@/data/course-list";
-import { seminarSchema, SeminarType } from "@/schemas/zod/seminar.schema";
+import { BaseResponseModel } from "@/models/base";
+import { seminarSchema, } from "@/schemas/zod/seminar.schema";
+import { onJoinSeminar } from "@/services/seminar.action";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useFormState } from "react-dom";
+import { useForm } from "react-hook-form";
+import toast from 'react-hot-toast';
 
 const SeminarForm = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [submittdModal, setSubmittedModal] = useState(false);
+  const [state, formAction] = useFormState<BaseResponseModel<null>, FormData>(onJoinSeminar, null);
 
   // hooks 
-  const methods = useForm<SeminarType>({
+  const methods = useForm<any>({
     resolver: zodResolver(seminarSchema),
   });
 
-  const { register,
-    handleSubmit,
+  const {
+    register,
     control,
-    watch,
-    getValues,
-    formState: { errors }, } = methods;
+    handleSubmit,
+    formState: { errors },
+    reset,
+    getValues
+  } = methods;
 
+  const onSubmit = handleSubmit((data) => formAction(data))
+
+  useEffect(() => {
+    if (!state) { return }
+    if (state.status === 'success') {
+      reset();
+      setSubmittedModal(true);
+    } else if (state.status === 'error') {
+      toast.error(state.message);
+    }
+  }, [reset, state]);
+
+  // 
   const searchParams = useSearchParams()
   const selectedCourseId = getValues('courseId')
 
@@ -38,11 +58,6 @@ const SeminarForm = () => {
     }
   }, [selectedCourseId])
 
-
-  // handler 
-  const onSubmit: SubmitHandler<SeminarType> = (data: SeminarType) => {
-    setIsOpen(true);
-  }
   // data 
   const courseOptions = courseList.map(course => {
     return { label: course.name, value: course.id.toString() }
@@ -53,7 +68,7 @@ const SeminarForm = () => {
 
   return (
     <div className="w-full xl:w-3/5 p-3 xl:p-10 z-40">
-      <FormSubmittedModal isOpen={isOpen} setIsOpen={setIsOpen} />
+      <FormSubmittedModal isOpen={submittdModal} setIsOpen={setSubmittedModal} />
 
       <h1 className="spacing text-3xl mb-[6px] font-black text-foreground-dark text-center">
         জয়েন <GradientText>ফ্রি সেমিনার</GradientText>
@@ -63,7 +78,7 @@ const SeminarForm = () => {
         বিস্তারিত আপনাকে জানিয়ে দিবেন।
       </p>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="xl:grid xl:grid-cols-2 space-y-4 xl:gap-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 xl:grid-cols-2 gap-5">
         <Input
           label="আপনার নাম (Only English)"
           placeholder="ইংরেজিতে আপনার নাম লিখুন"
@@ -98,13 +113,13 @@ const SeminarForm = () => {
         <Textarea
           label="আপনার ঠিকানা"
           placeholder="আপনার ঠিকানা লিখুন"
-          className="col-span-2"
+          className="xl:col-span-2"
           inputClassName="bg-white"
           {...register("address")}
           error={errors.address?.message as string}
         />
 
-        <div className="col-span-2 flex justify-center mt-5">
+        <div className="xl:col-span-2 flex justify-center mt-5">
           <PrimaryButton type="submit" className="px-12">
             সাবমিট করুন
           </PrimaryButton>

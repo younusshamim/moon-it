@@ -30,7 +30,7 @@ const ControlledSelect = ({ control, name, options, label, placeholder, error, i
         if (isSetParams) {
             const params = new URLSearchParams(searchParams);
             params.set(name, selected);
-            replace(`${pathname}?${params.toString()}`);
+            replace(`${pathname}?${params.toString()}`, { scroll: false });
         }
     }
 

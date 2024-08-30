@@ -2,7 +2,6 @@ import { z } from "zod";
 import { englishRegex, validateContactNo } from "./common-rules";
 
 export const seminarSchema = z.object({
-  id: z.number().optional(),
   name: z
     .string()
     .min(1, { message: "নাম আবশ্যক" })
@@ -12,5 +11,3 @@ export const seminarSchema = z.object({
   attendPosibility: z.string({ message: "সিলেক্ট করুন" }),
   address: z.string().optional(),
 });
-
-export type SeminarType = z.infer<typeof seminarSchema>;
