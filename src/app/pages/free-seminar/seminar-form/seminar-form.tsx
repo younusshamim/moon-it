@@ -67,7 +67,7 @@ const SeminarForm = () => {
   })
 
   return (
-    <div className="w-full xl:w-3/5 p-3 xl:p-10 z-40">
+    <div className="w-full xl:w-3/5 p-3 lg:p-10 z-40">
       <FormSubmittedModal isOpen={submittdModal} setIsOpen={setSubmittedModal} />
 
       <h1 className="spacing text-3xl mb-[6px] font-black text-foreground-dark text-center">
@@ -78,7 +78,7 @@ const SeminarForm = () => {
         বিস্তারিত আপনাকে জানিয়ে দিবেন।
       </p>
 
-      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+      <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 lg:grid-cols-2 gap-5">
         <Input
           label="আপনার নাম (Only English)"
           placeholder="ইংরেজিতে আপনার নাম লিখুন"
@@ -113,13 +113,13 @@ const SeminarForm = () => {
         <Textarea
           label="আপনার ঠিকানা"
           placeholder="আপনার ঠিকানা লিখুন"
-          className="xl:col-span-2"
+          className="lg:col-span-2"
           inputClassName="bg-white"
           {...register("address")}
           error={errors.address?.message as string}
         />
 
-        <div className="xl:col-span-2 flex justify-center mt-5">
+        <div className="lg:col-span-2 flex justify-center mt-5">
           <PrimaryButton type="submit" className="px-12">
             সাবমিট করুন
           </PrimaryButton>

@@ -33,7 +33,7 @@ const Logos = () => {
         {logos.map((item, index) => (
           <Image
             key={index}
-            className="w-[70px] h-20 xl:w-24 xl:h-20 object-contain hover:scale-110 duration-500"
+            className="w-[70px] h-20 lg:w-24 lg:h-20 object-contain hover:scale-110 duration-500"
             sizes="100vw"
             width={0}
             height={0}

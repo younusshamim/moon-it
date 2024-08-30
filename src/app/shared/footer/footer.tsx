@@ -11,9 +11,9 @@ const Footer = () => {
   return (
     <div className="bg-card ">
       <Container className="pt-20 pb-10">
-        <div className="grid grid-cols-1 xl:grid-cols-4 gap-10 xl:gap-0 place-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-0 place-items-center">
           {/* social and logo  */}
-          <div className="flex flex-col items-center xl:items-start">
+          <div className="flex flex-col items-center lg:items-start">
             <Image
               className="w-36 h-auto object-contain mb-5"
               src="/logo/logo.png"
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
 
           {/* quick links */}
-          <div className="hidden xl:block">
+          <div className="hidden lg:block">
             <h3 className="font-bold text-xl mb-2">কুইক লিংক-</h3>
             <div className="flex flex-col gap-1">
               <p className="cursor-pointer">
@@ -76,7 +76,7 @@ const Footer = () => {
           </div>
 
           {/* popular courses  */}
-          <div className="hidden xl:block">
+          <div className="hidden lg:block">
             <h3 className="font-bold text-xl mb-2">জনপ্রিয় কোর্স সমূহ-</h3>
             <div className="flex flex-col gap-1">
               <p className="cursor-pointer">প্রফেশনাল গ্রাফিক্স ডিজাইন</p>

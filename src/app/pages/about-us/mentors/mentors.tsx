@@ -7,7 +7,7 @@ import Chairman from "../chairman/chairman";
 
 const Mentors = () => {
   return (
-    <div className="bg-primary dark:bg-background2 space-y-32 xl:space-y-40">
+    <div className="bg-primary dark:bg-background2 space-y-32 lg:space-y-40">
       <Chairman />
 
       <Container className="pb-20">
@@ -15,13 +15,13 @@ const Mentors = () => {
           ইন্ডাস্ট্রি এক্সপার্ট ইনস্ট্রাক্টর
         </h2>
 
-        <div className="hidden xl:grid grid-cols-5 gap-5 xl:gap-8">
+        <div className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-8">
           {mentorList.map((mentor, index) => (
             <MentorCard mentor={mentor} key={mentor.name + index} />
           ))}
         </div>
 
-        <Carousel className="block xl:hidden" sliderDots={true} >
+        <Carousel className="block sm:hidden" sliderDots={true} >
           {mentorList.map((mentor, index) => (
             <CarouselItem key={mentor.name + index} className="basis-1/2 ">
               <MentorCard mentor={mentor} />

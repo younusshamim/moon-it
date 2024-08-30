@@ -34,10 +34,10 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
   const isDiscount = feeAfterDiscount > 0 && fee !== feeAfterDiscount && new Date() <= endOfDay;
 
   return (
-    <Container className="pb-10 xl:py-10 flex flex-col-reverse xl:flex-row gap-10 xl:gap-20 relative">
+    <Container className="pb-10 lg:py-10 flex flex-col-reverse lg:flex-row gap-10 lg:gap-20 relative">
       <LineShapes lightClassName="left-[350px]" />
 
-      <div className="flex flex-col gap-5 w-full xl:w-1/2 z-40">
+      <div className="flex flex-col gap-5 w-full lg:w-1/2 z-40">
         <h1 className="text-4xl text-foreground font-extrabold">
           {name}
         </h1>
@@ -53,7 +53,7 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
             </h3>
           )}
 
-          <div className="flex items-center gap-3 xl:gap-5">
+          <div className="flex items-center gap-3 lg:gap-5">
             <AdmissionFormModal
               isOpen={formModal}
               setIsOpen={setFormModal}
@@ -81,10 +81,10 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
         </div >
       </div>
 
-      <div className="w-full xl:w-1/2 z-40">
+      <div className="w-full lg:w-1/2 z-40">
         <ScrollAnimation variants={variant2}>
           <Image
-            className="w-full xl:h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
+            className="w-full lg:h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
             sizes="100vw"
             width={0}
             height={0}

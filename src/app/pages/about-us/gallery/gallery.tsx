@@ -4,7 +4,7 @@ import Tabs from "@/components/tabs";
 import imageCategories from "@/data/gallery-categories";
 import galleryImages from "@/data/gallery-images";
 import { useIsMounted } from "@/hooks/use-is-mounted";
-import useMediaQuery from "@/hooks/use-media-query";
+import { useLgScreen } from "@/hooks/use-media-query";
 import ScrollAnimation from "@/lib/animations/scroll-animation";
 import TabsAnimation from "@/lib/animations/tabs-animation";
 import { variant4 } from "@/lib/animations/variants";
@@ -20,7 +20,7 @@ const Gallery = () => {
     (item) => item.category === selected
   );
   const tabOptions = getOptions(imageCategories, "title", "id");
-  const isLargeScreen = useMediaQuery('(min-width: 640px)')
+  const lgScreen = useLgScreen()
   const mounted = useIsMounted()
 
   return (
@@ -43,7 +43,7 @@ const Gallery = () => {
         {mounted && (
           <ScrollAnimation variants={variant4}>
             <TabsAnimation selected={selected}>
-              <EmblaCarousel filteredImages={filteredImages} isLargeScreen={isLargeScreen} />
+              <EmblaCarousel filteredImages={filteredImages} lgScreen={lgScreen} />
             </TabsAnimation>
           </ScrollAnimation>
         )}

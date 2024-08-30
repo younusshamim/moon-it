@@ -9,19 +9,18 @@ import { Thumb } from './embla-carousel-thumbs-button';
 
 type PropType = {
     filteredImages: GalleryImgType[]
-    isLargeScreen: boolean
+    lgScreen: boolean
 }
 const OPTIONS: EmblaOptionsType = {}
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-    // const isLargeScreen = useMediaQuery('(min-width: 640px)')
-    const { filteredImages, isLargeScreen } = props
+    const { filteredImages, lgScreen } = props
     const [selectedIndex, setSelectedIndex] = useState(0)
     const [emblaMainRef, emblaMainApi] = useEmblaCarousel(OPTIONS)
     const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
         containScroll: 'keepSnaps',
         dragFree: true,
-        axis: isLargeScreen ? 'y' : "x"
+        axis: lgScreen ? 'y' : "x"
     })
 
     const onThumbClick = useCallback(
@@ -42,14 +41,14 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         if (!emblaMainApi) return
         onSelect()
         emblaMainApi.on('select', onSelect).on('reInit', onSelect)
-    }, [emblaMainApi, onSelect, isLargeScreen])
+    }, [emblaMainApi, onSelect, lgScreen])
 
     return (
-        <div className="embla flex flex-col-reverse xl:flex-row min-w-full gap-5">
+        <div className="embla flex flex-col-reverse lg:flex-row min-w-full gap-5">
             <div className="embla-thumbs">
-                <div className="embla-thumbs__viewport w-full xl:w-40" ref={emblaThumbsRef}>
+                <div className="embla-thumbs__viewport w-full lg:w-40" ref={emblaThumbsRef}>
                     {/*embla-thumbs__container  */}
-                    <div className="flex flex-row xl:flex-col gap-2.5 h-fit xl:h-[500px] xl:-ml-[12px]">
+                    <div className="flex flex-row lg:flex-col gap-2.5 h-fit lg:h-[550px] lg:-ml-[12px]">
                         {filteredImages.map((item, index) => (
                             <Thumb
                                 key={index}
@@ -67,7 +66,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 <div className="embla__container">
                     {filteredImages.map((item, index) => (
                         <div className="embla__slide " key={index}>
-                            <div className="embla__slide__number xl:min-h-[550px]">
+                            <div className="embla__slide__number lg:min-h-[550px]">
                                 <Image
                                     className="w-full h-full object-cover rounded-card shadow-lg cursor-pointer"
                                     key={item.image + index}

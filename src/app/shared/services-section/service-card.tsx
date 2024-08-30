@@ -1,3 +1,5 @@
+'use client';
+
 import { useLgScreen, useMdScreenOnly, useSmScreenOnly, useXsScreenOnly } from "@/hooks/use-media-query";
 import { cn } from "@/lib/utils";
 import { ServiceType } from "@/types/service";

@@ -21,7 +21,7 @@ const Address = () => {
         <LineShapes />
 
         <div className="w-full xl:w-3/5 z-40">
-          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
             <div className="hover:scale-105 duration-500 bg-red-50 dark:bg-card p-5 rounded-card flex flex-col justify-center shadow-sm">
               <h3 className="font-bold text-lg">ঠিকানা-</h3>
               <div className="flex gap-3 items-center mb-3">

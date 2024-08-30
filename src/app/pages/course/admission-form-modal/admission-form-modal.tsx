@@ -65,7 +65,7 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal, feeAfterDisc
 
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-      <div className="flex flex-col gap-12 px-0 xl:px-10 py-5">
+      <div className="flex flex-col gap-12 px-0 lg:px-10 py-5">
         <div className="flex flex-col items-center text-center">
           <Image
             src="/logo/logo.png"
@@ -75,15 +75,15 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal, feeAfterDisc
             width={0}
             sizes="100vw"
           />
-          <h1 className="text-3xl font-extrabold text-primary mb-3 xl:mb-1">
+          <h1 className="text-3xl font-extrabold text-primary mb-3 lg:mb-1">
             নিচের ফর্মটি সঠিক তথ্য দিয়ে পূরণ করুন
           </h1>
-          <h3 className="font-medium w-4/5 xl:w-full">
+          <h3 className="font-medium w-4/5 lg:w-full">
             ফর্মটি পূরণ করার পর আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন।
           </h3>
         </div>
 
-        <form onSubmit={onSubmit} className="grid grid-cols-2 gap-4 xl:gap-5">
+        <form onSubmit={onSubmit} className="grid grid-cols-2 gap-4 lg:gap-5">
           <Input
             label="আপনার নাম (Only English)"
             placeholder="ইংরেজিতে আপনার নাম লিখুন"
