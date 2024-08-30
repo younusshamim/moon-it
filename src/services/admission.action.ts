@@ -20,9 +20,10 @@ export const onAdmission = async (
 
     await connectToDatabase();
     const admission = new Admission(newData);
-    await admission.save();
+    const result = await admission.save();
 
     return {
+      data: result,
       status: "success",
       message: `Welcome, Your form submitted successfully!`,
     };
@@ -31,10 +32,6 @@ export const onAdmission = async (
       return {
         status: "error",
         message: "Invalid form data",
-        errors: error.issues.map((issue) => ({
-          path: issue.path.join("."),
-          message: `Server validation: ${issue.message}`,
-        })),
       };
     }
 
@@ -49,3 +46,33 @@ export const onAdmission = async (
 // revalidatePath(routes.home());
 // revalidateTag('contact');
 // redirect(routes.contactId({ contactId }));
+
+export const deleteAllAdmissions = async (
+  prevState: BaseResponseModel,
+  formData: FormData
+): Promise<BaseResponseModel> => {
+  try {
+    await connectToDatabase();
+    const result = await Admission.deleteMany({});
+
+    if (result.deletedCount === 0) {
+      return {
+        status: "success",
+        message: "No admissions found to delete.",
+      };
+    }
+
+    return {
+      status: "success",
+      message: `Successfully deleted all admissions. Total deleted: ${result.deletedCount}`,
+    };
+  } catch (error) {
+    console.error("Error in deleteAllAdmissions:", error);
+
+    return {
+      status: "error",
+      message:
+        "An error occurred while trying to delete all admissions. Please try again.",
+    };
+  }
+};

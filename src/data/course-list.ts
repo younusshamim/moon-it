@@ -13,7 +13,7 @@ const courseList: CourseType[] = [
     category: "it",
     image: "/courses/graphic-design-new.jpg",
     fee: 14500,
-    discount: { type: "amount", value: 6000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 6000, endDate: "09/20/2024" },
     metorIds: [1, 2],
     services: [
       {
@@ -66,7 +66,7 @@ const courseList: CourseType[] = [
     category: "it",
     image: "/courses/digital-marketing.jpg",
     fee: 12500,
-    discount: { type: "amount", value: 5000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 5000, endDate: "09/20/2024" },
     metorIds: [4],
     services: [
       {
@@ -119,7 +119,7 @@ const courseList: CourseType[] = [
     category: "it",
     image: "/courses/auto-cad.jpg",
     fee: 12500,
-    discount: { type: "amount", value: 5000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 5000, endDate: "09/20/2024" },
     metorIds: [5],
     services: [
       {
@@ -172,7 +172,7 @@ const courseList: CourseType[] = [
     category: "it",
     image: "/courses/it-support.jpg",
     fee: 10500,
-    discount: { type: "amount", value: 2000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 2000, endDate: "09/20/2024" },
     metorIds: [2, 3],
     services: [
       {
@@ -225,7 +225,7 @@ const courseList: CourseType[] = [
     category: "it",
     image: "/courses/office-application.jpg",
     fee: 7500,
-    discount: { type: "amount", value: 2000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 2000, endDate: "09/20/2024" },
     metorIds: [3, 2],
     services: [
       {
@@ -278,7 +278,7 @@ const courseList: CourseType[] = [
     category: "it",
     image: "/courses/networking.jpg",
     fee: 12500,
-    discount: { type: "amount", value: 4000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 4000, endDate: "09/20/2024" },
     metorIds: [1],
     services: [
       {
@@ -331,7 +331,7 @@ const courseList: CourseType[] = [
     category: "it",
     image: "/courses/web-design-new.jpg",
     fee: 12500,
-    discount: { type: "amount", value: 4000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 4000, endDate: "09/20/2024" },
     metorIds: [6],
     services: [
       {
@@ -383,7 +383,7 @@ const courseList: CourseType[] = [
     category: "language",
     image: "/courses/spoken-english.jpg",
     fee: 6500,
-    discount: { type: "percentage", value: 50, endDate: "20/09/2024" },
+    discount: { type: "percentage", value: 50, endDate: "09/20/2024" },
     metorIds: [7],
     services: [
       {
@@ -436,7 +436,7 @@ const courseList: CourseType[] = [
     category: "language",
     image: "/courses/arabic.jpg",
     fee: 9500,
-    discount: { type: "percentage", value: 50, endDate: "20/09/2024" },
+    discount: { type: "percentage", value: 50, endDate: "09/20/2024" },
     metorIds: [10],
     services: [
       {
@@ -488,7 +488,7 @@ const courseList: CourseType[] = [
     category: "language",
     image: "/courses/korean-language.jpg",
     fee: 15000,
-    discount: { type: "amount", value: 5000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 5000, endDate: "09/20/2024" },
     metorIds: [8],
     services: [
       {
@@ -541,7 +541,7 @@ const courseList: CourseType[] = [
     category: "language",
     image: "/courses/japanese-language.jpg",
     fee: 20000,
-    discount: { type: "amount", value: 5000, endDate: "20/09/2024" },
+    discount: { type: "amount", value: 5000, endDate: "09/20/2024" },
     metorIds: [9],
     services: [
       {

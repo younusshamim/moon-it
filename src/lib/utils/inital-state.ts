@@ -1,9 +1,9 @@
-import { BaseResponseModel } from "@/models/base";
+// import { BaseResponseModel } from "@/models/base";
 
-const initialState: BaseResponseModel<any> = {
-  data: null,
-  status: "success",
-  message: "",
-};
+// const initialState: BaseResponseModel<any> = {
+//   data: null,
+//   status: "",
+//   message: "",
+// };
 
-export default initialState;
+// export default initialState;

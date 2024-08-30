@@ -4,15 +4,8 @@ export interface BaseModel {
   updatedAt?: Date;
 }
 
-export type BaseResponseModel<T = null> =
-  | {
-      data?: T[] | null;
-      status: "success";
-      message: string;
-    }
-  | {
-      status: "error";
-      message: string;
-      errors?: Array<{ path: string; message: string }>;
-    }
-  | null;
+export type BaseResponseModel<T = null> = {
+  data?: T | T[] | null;
+  status: "success" | "error";
+  message: string;
+} | null;

@@ -13,9 +13,9 @@ interface PropsTypes extends React.SelectHTMLAttributes<HTMLInputElement> {
     error?: string;
 }
 
-const Select = ({ label, placeholder = "", options, className, inputClassName, error, ...props }: PropsTypes & SelectProps) => {
+const Select = ({ label, placeholder = "", options, inputClassName, error, ...props }: PropsTypes & SelectProps) => {
     return (
-        <div className={cn("flex flex-col gap-1", className)}>
+        <div className={cn("flex flex-col gap-1")}>
             <label className="text-sm">{label}</label>
 
             <ShadcnSelect {...props} >

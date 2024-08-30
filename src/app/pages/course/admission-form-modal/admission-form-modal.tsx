@@ -7,87 +7,61 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import courseList from "@/data/course-list";
 import { convertToBanglaNumber } from "@/lib/utils";
-import initialState from "@/lib/utils/inital-state";
-import { AdmissionModel } from "@/models/admission.model";
 import { BaseResponseModel } from "@/models/base";
 import { admissionSchema } from "@/schemas/zod/admission.schema";
-import { onAdmission } from "@/services/admission.service";
+import { onAdmission } from "@/services/admission.action";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useFormState, useFormStatus } from "react-dom";
-import { FieldPath, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
+import toast from 'react-hot-toast';
 
 type PropsTypes = {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
   setSubmittedModal: (isOpen: boolean) => void;
   className?: string;
+  feeAfterDiscount: number;
+  courseId: number;
+  isDiscount: boolean;
 }
 
-const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal }: PropsTypes) => {
-  const [submitted, setSubmitted] = useState(false)
-  const courseFee = 1350;
+const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal, feeAfterDiscount, courseId, isDiscount }: PropsTypes) => {
+  const [state, formAction] = useFormState<BaseResponseModel<null>, FormData>(onAdmission, null);
+  const { pending } = useFormStatus();
 
   const methods = useForm<any>({
-    mode: "all",
-    defaultValues: { courseFee: convertToBanglaNumber(courseFee), },
     resolver: zodResolver(admissionSchema),
+    defaultValues: { courseId, courseFee: convertToBanglaNumber(feeAfterDiscount) }
   });
-
-  const [state, formAction] = useFormState<BaseResponseModel<null>, FormData>(onAdmission, initialState);
-  const { pending } = useFormStatus();
 
   const {
     register,
     control,
-    formState: { isValid, errors },
-    setError
+    handleSubmit,
+    formState: { errors },
+    reset,
   } = methods;
-
-  useEffect(() => {
-    if (!state) {
-      return;
-    }
-    if (state.status === "error") {
-      state.errors?.forEach((error) => {
-        setError(error.path as FieldPath<AdmissionModel>, {
-          message: error.message,
-        });
-      });
-    }
-    if (state.status === "success") {
-      alert(state.message);
-    }
-  }, [state, setError]);
-
-  // const onSubmit: SubmitHandler<AdmissionType> = async (data: AdmissionType) => {
-  //   try {
-  //     const response = await onAdmission(data);
-
-  //     reset();
-  //     setIsOpen(false);
-  //     setSubmitted(true);
-  //   } catch (error) {
-  //     // console.error("Error:", error);
-  //     // toast.error(error instanceof Error ? error.message : "An unknown error occurred");
-  //     toast.error("An unknown error occurred");
-  //   }
-
-  // try {
-  //   const response = await onAdmission(data);
-
-  //   reset();
-  //   setIsOpen(false);
-  //   setSubmittedModal(true);
-  // } catch (error) {
-  //   console.log('hi...', error);
-  //   toast.error(error?.message ?? '');
-  // }
 
   const courseOptions = courseList.map(course => {
     return { label: course.name, value: course.id.toString() }
   })
+
+  const onSubmit = handleSubmit((data) => formAction(data))
+
+  useEffect(() => {
+    if (!state) { return }
+    if (state.status === 'success') {
+      reset();
+      setIsOpen(false);
+      setSubmittedModal(true);
+    } else if (state.status === 'error') {
+      toast.error(state.message);
+    }
+  }, [reset, setIsOpen, setSubmittedModal, state]);
+
+  const isActiveCourseFeeField = feeAfterDiscount > 0
 
   return (
     <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
@@ -109,7 +83,7 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal }: PropsTypes
           </h3>
         </div>
 
-        <form action={formAction} className="grid grid-cols-2 gap-4 xl:gap-5">
+        <form onSubmit={onSubmit} className="grid grid-cols-2 gap-4 xl:gap-5">
           <Input
             label="আপনার নাম (Only English)"
             placeholder="ইংরেজিতে আপনার নাম লিখুন"
@@ -129,10 +103,14 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal }: PropsTypes
             options={courseOptions}
             control={control}
             error={errors.courseId?.message as string}
+            inputClassName="disabled:opacity-100"
+            className={isActiveCourseFeeField ? "" : "col-span-2"}
+            disabled
           />
           <Input
-            label="ডিস্কাউন্টে কোর্স ফি"
+            label={isDiscount ? "ডিস্কাউন্টে কোর্স ফি" : "কোর্স ফি"}
             inputClassName="disabled:opacity-100 font-sans"
+            className={isActiveCourseFeeField ? "block" : "hidden"}
             disabled
             {...register("courseFee")}
             error={errors.courseFee?.message as string}
@@ -148,7 +126,7 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal }: PropsTypes
           <PrimaryButton
             type="submit"
             className="col-span-2 mt-5"
-            disabled={pending || !isValid}
+            disabled={pending}
           >
             সাবমিট করুন
           </PrimaryButton>

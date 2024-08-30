@@ -8,24 +8,30 @@ import ScrollAnimation from "@/lib/animations/scroll-animation";
 import { variant2 } from "@/lib/animations/variants";
 import { convertToBanglaNumber } from "@/lib/utils";
 import { CourseType } from "@/types/course";
+import { format } from 'date-fns';
 import Image from "next/image";
 import { useState } from "react";
 import AdmissionFormModal from "../admission-form-modal/admission-form-modal";
 
 const CourseDetails = ({ course }: { course: CourseType }) => {
-  const { name, description1, description2, fee, discount, image } = course;
+  const { id, name, description1, description2, fee, discount, image } = course;
   const { type, value, endDate } = discount || { type: '', value: 0, endDate: '' };
 
   const [formModal, setFormModal] = useState(false);
   const [submittedModal, setSubmittedModal] = useState(false)
 
   const generateDiscount = () => {
-    const discountEndDate = convertToBanglaNumber(endDate);
+    const discountEndDate = endDate;
     const discountAmountText = formatDiscountAmount(type, value);
-    const feeAfterDiscount = convertToBanglaNumber(calculateFeeAfterDiscount(fee, type, value));
+    const feeAfterDiscount = calculateFeeAfterDiscount(fee, type, value);
     return { discountEndDate, discountAmountText, feeAfterDiscount };
   };
   const { discountEndDate, discountAmountText, feeAfterDiscount } = generateDiscount();
+
+
+  const endOfDay = new Date(discountEndDate);
+  endOfDay.setHours(23, 59, 59, 999);
+  const isDiscount = feeAfterDiscount > 0 && fee !== feeAfterDiscount && new Date() <= endOfDay;
 
   return (
     <Container className="pb-10 xl:py-10 flex flex-col-reverse xl:flex-row gap-10 xl:gap-20 relative">
@@ -41,24 +47,37 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
         </div>
 
         <div className="flex flex-col gap-3 mt-5">
-          <h3 className="text-2xl font-bold">
-            কোর্স ফি ৳ <NumSpan>{convertToBanglaNumber(fee)}</NumSpan> টাকা
-          </h3>
+          {fee > 0 && (
+            <h3 className="text-2xl font-bold">
+              কোর্স ফি ৳ <NumSpan>{convertToBanglaNumber(fee)}</NumSpan> টাকা
+            </h3>
+          )}
 
           <div className="flex items-center gap-3 xl:gap-5">
-            <AdmissionFormModal isOpen={formModal} setIsOpen={setFormModal} setSubmittedModal={setSubmittedModal} />
+            <AdmissionFormModal
+              isOpen={formModal}
+              setIsOpen={setFormModal}
+              setSubmittedModal={setSubmittedModal}
+              courseId={id}
+              isDiscount={isDiscount}
+              feeAfterDiscount={feeAfterDiscount}
+            />
             <FormSubmittedModal isOpen={submittedModal} setIsOpen={setSubmittedModal} />
 
             <PrimaryButton size="lg" onClick={() => setFormModal(true)}>
-              ডিস্কাউন্টে ভর্তি হোন
+              {isDiscount ? 'ডিস্কাউন্টে ভর্তি হোন' : 'ভর্তি হোন'}
             </PrimaryButton>
 
-            <h3 className="text-2xl font-bold text-primary-lighter">৳ <NumSpan>{feeAfterDiscount}</NumSpan> টাকা</h3>
+            {isDiscount && (
+              <h3 className="text-2xl font-bold text-primary-lighter">৳ <NumSpan>{convertToBanglaNumber(feeAfterDiscount)}</NumSpan> টাকা</h3>
+            )}
           </div>
 
-          <p className="font-semibold text-[17px] text-secondary mt-1">
-            [আগামী <NumSpan>{discountEndDate}</NumSpan> ইং তারিখ পর্যন্ত <NumSpan>{discountAmountText}</NumSpan> ডিস্কাউন্টে কোর্স ফি মাত্র ৳ <NumSpan>{feeAfterDiscount}</NumSpan>/- টাকা]
-          </p >
+          {isDiscount && (
+            <p className="font-semibold text-[17px] text-secondary mt-1">
+              [আগামী <NumSpan>{convertToBanglaNumber(format(new Date(discountEndDate), 'dd/MM/yyyy'))}</NumSpan> ইং তারিখ পর্যন্ত <NumSpan>{discountAmountText}</NumSpan> ডিস্কাউন্টে কোর্স ফি মাত্র ৳ <NumSpan>{convertToBanglaNumber(feeAfterDiscount)}</NumSpan>/- টাকা]
+            </p >
+          )}
         </div >
       </div>
 
@@ -82,6 +101,7 @@ export default CourseDetails;
 
 
 const calculateFeeAfterDiscount = (fee: number, type: string, value: number) => {
+  if (fee === 0) return 0;
   return type === 'amount' ? fee - value : fee - (fee * value / 100);
 };
 const formatDiscountAmount = (type: string, value: number) => {

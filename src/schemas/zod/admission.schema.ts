@@ -11,5 +11,3 @@ export const admissionSchema = z.object({
   courseFee: z.string(),
   address: z.string().optional(),
 });
-
-// export type AdmissionType = z.infer<typeof admissionSchema>;
