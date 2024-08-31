@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: '%s - Moon IT | Computer & Language Training | Top Institute in Feni',
   },
   description:
-    "Moon IT is Feni's top institute for computer and language training. Improve your skills with our expert courses. Enroll today at the best training center in Feni. Call: 01785882381 | Moon Institute of IT.",
+    "Moon IT is Feni's top institute for computer and language training. Improve your skills with our  expert-led courses. Enroll today at the best training center in Feni. Call: 01785882381 | Moon Institute of IT.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
