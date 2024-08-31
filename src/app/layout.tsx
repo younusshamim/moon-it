@@ -11,8 +11,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Moon IT - Best Computer & Language Training Institute in Feni - Moon Institute of IT ',
-    template: `%s - Moon IT`,
+    default: 'Moon IT - Best Computer & Language Training Institute in Feni - Moon Institute of IT',
+    template: '%s - Moon IT | Best Computer & Language Training Institute in Feni - Moon Institute of IT',
   },
   description:
     "Moon IT is a leading institute in Feni offering computer and language training courses. Join us to boost your skills and advance your career. | Call: 01785882381 | Moon Institute of IT",

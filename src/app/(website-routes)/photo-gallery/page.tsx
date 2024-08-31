@@ -1,8 +1,10 @@
-import PageHeading from "@/components/page-heading";
-import BTEBCertified from "@/app/pages/about-us/bteb-certified/bteb-certified";
 import Gallery from "@/app/pages/about-us/gallery/gallery";
-import Mentors from "@/app/pages/about-us/mentors/mentors";
-import AboutUsComp from "@/app/shared/about-us/about-us";
+import PageHeading from "@/components/page-heading";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Photo Gallery'
+}
 
 const PhotoGallery = () => {
   return (

@@ -4,6 +4,11 @@ import ServicesSection from "@/app/shared/services-section/services-section";
 import Container from "@/components/container";
 import courseList from "@/data/course-list";
 import mentorList from "@/data/mentor-list";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Graphical Design'
+}
 
 const Course = ({ params }: { params: { id: string; } }) => {
   const id = parseInt(params.id);

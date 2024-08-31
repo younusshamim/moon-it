@@ -3,6 +3,11 @@ import SeminarContent from "@/app/pages/free-seminar/seminar-content/seminar-con
 import SeminarImageWrap from "@/app/pages/free-seminar/seminar-image-wrap/seminar-image-wrap";
 import Container from "@/components/container";
 import LineShapes from "@/components/shapes/line-shapes";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'Free Seminar'
+}
 
 const FreeSeminar = () => {
   return (
