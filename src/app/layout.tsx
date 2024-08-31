@@ -11,11 +11,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Moon IT - Best Computer & Language Training Institute in Feni - Moon Institute of IT',
-    template: '%s - Moon IT | Best Computer & Language Training Institute in Feni - Moon Institute of IT',
+    default: 'Moon IT - Leading Computer & Language Training in Feni | Moon Institute of IT',
+    template: '%s - Moon IT | Computer & Language Training in Feni | Moon Institute of IT',
   },
   description:
-    "Moon IT is a leading institute in Feni offering computer and language training courses. Join us to boost your skills and advance your career. | Call: 01785882381 | Moon Institute of IT",
+    "Join Moon IT, Feni's leading computer and language training institute, to enhance your skills and advance your career. Call: 01785882381 | Moon Institute of IT",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
