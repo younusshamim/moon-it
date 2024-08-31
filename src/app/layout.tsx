@@ -1,6 +1,7 @@
 import NextProgress from "@/components/next-progress";
 import { ThemeProvider } from "@/config/theme-provider";
 import { HindSiliguri } from "@/lib/fonts/fonts";
+import { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
@@ -8,11 +9,13 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title:
-    "Moon Institute of IT | Best Computer & Language Training Institute in Feni",
+export const metadata: Metadata = {
+  title: {
+    default: 'Moon IT - Best Computer & Language Training Institute in Feni - Moon Institute of IT ',
+    template: `%s - Moon IT`,
+  },
   description:
-    "Moon Institute of IT is a leading institute in Feni offering computer and language training courses. Join us to boost your skills and advance your career. | Call: 01785882381 | Moon IT",
+    "Moon IT is a leading institute in Feni offering computer and language training courses. Join us to boost your skills and advance your career. | Call: 01785882381 | Moon Institute of IT",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

@@ -1,6 +1,6 @@
 'use client';
 
-import useMediaQuery from "@/hooks/use-media-query";
+import { useSmScreen } from "@/hooks/use-media-query";
 import { animation1 } from "@/lib/animations/animations";
 import { cn } from "@/lib/utils";
 import { motion } from 'framer-motion';
@@ -9,7 +9,7 @@ import NavContainer from "./nav-container";
 
 const Navbar = () => {
   const [fixedNavbar, setFixedNavbar] = useState(false)
-  const isLargeScreen = useMediaQuery('(min-width: 640px)')
+  const isSmScreen = useSmScreen()
 
   const changeBackground: any = () => {
     setFixedNavbar(window.scrollY >= 1 ? true : false)
@@ -20,6 +20,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', changeBackground);
   }, []);
 
+
   return fixedNavbar ? (
     <div>
       <div className="h-full w-full absolute blur-md"></div>
@@ -27,12 +28,12 @@ const Navbar = () => {
         {...animation1}
         className={cn('py-[15px] w-full z-50 fixed top-0 backdrop-blur-3xl border-b border-muted bg-background2')}
       >
-        <NavContainer logoWidth={isLargeScreen ? 130 : 120} />
+        <NavContainer logoWidth={isSmScreen ? 130 : 120} />
       </motion.nav>
     </div>
   ) : (
     <nav className={cn('py-[15px] lg:py-[25px] sticky top-0 mb-6 lg:mb-0 w-full transition-all z-50 ')}>
-      <NavContainer logoWidth={isLargeScreen ? 150 : 130} mobileNavClassNames="bg-gradient-to-b from-transparent to-card shadow-md" />
+      <NavContainer logoWidth={isSmScreen ? 150 : 130} mobileNavClassNames="bg-gradient-to-b from-transparent to-card shadow-md" />
     </nav>
   )
 };

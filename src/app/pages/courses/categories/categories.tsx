@@ -10,9 +10,9 @@ type PropsType = {
 const Categories = ({ courseRef }: PropsType) => {
   return (
     <Container className="py-10">
-      <p className="text-lg justify-center mb-10 lg:mb-5">
+      <h1 className="text-lg justify-center mb-10 lg:mb-5">
         প্রতিটি কোর্সের সিলেবাস ব্যাসিক টু এডভান্সড লেভেল পর্যন্ত এমনভাবে সাজানো হয়েছে, যাতে আপনি কোর্স শেষে প্রতিটি টপিকে কাজ করার আত্মবিশ্বাস পান।
-      </p>
+      </h1>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-5 overflow-y-auto">
         {categories.map((category, index) => (
