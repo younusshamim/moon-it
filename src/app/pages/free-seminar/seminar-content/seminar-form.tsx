@@ -20,6 +20,7 @@ import toast from 'react-hot-toast';
 const SeminarForm = () => {
     const [submittdModal, setSubmittedModal] = useState(false);
     const [state, formAction] = useFormState<BaseResponseModel<null>, FormData>(onJoinSeminar, null);
+    const [submitting, setSubmitting] = useState(false)
 
     // hooks 
     const methods = useForm<any>({
@@ -35,14 +36,19 @@ const SeminarForm = () => {
         getValues
     } = methods;
 
-    const onSubmit = handleSubmit((data) => formAction(data))
+    const onSubmit = handleSubmit((data) => {
+        formAction(data);
+        setSubmitting(true)
+    })
 
     useEffect(() => {
         if (!state) { return }
         if (state.status === 'success') {
             reset();
             setSubmittedModal(true);
+            setSubmitting(false)
         } else if (state.status === 'error') {
+            setSubmitting(false)
             toast.error(state.message);
         }
     }, [reset, state]);
@@ -111,8 +117,8 @@ const SeminarForm = () => {
             />
 
             <div className="lg:col-span-2 flex justify-center mt-5">
-                <PrimaryButton type="submit" className="px-12">
-                    সাবমিট করুন
+                <PrimaryButton type="submit" className="px-12" disabled={submitting}>
+                    {submitting ? 'অপেক্ষা করুন..' : 'সাবমিট করুন'}
                 </PrimaryButton>
             </div>
         </form>

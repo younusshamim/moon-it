@@ -12,8 +12,8 @@ import { admissionSchema } from "@/schemas/zod/admission.schema";
 import { onAdmission } from "@/services/admission.action";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import { useEffect } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import { useEffect, useState } from "react";
+import { useFormState } from "react-dom";
 import { useForm } from "react-hook-form";
 import toast from 'react-hot-toast';
 
@@ -29,7 +29,7 @@ type PropsTypes = {
 
 const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal, feeAfterDiscount, courseId, isDiscount }: PropsTypes) => {
   const [state, formAction] = useFormState<BaseResponseModel<null>, FormData>(onAdmission, null);
-  const { pending } = useFormStatus();
+  const [submitting, setSubmitting] = useState(false)
 
   const methods = useForm<any>({
     resolver: zodResolver(admissionSchema),
@@ -48,15 +48,20 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal, feeAfterDisc
     return { label: course.name, value: course.id.toString() }
   })
 
-  const onSubmit = handleSubmit((data) => formAction(data))
+  const onSubmit = handleSubmit((data) => {
+    formAction(data);
+    setSubmitting(true)
+  })
 
   useEffect(() => {
     if (!state) { return }
     if (state.status === 'success') {
       reset();
       setIsOpen(false);
+      setSubmitting(false)
       setSubmittedModal(true);
     } else if (state.status === 'error') {
+      setSubmitting(false)
       toast.error(state.message);
     }
   }, [reset, setIsOpen, setSubmittedModal, state]);
@@ -126,9 +131,9 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal, feeAfterDisc
           <PrimaryButton
             type="submit"
             className="col-span-2 mt-5"
-            disabled={pending}
+            disabled={submitting}
           >
-            সাবমিট করুন
+            {submitting ? 'অপেক্ষা করুন..' : 'সাবমিট করুন'}
           </PrimaryButton>
         </form>
       </div>
