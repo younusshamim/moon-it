@@ -5,12 +5,28 @@ import Container from "@/components/container";
 import courseList from "@/data/course-list";
 import mentorList from "@/data/mentor-list";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-export const metadata: Metadata = {
-  title: 'Graphical Design'
+
+type PropsTypes = {
+  params: { id: string; }
 }
 
-const Course = ({ params }: { params: { id: string; } }) => {
+export async function generateStaticParams() {
+  return courseList.map((course) => ({ params: { id: course.id.toString() } }));
+}
+
+export async function generateMetadata({ params }: PropsTypes): Promise<Metadata> {
+  const id = parseInt(params.id);
+  const targetCourse = courseList.find((course) => course.id === id);
+  return {
+    title: targetCourse?.name,
+    description: `${targetCourse?.description1} ${targetCourse?.description2}`,
+    openGraph: { images: [{ url: targetCourse?.image || "" }] }
+  }
+}
+
+const Course = ({ params }: PropsTypes) => {
   const id = parseInt(params.id);
   const targetCourse = courseList.find((course) => course.id === id);
   const mentors = mentorList.filter((mentor) =>
@@ -18,7 +34,7 @@ const Course = ({ params }: { params: { id: string; } }) => {
   );
 
   if (!targetCourse) {
-    return <p>Course not found</p>;
+    return notFound();
   }
 
   return (
