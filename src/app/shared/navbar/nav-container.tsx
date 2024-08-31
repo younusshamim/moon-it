@@ -88,6 +88,12 @@ const NavContainer = ({ logoWidth, mobileNavClassNames }: PropsType) => {
                             <span className="font-semibold">{item.name}</span>
                         </div>
                     ))}
+
+                    <div>
+                        <Link href="/free-seminar">
+                            <PrimaryButton size="sm" className="px-3">ফ্রি সেমিনার</PrimaryButton>
+                        </Link>
+                    </div>
                 </Container>
             )}
         </>

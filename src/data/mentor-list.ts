@@ -43,12 +43,12 @@ const mentorList: MentorType[] = [
     title: "ইন্সট্রাক্টর - অটোক্যাড এন্ড ইস্টিমেট-কস্টিং প্রোগ্রাম",
     picture: "/instructors/nurul-islam.png",
   },
-  {
-    id: 6,
-    name: "ইউনুছ শামীম",
-    title: "ইন্সট্রাক্টর - ওয়েব ডিজাইন এন্ড ডেভেলপমেন্ট",
-    picture: "/instructors/younus-shamim.png",
-  },
+  // {
+  //   id: 6,
+  //   name: "ইউনুছ শামীম",
+  //   title: "ইন্সট্রাক্টর - ওয়েব ডিজাইন এন্ড ডেভেলপমেন্ট",
+  //   picture: "/instructors/younus-shamim.png",
+  // },
   {
     id: 7,
     name: "আবদুল্লাহ রিয়াদ জয়",

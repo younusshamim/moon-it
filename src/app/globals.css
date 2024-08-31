@@ -70,3 +70,13 @@
   flex: 0 0 100%;
   min-width: 0;
 }
+
+.bg-clip-text-new {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.backdrop-blur-2xl-new {
+  backdrop-filter: blur(40px); 
+  -webkit-backdrop-filter: blur(40px); 
+}
