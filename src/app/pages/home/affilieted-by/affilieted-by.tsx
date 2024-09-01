@@ -13,7 +13,7 @@ const AffilietedBy = () => {
             sizes="100vw"
             width={0}
             height={0}
-            src={'/logo/BD_Government_Sea.png'}
+            src={'/icons/001-stamp.png'}
             alt={'BD_Government_Sea'}
           />
           <h2 className="text-4xl text-foreground-dark font-extrabold mb-[6px]">
