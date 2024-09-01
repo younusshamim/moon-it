@@ -22,7 +22,13 @@ export async function generateMetadata({ params }: PropsTypes): Promise<Metadata
   return {
     title: targetCourse?.name,
     description: `${targetCourse?.description1} ${targetCourse?.description2}`,
-    openGraph: { images: [{ url: targetCourse?.image || "" }] }
+    openGraph: {
+      images: {
+        url: targetCourse?.image || "",
+        width: 1200,
+        height: 630,
+      }
+    }
   }
 }
 

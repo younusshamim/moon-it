@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   },
   description:
     "Moon IT is Feni's top institute for computer and language training. Improve your skills with our  expert-led courses. Enroll today at the best training center in Feni. Call: 01785882381 | Moon Institute of IT.",
+  keywords: [
+    "Moon IT", "Moon IT Training", "Moon IT Training Institute",
+    "মুন আইটি", "মুন আইটি ফেনী",
+    "Best computer training center in Feni", "Top computer training institute in Feni",
+    "Computer training Feni", "Language training Feni", "IT courses Feni"
+  ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
