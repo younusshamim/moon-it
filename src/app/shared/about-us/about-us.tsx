@@ -15,12 +15,12 @@ const AboutUs = () => {
         <div className="w-full lg:w-1/2 z-40 flex flex-col gap-2">
           <p className="font-bold text-xl">প্রতিষ্ঠান সম্পর্কে কিছু কথা</p>
 
-          <h1 className="text-4xl text-foreground-dark font-extrabold mb-4">
+          <h2 className="text-4xl text-foreground-dark font-extrabold mb-4">
             <GradientText>
               সাফল্যের <span className="font-sans">১৯</span> বছর
             </GradientText>{" "}
             আইটি এক্সপার্ট তৈরির জগতে ফেনীর বিশ্বস্ত প্রতিষ্ঠান
-          </h1>
+          </h2>
 
 
           <h2 className="text-justify mb-3 text-[17px]">

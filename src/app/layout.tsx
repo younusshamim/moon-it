@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: '/og/opengraph-image.png',
+        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og/opengraph-image.png`,
         width: 1200,
         height: 630,
         alt: 'Moon IT training institute',
