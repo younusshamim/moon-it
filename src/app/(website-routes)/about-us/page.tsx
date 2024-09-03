@@ -6,7 +6,7 @@ import PageHeading from "@/components/page-heading";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'About Us'
+  title: 'আমাদের সম্পর্কে',
 }
 
 const AboutUs = () => {
