@@ -11,7 +11,6 @@ const PageHeader = () => {
       >
         <div className="bg-black bg-opacity-65 w-full h-full  text-white text-4xl text-center py-20 rounded-md flex gap-3 items-center justify-center">
           <h1 className="spacing font-black">ফ্রি সেমিনার</h1>
-          {/* <h1 className="spacing font-black">প্রফেশনাল গ্রাফিক্স ডিজাইন</h1> */}
           <IoCheckmarkCircle />
         </div>
       </div>

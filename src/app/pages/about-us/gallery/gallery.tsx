@@ -29,10 +29,10 @@ const Gallery = () => {
         <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-[6px]">
           ফটো গ্যালারী
         </h2>
-        <p className="font-semibold mb-10 text-center">
+        <h2 className="font-semibold mb-10 text-center">
           শিক্ষার্থী/শিক্ষক-দের কিছু সুন্দর মুহূর্ত দেখতে পাবেন আমাদের
           গ্যালারিতে।
-        </p>
+        </h2>
 
         <Tabs
           tabOptions={tabOptions}

@@ -8,10 +8,10 @@ const SeminarContent = () => {
         জয়েন <GradientText>ফ্রি সেমিনার</GradientText>
       </h1>
 
-      <h1 className="text-center mb-10">
+      <h2 className="text-center mb-10">
         ফর্মটি পূরণ করার পর আমাদের প্রতিনিধি শীঘ্রই সেমিনারের সময় এবং
         বিস্তারিত আপনাকে জানিয়ে দিবেন।
-      </h1>
+      </h2>
 
       <SeminarForm />
     </div>
