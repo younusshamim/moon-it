@@ -6,6 +6,7 @@ import { BaseResponseModel } from "@/models/base";
 import { loginSchema } from "@/schemas/zod/login.schema";
 import { onJoinSeminar } from "@/services/seminar.action";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next-nprogress-bar";
 import { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { useForm } from "react-hook-form";
@@ -14,6 +15,7 @@ import toast from 'react-hot-toast';
 const LoginForm = () => {
     const [state, formAction] = useFormState<BaseResponseModel<null>, FormData>(onJoinSeminar, null);
     const [submitting, setSubmitting] = useState(false)
+    const router = useRouter()
 
     const {
         register,
@@ -29,6 +31,7 @@ const LoginForm = () => {
     const onSubmit = handleSubmit((data) => {
         // formAction(data);
         // setSubmitting(true)
+        router.push('/dashboard')
     })
 
     useEffect(() => {
@@ -43,7 +46,9 @@ const LoginForm = () => {
     }, [reset, state]);
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 w-[400px]">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 w-[320px]">
+            <h1 className="text-3xl font-black text-center uppercase">Sign In</h1>
+
             <Input
                 label="Email"
                 placeholder="Write your email"
@@ -58,7 +63,9 @@ const LoginForm = () => {
                 error={errors.password?.message as string}
             />
 
-            <PrimaryButton type="submit" disabled={submitting}>{submitting ? 'Signing In' : 'Sign In'}</PrimaryButton>
+            <PrimaryButton className="w-full" type="submit" disabled={submitting}>
+                {submitting ? 'Signing In' : 'Sign In'}
+            </PrimaryButton>
         </form>
     );
 };
