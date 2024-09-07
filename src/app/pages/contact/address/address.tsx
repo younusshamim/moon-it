@@ -11,7 +11,7 @@ import { MdAccessTime, MdEmail } from "react-icons/md";
 const Address = () => {
   return (
     <Container className="pt-10 pb-20">
-      <h2 className="text-lg justify-center text-center xl:text-left mb-5 xl:mb-0">
+      <h2 className="font-semibold justify-center text-center xl:text-left mb-5 xl:mb-0">
         যে কোনো প্রয়োজনে যোগাযোগ করতে সরাসরি আমাদের অফিস ভিজিট করতে পারেন।
         তাছাড়া হটলাইন নম্বরে কল করে জেনে নিতে পারেন ট্রেইনিং সংক্রান্ত যেকোনো
         তথ্য। এছাড়াও উল্লেখিত মেইলে কিংবা ফেসবুক ম্যাসেঞ্জারেও নক দিতে পারেন।
