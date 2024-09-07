@@ -70,7 +70,7 @@ const NavContainer = ({ logoWidth, mobileNavClassNames }: PropsType) => {
                 </div>
 
                 {/* ---- mobile menu ----  */}
-                <div className="flex items-center gap-2 lg:hidden">
+                <div className="flex items-center gap-2 lg:hidden z-50">
                     <ThemeSwitcher />
                     {navOpen
                         ? <IoCloseSharp className='text-[26px]' onClick={navbarToggle} />
@@ -80,19 +80,17 @@ const NavContainer = ({ logoWidth, mobileNavClassNames }: PropsType) => {
             </Container>
 
             {navOpen && (
-                <Container className={cn("space-y-4 mt-5 py-5 pl-5 ", mobileNavClassNames)}>
+                <Container className={cn("space-y-4 mt-5 py-5 pl-5", mobileNavClassNames)}>
                     {navItems.map((item, index) => (
                         <div
                             key={item.name + index} onClick={() => handleNavigate(item.link)} className={cn("", { 'text-primary-lighter': pathname === item.link })}
                         >
-                            <span className="font-semibold">{item.name}</span>
+                            <span className="font-semibold ">{item.name}</span>
                         </div>
                     ))}
 
                     <div>
-                        <Link href="/free-seminar">
-                            <PrimaryButton size="sm" className="px-3">ফ্রি সেমিনার</PrimaryButton>
-                        </Link>
+                        <PrimaryButton size="sm" className="px-5" onClick={() => handleNavigate('/free-seminar')}>ফ্রি সেমিনার</PrimaryButton>
                     </div>
                 </Container>
             )}
