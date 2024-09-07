@@ -48,5 +48,4 @@ export const menuItems = [
       },
     ],
   },
-
 ];
