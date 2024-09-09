@@ -10,7 +10,7 @@ export default function Sidebar({ className }: { className?: string }) {
   return (
     <aside
       className={cn(
-        'fixed bottom-0 start-0 z-50 h-full w-[284px] dark:bg-gray-100/50 xl:p-5 2xl:w-[308px]',
+        'fixed bottom-0 start-0 z-40 h-full w-[284px] dark:bg-gray-100/50 xl:p-5 2xl:w-[308px]',
         className
       )}
     >

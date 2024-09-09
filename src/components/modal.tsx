@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
 import { ReactNode } from 'react';
-import { Dialog, DialogContent, DialogTrigger } from './ui/dialog';
+import { Dialog, DialogContent, DialogContentProps, DialogTrigger } from './ui/dialog';
 
 type PropsTypes = {
     isOpen?: boolean;
@@ -9,9 +9,9 @@ type PropsTypes = {
     children: ReactNode;
     className?: string;
     size?: 'sm' | 'md' | 'lg';
-}
+} & DialogContentProps;
 
-const Modal = ({ isOpen, setIsOpen, triggerBtn, children, className, size }: PropsTypes) => {
+const Modal = ({ isOpen, setIsOpen, triggerBtn, children, className, size, closeBtn }: PropsTypes) => {
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             {triggerBtn && (
@@ -20,11 +20,14 @@ const Modal = ({ isOpen, setIsOpen, triggerBtn, children, className, size }: Pro
                 </DialogTrigger >
             )}
 
-            <DialogContent className={cn("max-w-screen-md max-h-screen overflow-y-auto border-muted z-50", className, {
-                'max-w-screen-sm': size === 'sm',
-                'max-w-screen-md': size === 'md',
-                'max-w-screen-lg': size === 'lg',
-            })}>
+            <DialogContent
+                closeBtn={closeBtn}
+                className={cn("w-[90%] md:max-w-screen-md max-h-screen overflow-y-auto border-muted z-50", className, {
+                    'max-w-screen-sm': size === 'sm',
+                    'max-w-screen-md': size === 'md',
+                    'max-w-screen-lg': size === 'lg',
+                })}>
+
                 {children}
             </DialogContent>
         </Dialog >

@@ -3,20 +3,14 @@
 import { pageLinks } from '@/components/search/page-links.data';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   PiFileTextDuotone,
   PiMagnifyingGlassBold,
-  PiXBold,
+  PiXBold
 } from 'react-icons/pi';
-import {
-  ActionIcon,
-  Button,
-  Empty,
-  Input,
-  SearchNotFoundIcon,
-  Title,
-} from 'rizzui';
+import { Button } from '../ui/button';
+import { Input } from '../ui/input';
 
 export default function SearchList({ onClose }: { onClose?: () => void }) {
   const inputRef = useRef(null);
@@ -46,14 +40,14 @@ export default function SearchList({ onClose }: { onClose?: () => void }) {
 
   return (
     <>
-      <div className="flex items-center px-5 py-4">
+      <div className="flex items-center px-5 pt-4">
         <Input
-          variant="flat"
           value={searchText}
           ref={inputRef}
           onChange={(e) => setSearchText(() => e.target.value)}
           placeholder="Search pages here"
           className="flex-1"
+          inputClassName="bg-gray-200 focus:bg-white"
           prefix={
             <PiMagnifyingGlassBold className="h-[18px] w-[18px] text-gray-600" />
           }
@@ -61,7 +55,7 @@ export default function SearchList({ onClose }: { onClose?: () => void }) {
             searchText && (
               <Button
                 size="sm"
-                variant="text"
+                variant="ghost"
                 className="h-auto w-auto px-0"
                 onClick={(e) => {
                   e.preventDefault();
@@ -73,31 +67,27 @@ export default function SearchList({ onClose }: { onClose?: () => void }) {
             )
           }
         />
-        <ActionIcon
-          variant="text"
-          size="sm"
-          className="ms-3 text-gray-500 hover:text-gray-700"
+        <span
+          // variant="text"
+          // size="sm"
+          className="ms-3 text-gray-500 hover:text-gray-700 cursor-pointer"
           onClick={onClose}
         >
           <PiXBold className="h-5 w-5" />
-        </ActionIcon>
+        </span>
       </div>
 
-      <div className="custom-scrollbar max-h-[60vh] overflow-y-auto border-t border-gray-300 px-2 py-4">
-        <>
-          {menuItemsFiltered.length === 0 ? (
-            <Empty
-              className="scale-75"
-              image={<SearchNotFoundIcon />}
-              text="No Result Found"
-              textClassName="text-xl"
-            />
-          ) : null}
-        </>
+      <div className="custom-scrollbar min-h-[60vh] max-h-[60vh] overflow-y-auto border-t border-gray-300 px-2 py-4">
+
+        {menuItemsFiltered.length === 0 && (
+          <div className='w-full h-full flex justify-center items-center'>
+            <p>No Result Found</p>
+          </div>
+        )}
 
         {menuItemsFiltered.map((item, index) => {
           return (
-            <Fragment key={item.name + '-' + index}>
+            <div key={item.name + '-' + index}>
               {item?.href ? (
                 <Link
                   href={item?.href as string}
@@ -117,17 +107,16 @@ export default function SearchList({ onClose }: { onClose?: () => void }) {
                   </span>
                 </Link>
               ) : (
-                <Title
-                  as="h6"
+                <h4
                   className={cn(
                     'mb-1 px-3 text-xs font-semibold uppercase tracking-widest text-gray-500 dark:text-gray-500',
                     index !== 0 && 'mt-6 4xl:mt-7'
                   )}
                 >
                   {item.name}
-                </Title>
+                </h4>
               )}
-            </Fragment>
+            </div>
           );
         })}
       </div>

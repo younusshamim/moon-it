@@ -1,4 +1,3 @@
-import { routes } from "@/config/routes";
 const DUMMY_ID = "1";
 
 // Note: do not add href in the label object, it is rendering as label
@@ -10,23 +9,23 @@ export const pageLinks = [
   // label end
   {
     name: "E-Commerce",
-    href: routes.eCommerce.dashboard,
+    href: "/asdfsad/sdfsfsd",
   },
   {
     name: "Support",
-    href: routes.support.dashboard,
+    href: "/asdfsad/sdfsfsd",
   },
   {
     name: "Logistics",
-    href: routes.logistics.dashboard,
+    href: "/asdfsad/sdfsfsd",
   },
   {
     name: "Analytics",
-    href: routes.analytics,
+    href: "",
   },
   {
     name: "File",
-    href: routes.file.dashboard,
+    href: "",
   },
   // label start
   {
@@ -35,107 +34,107 @@ export const pageLinks = [
   // label end
   {
     name: "Products",
-    href: routes.eCommerce.products,
+    href: "",
   },
   {
     name: "Product Details",
-    href: routes.eCommerce.productDetails(DUMMY_ID),
+    href: "",
   },
   {
     name: "Create Product",
-    href: routes.eCommerce.createProduct,
+    href: "",
   },
   {
     name: "Edit Product",
-    href: routes.eCommerce.ediProduct(DUMMY_ID),
+    href: "",
   },
   {
     name: "Categories",
-    href: routes.eCommerce.categories,
+    href: "",
   },
   {
     name: "Create Category",
-    href: routes.eCommerce.createCategory,
+    href: "",
   },
   {
     name: "Edit Category",
-    href: routes.eCommerce.editCategory(DUMMY_ID),
+    href: "",
   },
   {
     name: "Orders",
-    href: routes.eCommerce.orders,
+    href: "",
   },
   {
     name: "Order Details",
-    href: routes.eCommerce.orderDetails(DUMMY_ID),
+    href: "",
   },
   {
     name: "Create Order",
-    href: routes.eCommerce.createOrder,
+    href: "",
   },
   {
     name: "Edit Order",
-    href: routes.eCommerce.editOrder(DUMMY_ID),
+    href: "",
   },
   {
     name: "Reviews",
-    href: routes.eCommerce.reviews,
+    href: "",
   },
   {
     name: "Shop",
-    href: routes.eCommerce.shop,
+    href: "",
   },
   {
     name: "Cart",
-    href: routes.eCommerce.cart,
+    href: "",
   },
   {
     name: "Checkout & Payment",
-    href: routes.eCommerce.checkout,
+    href: "",
   },
   {
     name: "Support Inbox",
-    href: routes.support.inbox,
+    href: "",
   },
   {
     name: "Support Snippets",
-    href: routes.support.snippets,
+    href: "",
   },
   {
     name: "Support Templates",
-    href: routes.support.templates,
+    href: "",
   },
   {
     name: "Invoice List",
-    href: routes.invoice.home,
+    href: "",
   },
   {
     name: "Invoice Details",
-    href: routes.invoice.details(DUMMY_ID),
+    href: "",
   },
   {
     name: "Create Invoice",
-    href: routes.invoice.create,
+    href: "",
   },
   {
     name: "Edit Invoice",
-    href: routes.invoice.edit(DUMMY_ID),
+    href: "",
   },
   {
     name: "Shipment List",
-    href: routes.logistics.shipmentList,
+    href: "",
   },
   {
     name: "Shipment Details",
-    href: routes.logistics.shipmentDetails(DUMMY_ID),
+    href: "",
   },
   {
     name: "Tracking",
-    href: routes.logistics.tracking(DUMMY_ID),
+    href: "",
   },
   {
     name: "File Manager",
-    href: routes.file.manager,
+    href: "",
   },
   // label start
   {
@@ -144,23 +143,23 @@ export const pageLinks = [
   // label end
   {
     name: "Cards",
-    href: routes.widgets.cards,
+    href: "",
   },
   {
     name: "Icons",
-    href: routes.widgets.icons,
+    href: "",
   },
   {
     name: "Charts",
-    href: routes.widgets.charts,
+    href: "",
   },
   // {
   //   name: 'Banners',
-  //   href: routes.widgets.banners,
+  //   href:"",
   // },
   {
     name: "Maps",
-    href: routes.widgets.maps,
+    href: "",
   },
   // label start
   {
@@ -169,27 +168,27 @@ export const pageLinks = [
   // label end
   {
     name: "Profile Settings",
-    href: routes.forms.profileSettings,
+    href: "",
   },
   {
     name: "Notification Preference",
-    href: routes.forms.notificationPreference,
+    href: "",
   },
   {
     name: "Personal Information",
-    href: routes.forms.personalInformation,
+    href: "",
   },
   {
     name: "Newsletter",
-    href: routes.forms.newsletter,
+    href: "",
   },
   // {
   //   name: 'Multi Step',
-  //   href: routes.forms.multiStep,
+  //   href:"",
   // },
   {
     name: "Payment checkout",
-    href: routes.eCommerce.checkout,
+    href: "",
   },
   // label start
   {
@@ -198,27 +197,27 @@ export const pageLinks = [
   // label end
   {
     name: "Basic",
-    href: routes.tables.basic,
+    href: "",
   },
   {
     name: "Collapsible",
-    href: routes.tables.collapsible,
+    href: "",
   },
   {
     name: "Enhanced",
-    href: routes.tables.enhanced,
+    href: "",
   },
   {
     name: "Sticky Header",
-    href: routes.tables.stickyHeader,
+    href: "",
   },
   {
     name: "Pagination",
-    href: routes.tables.pagination,
+    href: "",
   },
   {
     name: "Search",
-    href: routes.tables.search,
+    href: "",
   },
   // label start
   {
@@ -227,31 +226,31 @@ export const pageLinks = [
   // label end
   {
     name: "Profile",
-    href: routes.profile,
+    href: "",
   },
   {
     name: "Welcome",
-    href: routes.welcome,
+    href: "",
   },
   {
     name: "Coming soon",
-    href: routes.comingSoon,
+    href: "",
   },
   {
     name: "Access Denied",
-    href: routes.accessDenied,
+    href: "",
   },
   {
     name: "Not Found",
-    href: routes.notFound,
+    href: "",
   },
   {
     name: "Maintenance",
-    href: routes.maintenance,
+    href: "",
   },
   {
     name: "Blank",
-    href: routes.blank,
+    href: "",
   },
   // label start
   {
@@ -260,82 +259,82 @@ export const pageLinks = [
   // label end
   {
     name: "Modern Sign Up",
-    href: routes.auth.signUp1,
+    href: "",
   },
   {
     name: "Vintage Sign Up",
-    href: routes.auth.signUp2,
+    href: "",
   },
   {
     name: "Trendy Sign Up",
-    href: routes.auth.signUp3,
+    href: "",
   },
   {
     name: "Elegant Sign Up",
-    href: routes.auth.signUp4,
+    href: "",
   },
   {
     name: "Classic Sign Up",
-    href: routes.auth.signUp5,
+    href: "",
   },
   {
     name: "Modern Sign In",
-    href: routes.auth.signIn1,
+    href: "",
   },
   {
     name: "Vintage Sign In",
-    href: routes.auth.signIn2,
+    href: "",
   },
   {
     name: "Trendy Sign In",
-    href: routes.auth.signIn3,
+    href: "",
   },
   {
     name: "Elegant Sign In",
-    href: routes.auth.signIn4,
+    href: "",
   },
   {
     name: "Classic Sign In",
-    href: routes.auth.signIn5,
+    href: "",
   },
   {
     name: "Modern Forgot Password",
-    href: routes.auth.forgotPassword1,
+    href: "",
   },
   {
     name: "Vintage Forgot Password",
-    href: routes.auth.forgotPassword2,
+    href: "",
   },
   {
     name: "Trendy Forgot Password",
-    href: routes.auth.forgotPassword3,
+    href: "",
   },
   {
     name: "Elegant Forgot Password",
-    href: routes.auth.forgotPassword4,
+    href: "",
   },
   {
     name: "Classic Forgot Password",
-    href: routes.auth.forgotPassword5,
+    href: "",
   },
   {
     name: "Modern OTP Page",
-    href: routes.auth.otp1,
+    href: "",
   },
   {
     name: "Vintage OTP Page",
-    href: routes.auth.otp2,
+    href: "",
   },
   {
     name: "Trendy OTP Page",
-    href: routes.auth.otp3,
+    href: "",
   },
   {
     name: "Elegant OTP Page",
-    href: routes.auth.otp4,
+    href: "",
   },
   {
     name: "Classic OTP Page",
-    href: routes.auth.otp5,
+    href: "",
   },
 ];
