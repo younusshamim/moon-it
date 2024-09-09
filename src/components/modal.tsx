@@ -23,9 +23,9 @@ const Modal = ({ isOpen, setIsOpen, triggerBtn, children, className, size, close
             <DialogContent
                 closeBtn={closeBtn}
                 className={cn("w-[90%] md:max-w-screen-md max-h-screen overflow-y-auto border-muted z-50", className, {
-                    'max-w-screen-sm': size === 'sm',
-                    'max-w-screen-md': size === 'md',
-                    'max-w-screen-lg': size === 'lg',
+                    'md:max-w-screen-sm': size === 'sm',
+                    'md:max-w-screen-md': size === 'md',
+                    'md:max-w-screen-lg': size === 'lg',
                 })}>
 
                 {children}

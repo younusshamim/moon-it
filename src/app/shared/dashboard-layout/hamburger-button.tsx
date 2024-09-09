@@ -5,7 +5,6 @@ import {
   useDrawer,
 } from '@/app/shared/drawer-views/use-drawer';
 import { cn } from '@/lib/utils';
-import { ActionIcon } from 'rizzui';
 
 interface Props {
   view: JSX.Element;
@@ -22,9 +21,8 @@ export default function HamburgerButton({
 }: Props) {
   const { openDrawer } = useDrawer();
   return (
-    <ActionIcon
+    <span
       aria-label="Open Sidebar Menu"
-      variant="text"
       className={cn('me-3 h-auto w-auto p-0 sm:me-4 xl:hidden', className)}
       onClick={() =>
         openDrawer({
@@ -48,6 +46,6 @@ export default function HamburgerButton({
           d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
         />
       </svg>
-    </ActionIcon>
+    </span>
   );
 }
