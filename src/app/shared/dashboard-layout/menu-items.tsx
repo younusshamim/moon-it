@@ -1,11 +1,8 @@
-const DUMMY_ID = '1'
 import { routes } from '@/config/routes';
 import { FaHome } from "react-icons/fa";
 import {
   PiShoppingCart
 } from 'react-icons/pi';
-
-
 
 export const menuItems = [
   {
@@ -14,38 +11,28 @@ export const menuItems = [
     icon: <FaHome />,
   },
   {
-    name: 'E-Commerce',
-    href: '#',
+    name: 'Courses',
+    href: routes.dashboard.courses,
     icon: <PiShoppingCart />,
-    dropdownItems: [
-      {
-        name: 'Students',
-        href: routes.dashboard.students,
-      },
-      {
-        name: 'Product Details',
-        href: '',
-      },
-      {
-        name: 'Create Product',
-        href: '',
-      },
-      {
-        name: 'Edit Product',
-        href: '',
-      },
-      {
-        name: 'Categories',
-        href: '',
-      },
-      {
-        name: 'Create Category',
-        href: '',
-      },
-      {
-        name: 'Edit Category',
-        href: '',
-      },
-    ],
+  },
+  {
+    name: 'Students',
+    href: routes.dashboard.students,
+    icon: <PiShoppingCart />,
+  },
+  {
+    name: 'Registration',
+    href: 'aabbcc',
+    icon: <PiShoppingCart />,
+  },
+  {
+    name: 'Admission',
+    href: 'aabbcc',
+    icon: <PiShoppingCart />,
+  },
+  {
+    name: 'Seminar',
+    href: 'aabbcc',
+    icon: <PiShoppingCart />,
   },
 ];
