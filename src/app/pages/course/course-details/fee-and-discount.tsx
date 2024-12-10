@@ -7,7 +7,9 @@ import { convertToBanglaNumber } from "@/lib/utils";
 import { CourseType } from "@/types/course";
 import { format } from "date-fns";
 import { useState } from "react";
+import { MdCall } from "react-icons/md";
 import AdmissionFormModal from "../admission-form-modal/admission-form-modal";
+
 
 type PropsType = {
     course: CourseType;
@@ -16,6 +18,7 @@ type PropsType = {
 const FeeAndDiscount = ({ course }: PropsType) => {
     const [formModal, setFormModal] = useState(false);
     const [submittedModal, setSubmittedModal] = useState(false)
+    const phoneNumber = "+8801785882381";
 
     const { id, fee, discount, } = course;
     const { type, value, endDate } = discount || { type: '', value: 0, endDate: '' };
@@ -40,7 +43,7 @@ const FeeAndDiscount = ({ course }: PropsType) => {
                 </h3>
             )}
 
-            <div className="flex items-center gap-3 lg:gap-5">
+            <div className="flex items-center gap-4">
                 <AdmissionFormModal
                     isOpen={formModal}
                     setIsOpen={setFormModal}
@@ -51,9 +54,19 @@ const FeeAndDiscount = ({ course }: PropsType) => {
                 />
                 <FormSubmittedModal isOpen={submittedModal} setIsOpen={setSubmittedModal} />
 
-                <PrimaryButton size="lg" onClick={() => setFormModal(true)}>
-                    {isDiscount ? 'ডিস্কাউন্টে ভর্তি হোন' : 'ভর্তি হোন'}
+                <PrimaryButton size="lg" onClick={() => setFormModal(true)} >
+                    {isDiscount ? 'ডিস্কাউন্টে ভর্তি হোন' : 'ডিস্কাউন্টে ভর্তি হোন'}
                 </PrimaryButton>
+
+                <a href={`tel:${phoneNumber}`}>
+                    <PrimaryButton
+                        size="lg"
+                        variant="outline"
+                        iconLeft={<MdCall className="text-primary" />}
+                    >
+                        কল করুন
+                    </PrimaryButton>
+                </a>
 
                 {isDiscount && (
                     <h3 className="text-2xl font-bold text-primary-lighter">৳ <NumSpan>{convertToBanglaNumber(feeAfterDiscount)}</NumSpan> টাকা</h3>

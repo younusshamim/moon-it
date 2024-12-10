@@ -15,7 +15,7 @@ export const onAdmission = async (
     const data = admissionSchema.parse(formData);
     const newData = {
       ...data,
-      courseFee: Number(convertToEnglishNumber(data.courseFee)),
+      courseFee: Number(convertToEnglishNumber(data.courseFee ?? 0)),
     };
 
     await connectToDatabase();

@@ -81,10 +81,12 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal, feeAfterDisc
             sizes="100vw"
           />
           <h1 className="text-3xl font-extrabold text-primary mb-3 lg:mb-1">
-            নিচের ফর্মটি সঠিক তথ্য দিয়ে পূরণ করুন
+            {/* নিচের ফর্মটি সঠিক তথ্য দিয়ে পূরণ করুন */}
+            ডিস্কাউন্টে ভর্তি হতে নিচের ফর্মটি পূরণ করুন
           </h1>
           <h3 className="font-medium w-4/5 lg:w-full">
-            ফর্মটি পূরণ করার পর আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন।
+            {/* ফর্মটি পূরণ করার পর আমাদের প্রতিনিধি শীঘ্রই আপনার সাথে যোগাযোগ করবেন। */}
+            ফর্মটি পূরণের পর আমাদের প্রতিনিধি শীঘ্রই আপনার সঙ্গে ডিস্কাউন্টে ভর্তি বিষয়ে যোগাযোগ করবে।
           </h3>
         </div>
 
@@ -109,17 +111,17 @@ const AdmissionFormModal = ({ isOpen, setIsOpen, setSubmittedModal, feeAfterDisc
             control={control}
             error={errors.courseId?.message as string}
             inputClassName="disabled:opacity-100"
-            className={isActiveCourseFeeField ? "" : "col-span-2"}
+            className={isActiveCourseFeeField ? "col-span-2" : "col-span-2"}
             disabled
           />
-          <Input
+          {/* <Input
             label={isDiscount ? "ডিস্কাউন্টে কোর্স ফি" : "কোর্স ফি"}
             inputClassName="disabled:opacity-100 font-sans"
             className={isActiveCourseFeeField ? "block" : "hidden"}
             disabled
             {...register("courseFee")}
             error={errors.courseFee?.message as string}
-          />
+          /> */}
           <Textarea
             label="আপনার ঠিকানা"
             placeholder="আপনার ঠিকানা লিখুন"

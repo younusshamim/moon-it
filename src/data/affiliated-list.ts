@@ -2,15 +2,6 @@ import { AffiliatedType } from "@/types/affiliated";
 
 const affiliatedList: AffiliatedType[] = [
   {
-    icon: "/logo/BTEB-Logo.png",
-    title: "কারিগরি শিক্ষাবোর্ড",
-    description:
-      "গনপ্রজাতন্ত্রী বাংলাদেশ সরকারের কারিগরি শিক্ষাবোর্ড কর্তৃক অনুমোদিত।",
-    affiliatedNo: "BTEB কোড- ৬৯০৩২",
-    website: "https://bteb.gov.bd/",
-    pdf: "/affiliated-pdf/bteb.pdf",
-  },
-  {
     icon: "/logo/BD_Government_Sea.png",
     title: "শিক্ষা মন্ত্রনালয়",
     description:
@@ -19,6 +10,15 @@ const affiliatedList: AffiliatedType[] = [
     website:
       "https://tmed.portal.gov.bd/site/moedu_office_order/7eb204d5-3ee8-4fc3-90c5-e3ac91120593",
     pdf: "https://tmed.portal.gov.bd/site/moedu_office_order/7eb204d5-3ee8-4fc3-90c5-e3ac91120593",
+  },
+  {
+    icon: "/logo/BTEB-Logo.png",
+    title: "কারিগরি শিক্ষাবোর্ড",
+    description:
+      "গনপ্রজাতন্ত্রী বাংলাদেশ সরকারের কারিগরি শিক্ষাবোর্ড কর্তৃক অনুমোদিত।",
+    affiliatedNo: "BTEB কোড- ৬৯০৩২",
+    website: "https://bteb.gov.bd/",
+    pdf: "/affiliated-pdf/bteb.pdf",
   },
   {
     icon: "/logo/NSDA.png",

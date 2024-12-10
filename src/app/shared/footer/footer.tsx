@@ -26,15 +26,15 @@ const Footer = () => {
             <p className="font-bold mb-2">কমিউনিটি -এর সাথে কানেক্টেড থাকতে</p>
             <div className="flex gap-3 text-3xl">
               <a href="https://www.facebook.com/moon69032" target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="cursor-pointer rounded-full" />
+                <FaFacebook className="cursor-pointer " />
               </a>
 
               <a href="https://www.youtube.com/@MoonITFeni" target="_blank" rel="noopener noreferrer">
-                <IoLogoYoutube className="cursor-pointer rounded-full" />
+                <IoLogoYoutube className="cursor-pointer " />
               </a>
 
-              {/* <FaInstagramSquare className="cursor-pointer rounded-full" /> */}
-              <FaLinkedin className="cursor-pointer rounded-full" />
+              {/* <FaInstagramSquare className="cursor-pointer " /> */}
+              <FaLinkedin className="cursor-pointer " />
             </div>
           </div>
 
@@ -46,7 +46,7 @@ const Footer = () => {
               <IoLocationSharp className="text-2xl" />
               <p>
                 মনোয়ারা ম্যানশন, স্টেডিয়াম রোড, একাডেমী <br /> (আইয়ুব আলী
-                চেম্বার/নূরীয় মসজিদ সংলগ্ন), ফেনী।
+                চেম্বার/নুরিয়া মসজিদ সংলগ্ন), ফেনী।
               </p>
             </div>
 

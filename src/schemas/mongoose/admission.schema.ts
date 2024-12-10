@@ -18,7 +18,7 @@ const AdmissionSchema = new mongoose.Schema(
     },
     courseFee: {
       type: Number,
-      required: true,
+      required: false,
     },
     address: {
       type: String,
