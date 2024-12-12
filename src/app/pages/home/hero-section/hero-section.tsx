@@ -32,14 +32,14 @@ const HeroSection = () => {
             প্রস্তুত আপনার ক্যারিয়ার গড়ার অগ্রযাত্রায়।
           </h1>
 
-          <div className="flex gap-4 z-40 w-full lg:w-fit">
-            <Link href="free-seminar" className="w-1/2 lg:w-fit">
+          <div className="flex gap-3 lg:gap-4 z-40 w-full lg:w-fit">
+            <Link href="free-seminar" className="w-1/2 lg:w-fit ml-5 lg:ml-0">
               <PrimaryButton size="lg" iconRight={<MdOutlineComputer />} className="w-full lg:w-fit">
                 ফ্রি সেমিনার
               </PrimaryButton>
             </Link>
 
-            <Link href="courses" className="w-1/2 lg:w-fit">
+            <Link href="courses" className="w-1/2 lg:w-fit mr-5 lg:mr-0">
               <PrimaryButton
                 iconRight={<MdOutlineComputer className="text-primary" />}
                 variant="outline"
