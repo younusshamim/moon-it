@@ -6,7 +6,6 @@ import { FaFacebook } from "react-icons/fa6";
 import { IoIosCall, IoLogoYoutube } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 
-
 const Footer = () => {
   return (
     <div className="bg-card ">
@@ -25,11 +24,19 @@ const Footer = () => {
 
             <p className="font-bold mb-2">কমিউনিটি -এর সাথে কানেক্টেড থাকতে</p>
             <div className="flex gap-3 text-3xl">
-              <a href="https://www.facebook.com/moon69032" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.facebook.com/moon69032"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebook className="cursor-pointer " />
               </a>
 
-              <a href="https://www.youtube.com/@MoonITFeni" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.youtube.com/@MoonITFeni"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <IoLogoYoutube className="cursor-pointer " />
               </a>
 
@@ -79,7 +86,7 @@ const Footer = () => {
           <div className="hidden lg:block">
             <h3 className="font-bold text-xl mb-2">জনপ্রিয় কোর্স সমূহ-</h3>
             <div className="flex flex-col gap-1">
-              <p className="cursor-pointer">প্রফেশনাল গ্রাফিক্স ডিজাইন</p>
+              <p className="cursor-pointer">প্রফেশনাল গ্রাফিক ডিজাইন</p>
               <p className="cursor-pointer">ডিজিটাল মার্কেটিং</p>
               <p className="cursor-pointer">
                 ফাইন আর্টস (<span className="font-sans">১</span> বছর মেয়াদী)

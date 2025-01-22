@@ -4,19 +4,20 @@ const mentorList: MentorType[] = [
   {
     id: 1,
     name: "ইঞ্জি. ইউছুপ শাহীন",
-    title: "ইন্সট্রাক্টর - নেটওয়ার্কিং সিসিএনএ এন্ড আইটি সাপোর্ট সার্ভিসেস",
-    picture: "/instructors/Yousuf-Shahin-instructor.png",
+    title:
+      "ইন্সট্রাক্টর - নেটওয়ার্কিং সিসিএনএ, গ্রাফিক ডিজাইন এন্ড আইটি সাপোর্ট সার্ভিসেস",
+    picture: "/instructors/Yousuf-Shahin-Final.png",
   },
   {
     id: 11,
     name: "ইঞ্জি. আবদুস সোবহান শামীম",
-    title: "ইন্সট্রাক্টর - কম্পিউটার টেকনোলজি (১ বছর)",
+    title: "ইন্সট্রাক্টর - কম্পিউটার টেকনোলজি",
     picture: "/instructors/abdus-sobhan-shamim.png",
   },
   {
     id: 12,
     name: "শর্ণা শাহা",
-    title: "ইন্সট্রাক্টর - ফাইন আর্টস (১ বছর)",
+    title: "ইন্সট্রাক্টর - ফাইন আর্টস",
     picture: "/instructors/sorna-saha.png",
   },
   {
@@ -28,7 +29,7 @@ const mentorList: MentorType[] = [
   {
     id: 2,
     name: "ইফতেখার হোসাইন",
-    title: "ইন্সট্রাক্টর - গ্রাফিক্স এন্ড UI/UX ডিজাইন",
+    title: "ইন্সট্রাক্টর - গ্রাফিক এন্ড UI/UX ডিজাইন, আইটি সাপোর্ট সার্ভিসেস",
     picture: "/instructors/iftikhar-hossain.png",
   },
   {
@@ -43,12 +44,12 @@ const mentorList: MentorType[] = [
     title: "ইন্সট্রাক্টর - অটোক্যাড এন্ড ইস্টিমেট-কস্টিং প্রোগ্রাম",
     picture: "/instructors/nurul-islam.png",
   },
-  // {
-  //   id: 6,
-  //   name: "ইউনুছ শামীম",
-  //   title: "ইন্সট্রাক্টর - ওয়েব ডিজাইন এন্ড ডেভেলপমেন্ট",
-  //   picture: "/instructors/younus-shamim.png",
-  // },
+  {
+    id: 6,
+    name: "ইউনুছ শামীম",
+    title: "ইন্সট্রাক্টর - ওয়েব ডিজাইন এন্ড ডেভেলপমেন্ট",
+    picture: "/instructors/younus-shamim.png",
+  },
   {
     id: 7,
     name: "আবদুল্লাহ রিয়াদ জয়",
@@ -64,7 +65,7 @@ const mentorList: MentorType[] = [
   {
     id: 10,
     name: "হাফেজ মাওঃ হাসান বিন মমিন",
-    title: "ইন্সট্রাক্টর - আরাবিক ল্যাঙ্গুয়েজ",
+    title: "ইন্সট্রাক্টর - অ্যারাবিক ল্যাঙ্গুয়েজ",
     picture: "/instructors/hasan-bin-momin.png",
   },
   {
@@ -75,7 +76,7 @@ const mentorList: MentorType[] = [
   },
   {
     id: 13,
-    name: "ইকবাল হোসাইন",
+    name: "রুবেল রানা",
     title: "ইন্সট্রাক্টর - জার্মান ল্যাঙ্গুয়েজ",
     picture: "/instructors/male-instructor.png",
   },

@@ -10,8 +10,9 @@ export interface CourseType {
   id: number;
   name: string;
   title: string;
-  description1: string;
-  description2: string;
+  description1?: string;
+  description2?: string;
+  description3?: string;
   category: string;
   image: string;
   fee: number;
