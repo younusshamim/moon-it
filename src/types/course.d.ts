@@ -1,10 +1,23 @@
 import { ServiceType } from "./service";
 
-type DiscountType = {
+export type DiscountType = {
   type: "amount" | "percentage";
   value: number;
   endDate: string;
 } | null;
+
+export type CurriculumLessonType = {
+  title: string;
+  details?: string;
+};
+export type CurriculumModuleType = {
+  title: string;
+  lessons: CurriculumLessonType[];
+};
+export type CurriculumSectionType = {
+  title: string;
+  modules: CurriculumModuleType[];
+};
 
 export interface CourseType {
   id: number;
@@ -19,4 +32,5 @@ export interface CourseType {
   discount: DiscountType;
   metorIds: number[];
   services: ServiceType[];
+  curriculum?: CurriculumSectionType[];
 }

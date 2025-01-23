@@ -58,7 +58,9 @@ const Course = ({ params }: PropsTypes) => {
         <ServicesSection servicesData={targetCourse?.services} />
       </Container>
 
-      <CourseCurriculum />
+      {targetCourse.curriculum && (
+        <CourseCurriculum curriculum={targetCourse.curriculum} />
+      )}
 
       {mentors.length > 0 && <CourseMentors mentors={mentors} />}
     </>

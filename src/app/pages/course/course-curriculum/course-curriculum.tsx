@@ -1,21 +1,25 @@
 "use client";
 import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
-import courseCurriculumData, { CourseSectionType } from "./data";
 import CourseSection from "./course-section";
 import { useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import PrimaryButton from "@/components/primary-button";
 import { cn } from "@/lib/utils";
+import { CurriculumSectionType } from "@/types/course";
 
-const CourseCurriculum: React.FC = () => {
+type PropsTypes = {
+  curriculum: CurriculumSectionType[];
+};
+
+const CourseCurriculum = ({ curriculum }: PropsTypes) => {
   const [showAll, setShowAll] = useState(false);
 
   const visibleModules = useMemo(() => {
     let count = 0;
-    const limitedSections = courseCurriculumData.reduce(
-      (acc: CourseSectionType[], section) => {
+    const limitedSections = curriculum.reduce(
+      (acc: CurriculumSectionType[], section) => {
         if (count >= 5) return acc;
 
         const limitedModules = section.modules.filter(() => {
@@ -35,9 +39,9 @@ const CourseCurriculum: React.FC = () => {
     );
 
     return limitedSections;
-  }, [courseCurriculumData]);
+  }, [curriculum]);
 
-  const dataToRender = showAll ? courseCurriculumData : visibleModules;
+  const dataToRender = showAll ? curriculum : visibleModules;
 
   return (
     <section className="py-10">
@@ -47,7 +51,7 @@ const CourseCurriculum: React.FC = () => {
         </h2>
 
         <div className="space-y-8 max-w-3xl mx-auto relative">
-          {dataToRender.map((section: CourseSectionType, index: number) => (
+          {dataToRender.map((section: CurriculumSectionType, index: number) => (
             <CourseSection key={index} section={section} sectionIndex={index} />
           ))}
 
