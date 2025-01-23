@@ -1,9 +1,44 @@
+"use client";
 import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
 import courseCurriculumData, { CourseSectionType } from "./data";
 import CourseSection from "./course-section";
+import { useMemo, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import PrimaryButton from "@/components/primary-button";
+import { cn } from "@/lib/utils";
 
 const CourseCurriculum: React.FC = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleModules = useMemo(() => {
+    let count = 0;
+    const limitedSections = courseCurriculumData.reduce(
+      (acc: CourseSectionType[], section) => {
+        if (count >= 5) return acc;
+
+        const limitedModules = section.modules.filter(() => {
+          if (count < 4) {
+            count++;
+            return true;
+          }
+          return false;
+        });
+
+        if (limitedModules.length > 0) {
+          acc.push({ ...section, modules: limitedModules });
+        }
+        return acc;
+      },
+      []
+    );
+
+    return limitedSections;
+  }, [courseCurriculumData]);
+
+  const dataToRender = showAll ? courseCurriculumData : visibleModules;
+
   return (
     <section className="py-10">
       <Container>
@@ -11,16 +46,30 @@ const CourseCurriculum: React.FC = () => {
           কোর্স <GradientText>কারিকুলাম</GradientText>
         </h2>
 
-        <div className="space-y-8 max-w-3xl mx-auto">
-          {courseCurriculumData.map(
-            (section: CourseSectionType, index: number) => (
-              <CourseSection
-                key={index}
-                section={section}
-                sectionIndex={index}
-              />
-            )
+        <div className="space-y-8 max-w-3xl mx-auto relative">
+          {dataToRender.map((section: CourseSectionType, index: number) => (
+            <CourseSection key={index} section={section} sectionIndex={index} />
+          ))}
+
+          {!showAll && (
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
           )}
+
+          <div
+            className={cn(
+              "absolute inset-x-0 bottom-0 flex justify-center pb-2",
+              {
+                static: showAll,
+              }
+            )}
+          >
+            <PrimaryButton
+              onClick={() => setShowAll(!showAll)}
+              iconRight={showAll ? <ChevronUp /> : <ChevronDown />}
+            >
+              {showAll ? "কমিয়ে দেখুন" : "সব দেখুন"}
+            </PrimaryButton>
+          </div>
         </div>
       </Container>
     </section>
