@@ -1,11 +1,11 @@
 import React from "react";
 import { Accordion } from "@/components/ui/accordion";
 import CourseModule from "./course-module";
-import { CourseSectionType } from "./data";
 import { GraduationCap } from "lucide-react";
+import { CurriculumSectionType } from "@/types/course";
 
 interface CourseSectionProps {
-  section: CourseSectionType;
+  section: CurriculumSectionType;
   sectionIndex: number;
 }
 

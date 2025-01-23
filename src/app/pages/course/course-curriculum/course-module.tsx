@@ -4,11 +4,11 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import { CourseModuleType } from "./data";
 import { BookOpen, CheckCircle } from "lucide-react";
+import { CurriculumModuleType } from "@/types/course";
 
 interface CourseModuleProps {
-  module: CourseModuleType;
+  module: CurriculumModuleType;
   sectionIndex: number;
   moduleIndex: number;
 }
