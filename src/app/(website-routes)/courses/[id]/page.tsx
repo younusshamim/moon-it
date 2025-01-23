@@ -1,6 +1,6 @@
 import CourseDetails from "@/app/pages/course/course-details/course-details";
 import CourseMentors from "@/app/pages/course/course-mentors/course-mentors";
-import Curriculum from "@/app/pages/course/curriculum/curriculum";
+import CourseCurriculum from "@/app/pages/course/course-curriculum/course-curriculum";
 import ServicesSection from "@/app/shared/services-section/services-section";
 import Container from "@/components/container";
 import GradientText from "@/components/gradient-text";
@@ -51,14 +51,14 @@ const Course = ({ params }: PropsTypes) => {
     <>
       <CourseDetails course={targetCourse} />
 
-      <Curriculum />
-
       <Container className="py-10">
         <h2 className="text-4xl text-foreground-dark font-extrabold text-center mb-4">
           কোর্সে <GradientText>আপনি পাচ্ছেন</GradientText>
         </h2>
         <ServicesSection servicesData={targetCourse?.services} />
       </Container>
+
+      <CourseCurriculum />
 
       {mentors.length > 0 && <CourseMentors mentors={mentors} />}
     </>
