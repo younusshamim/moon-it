@@ -21,17 +21,18 @@ const CourseModule: React.FC<CourseModuleProps> = React.memo(
         className="bg-background rounded-lg border overflow-hidden transition-all duration-300 hover:border-primary-lighter"
       >
         <AccordionTrigger
-          className="text-lg font-semibold hover:no-underline px-4 py-3"
+          className="md:text-lg font-semibold hover:no-underline px-3 md:px-4 py-3"
           iconClassName="ml-3 bg-card p-1 w-6 h-6 rounded-full"
         >
-          <div className="flex items-center space-x-3 w-full">
-            <span className="bg-primary text-primary-foreground p-2 rounded-full">
-              <BookOpen className="h-5 w-5" />
-            </span>
-            <span className="text-foreground flex-grow text-left">
-              {module.title}
-            </span>
-            <span className="text-muted-foreground text-sm">
+          <div className="flex items-center justify-between w-full">
+            <div className="flex items-center space-x-3">
+              <span className="bg-primary text-primary-foreground p-2 rounded-full">
+                <BookOpen className="h-3 w-3 md:h-5 md:w-5" />
+              </span>
+              <span className="text-foreground text-left">{module.title}</span>
+            </div>
+
+            <span className="text-muted-foreground text-sm hidden md:block">
               {module.lessons.length} Lessons
             </span>
           </div>
