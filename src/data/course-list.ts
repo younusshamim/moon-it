@@ -106,6 +106,339 @@ const courseList: CourseType[] = [
         image: "/icons/unlimited-support.png",
       },
     ],
+    curriculum: [
+      {
+        title: "Digital Marketing Foundations",
+        modules: [
+          {
+            title: "Digital Marketing Fundamentals",
+            lessons: [
+              {
+                title: "Digital Marketing Overview",
+                details: "Definition, scope, digital marketing ecosystem",
+              },
+              {
+                title: "Marketing Strategy Development",
+                details: "Creating comprehensive digital marketing plans",
+              },
+              {
+                title: "Audience Segmentation",
+                details: "Targeting techniques, customer persona creation",
+              },
+              {
+                title: "Digital Marketing Terminology",
+                details: "Key terms, metrics, industry-specific vocabulary",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Social Media Marketing Strategies",
+        modules: [
+          {
+            title: "Facebook Marketing Mastery",
+            lessons: [
+              {
+                title: "Facebook Marketing Foundations",
+                details: "Platform overview, marketing potential",
+              },
+              {
+                title: "Page Optimization",
+                details: "Creating and optimizing business pages",
+              },
+              {
+                title: "Content Strategy",
+                details: "Developing engaging Facebook content",
+              },
+              {
+                title: "Facebook Groups Marketing",
+                details: "Community building, engagement techniques",
+              },
+              {
+                title: "Facebook Advertising",
+                details: "Ad campaigns, targeting, management",
+              },
+              {
+                title: "Advanced Targeting",
+                details: "Sophisticated audience segmentation",
+              },
+              {
+                title: "Analytics and Reporting",
+                details: "Performance tracking, insights interpretation",
+              },
+              {
+                title: "Campaign Management",
+                details: "Scaling and optimizing ad campaigns",
+              },
+              {
+                title: "Ad Design Techniques",
+                details: "Creating compelling visual advertisements",
+              },
+            ],
+          },
+          {
+            title: "Pinterest Marketing",
+            lessons: [
+              {
+                title: "Pinterest Marketing Introduction",
+                details: "Platform opportunities, marketing potential",
+              },
+              {
+                title: "Business Account Creation",
+                details: "Setting up and optimizing Pinterest profile",
+              },
+              {
+                title: "Account Management",
+                details: "Content curation, board organization",
+              },
+              {
+                title: "Content Strategy",
+                details: "Creating engaging visual content",
+              },
+              {
+                title: "Pinterest Advertising",
+                details: "Ad types, campaign creation",
+              },
+              {
+                title: "SEO and Organic Growth",
+                details: "Strategies for increasing visibility",
+              },
+              {
+                title: "Advanced Marketing Techniques",
+                details: "Sophisticated Pinterest marketing strategies",
+              },
+            ],
+          },
+          {
+            title: "LinkedIn Marketing",
+            lessons: [
+              {
+                title: "LinkedIn Marketing Fundamentals",
+                details: "Professional networking, B2B marketing",
+              },
+              {
+                title: "Content Strategy",
+                details: "Professional content development",
+              },
+              {
+                title: "Network Building",
+                details: "Connection and networking strategies",
+              },
+              {
+                title: "LinkedIn Advertising",
+                details: "Professional targeted advertising",
+              },
+              {
+                title: "Sales and Lead Generation",
+                details: "Using Sales Navigator effectively",
+              },
+              {
+                title: "B2B Marketing",
+                details: "Strategies for business-to-business marketing",
+              },
+              {
+                title: "Personal Branding",
+                details: "Profile optimization, career growth",
+              },
+            ],
+          },
+          {
+            title: "Instagram Marketing",
+            lessons: [
+              {
+                title: "Instagram Marketing Introduction",
+                details: "Platform overview, marketing strategies",
+              },
+              {
+                title: "Content Strategy",
+                details: "Creating visually engaging content",
+              },
+              {
+                title: "Instagram Advertising",
+                details: "Ad types, campaign creation",
+              },
+              {
+                title: "Advanced Targeting",
+                details: "Audience segmentation techniques",
+              },
+              {
+                title: "Ad Campaign Management",
+                details: "Scaling and optimizing campaigns",
+              },
+            ],
+          },
+          {
+            title: "TikTok Advertising",
+            lessons: [
+              {
+                title: "TikTok Advertising Fundamentals",
+                details: "Platform overview, advertising opportunities",
+              },
+              {
+                title: "Advertising Objectives",
+                details: "Campaign goals and strategies",
+              },
+              {
+                title: "Ad Creation Techniques",
+                details: "Designing effective TikTok ads",
+              },
+              {
+                title: "Advanced Ad Strategies",
+                details: "Sophisticated campaign management",
+              },
+              {
+                title: "Tracking and Analytics",
+                details: "Pixel implementation, event tracking",
+              },
+              {
+                title: "E-commerce Promotion",
+                details: "App and product promotion techniques",
+              },
+              {
+                title: "Campaign Optimization",
+                details: "Performance analysis and improvement",
+              },
+              {
+                title: "Industry Insights",
+                details: "Case studies and marketing trends",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Video and Search Marketing",
+        modules: [
+          {
+            title: "YouTube Video Marketing",
+            lessons: [
+              {
+                title: "Content Ideation",
+                details: "Generating compelling video content ideas",
+              },
+              {
+                title: "Video Editing Tools",
+                details: "Software introduction and basic techniques",
+              },
+              {
+                title: "Video Production",
+                details: "Creating promotional and engaging content",
+              },
+              {
+                title: "Channel Optimization",
+                details: "YouTube channel setup and management",
+              },
+              {
+                title: "SEO and Keyword Research",
+                details: "Optimizing video content for search",
+              },
+              {
+                title: "Competitor Analysis",
+                details: "Analyzing and learning from competitors",
+              },
+              {
+                title: "Promotional Campaigns",
+                details: "Paid video promotion strategies",
+              },
+              {
+                title: "Monetization Strategies",
+                details: "YouTube revenue generation techniques",
+              },
+            ],
+          },
+          {
+            title: "Google Marketing",
+            lessons: [
+              {
+                title: "Google Ads Introduction",
+                details: "Platform overview and account setup",
+              },
+              {
+                title: "Search Ads",
+                details: "Creating and optimizing search advertisements",
+              },
+              {
+                title: "Display Ads",
+                details: "Visual advertising strategies",
+              },
+              {
+                title: "Video Ads",
+                details: "Video advertising on Google platforms",
+              },
+              {
+                title: "Shopping Ads",
+                details: "E-commerce product advertising",
+              },
+              {
+                title: "App Campaigns",
+                details: "Mobile app promotion techniques",
+              },
+              {
+                title: "Analytics and Optimization",
+                details: "Performance tracking and improvement",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Advanced Marketing Technologies",
+        modules: [
+          {
+            title: "Web Analytics",
+            lessons: [
+              {
+                title: "Technical Basics",
+                details: "Web analytics fundamentals",
+              },
+              {
+                title: "Google Tag Manager Setup",
+                details: "Implementation and configuration",
+              },
+              {
+                title: "Google Analytics 4 Mastery",
+                details: "Advanced tracking and insights",
+              },
+              {
+                title: "E-commerce Analytics",
+                details: "Growth insights and strategies",
+              },
+              {
+                title: "Pixel Implementation",
+                details: "Facebook Pixel setup for iOS updates",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Freelancing and Professional Development",
+        modules: [
+          {
+            title: "Freelancing Marketplaces",
+            lessons: [
+              {
+                title: "Fiverr Marketplace",
+                details: "Profile creation, service offerings",
+              },
+              {
+                title: "Upwork Strategies",
+                details: "Effective client acquisition",
+              },
+              {
+                title: "LinkedIn Client Hunting",
+                details: "Professional networking and lead generation",
+              },
+              {
+                title: "Payment Solutions",
+                details: "Payoneer and international transactions",
+              },
+            ],
+          },
+        ],
+      },
+    ],
   },
   {
     id: 3,
