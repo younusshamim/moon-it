@@ -1,23 +1,19 @@
 import Container from "@/components/container";
 import { chairmanImage } from "@/data/focused-images";
-import ScrollAnimation from "@/lib/animations/scroll-animation";
-import { variant3 } from "@/lib/animations/variants";
 import Image from "next/image";
 
 const Chairman = () => {
   return (
     <Container className="pt-20 flex flex-col lg:flex-row gap-20 lg:gap-28 items-center justify-center">
       <div className="w-[calc(100%-50px)] lg:w-1/2 flex justify-start lg:justify-end relative">
-        <ScrollAnimation variants={variant3} className="z-10">
-          <Image
-            className="w-full h-[350px] lg:h-[400px] object-cover object-center rounded-card  border-white border-4 shadow-lg"
-            sizes="100vw"
-            width={0}
-            height={0}
-            src={chairmanImage}
-            alt="Yousuf Shahin - Chairman of Moon IT"
-          />
-        </ScrollAnimation>
+        <Image
+          className="w-full h-[350px] lg:h-[400px] object-cover object-center rounded-card  border-white border-4 shadow-lg"
+          sizes="100vw"
+          width={0}
+          height={0}
+          src={chairmanImage}
+          alt="Yousuf Shahin - Chairman of Moon IT"
+        />
 
         <div className="w-[90%] lg:w-[80%] h-[350px] lg:h-[400px] bg-primary-lighter dark:bg-background rounded-card absolute top-7 -right-5 lg:top-10 lg:-right-10 z-0 border-white border-4 shadow-lg"></div>
       </div>

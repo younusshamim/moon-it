@@ -1,7 +1,5 @@
 import Container from "@/components/container";
 import LineShapes from "@/components/shapes/line-shapes";
-import ScrollAnimation from "@/lib/animations/scroll-animation";
-import { variant2 } from "@/lib/animations/variants";
 import { CourseType } from "@/types/course";
 import Image from "next/image";
 import FeeAndDiscount from "./fee-and-discount";
@@ -33,16 +31,14 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
       </div>
 
       <div className="w-full lg:w-1/2 z-40">
-        <ScrollAnimation variants={variant2}>
-          <Image
-            className="w-full lg:h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
-            sizes="100vw"
-            width={0}
-            height={0}
-            src={image}
-            alt={name}
-          />
-        </ScrollAnimation>
+        <Image
+          className="w-full lg:h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
+          sizes="100vw"
+          width={0}
+          height={0}
+          src={image}
+          alt={name}
+        />
       </div>
     </Container>
   );

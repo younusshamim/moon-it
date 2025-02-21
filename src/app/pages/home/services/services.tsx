@@ -18,9 +18,7 @@ const Services = () => {
           <GradientText> কেন আস্থা রাখবেন </GradientText> মুন আইটি-তে?
         </h2>
 
-        {/* <ScrollAnimation variants={variant1}> */}
         <ServicesSection servicesData={servicesData} />
-        {/* </ScrollAnimation> */}
       </Container>
     </div>
   );

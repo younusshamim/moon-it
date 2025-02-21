@@ -8,11 +8,16 @@ import { FaArrowRight } from "react-icons/fa6";
 type PropsTypes = {
   course: CourseType;
   className?: string;
-}
+};
 
 const CourseCard = ({ course, className }: PropsTypes) => {
   return (
-    <div className={cn("bg-background dark:bg-background2 rounded-card hover:scale-[1.02] transition-all duration-500", className)}>
+    <div
+      className={cn(
+        "bg-background dark:bg-background2 rounded-card hover:scale-[1.02] transition-all duration-500",
+        className
+      )}
+    >
       <Image
         className="w-full h-[170px] object-cover rounded-t-card"
         sizes="100vw"

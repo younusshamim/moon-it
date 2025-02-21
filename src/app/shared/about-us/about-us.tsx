@@ -49,7 +49,7 @@ const AboutUs = () => {
         </div>
 
         <div className="w-full lg:w-1/2 z-40">
-          {/* <ScrollAnimation variants={variant2}>
+          {/*
             <Image
               className="w-full h-[380px] object-cover object-bottom shadow-lg shadow-slate-400 dark:shadow-slate-700 rounded-card hover:scale-[1.02] transition-all duration-500"
               sizes="100vw"
@@ -58,7 +58,7 @@ const AboutUs = () => {
               src="/photo/technical-school.jpg"
               alt="Moon IT Seminar"
             />
-          </ScrollAnimation> */}
+          */}
 
           <Carousel imgOverlaySlider={true}>
             {aboutImages.map((item, index) => (
