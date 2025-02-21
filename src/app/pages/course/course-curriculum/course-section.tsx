@@ -12,9 +12,9 @@ interface CourseSectionProps {
 const CourseSection: React.FC<CourseSectionProps> = React.memo(
   ({ section, sectionIndex }) => {
     return (
-      <section className="bg-card border rounded-lg px-4 md:px-5 py-5 space-y-6 shadow-sm transition-all duration-300 hover:shadow-xl">
+      <section className="bg-card border border-muted rounded-lg px-4 md:px-5 py-5 space-y-6 shadow-sm transition-all duration-300 hover:shadow-xl">
         <div className="flex items-center justify-center space-x-2 flex-col md:flex-row">
-          <GraduationCap className="h-9 w-9 text-secondary" />
+          <GraduationCap className="size-12 md:size-9 text-secondary" />
           <h3 className="text-xl font-bold text-center text-foreground ">
             {section.title}
           </h3>

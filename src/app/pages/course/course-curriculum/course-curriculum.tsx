@@ -46,7 +46,7 @@ const CourseCurriculum = ({ curriculum }: PropsTypes) => {
   return (
     <section className="py-10">
       <Container>
-        <h2 className="text-4xl text-foreground-dark font-extrabold  text-center mb-4">
+        <h2 className="text-4xl text-foreground-dark font-extrabold text-center mb-4">
           কোর্স <GradientText>কারিকুলাম</GradientText>
         </h2>
 
@@ -56,7 +56,7 @@ const CourseCurriculum = ({ curriculum }: PropsTypes) => {
           ))}
 
           {!showAll && (
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 to-transparent pointer-events-none" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white via-white/80 dark:from-gray-800 dark:via-gray-800/80  to-transparent pointer-events-none" />
           )}
 
           <div

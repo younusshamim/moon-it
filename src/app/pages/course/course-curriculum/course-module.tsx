@@ -18,7 +18,7 @@ const CourseModule: React.FC<CourseModuleProps> = React.memo(
     return (
       <AccordionItem
         value={`module-${sectionIndex}-${moduleIndex}`}
-        className="bg-background rounded-lg border overflow-hidden transition-all duration-300 hover:border-primary-lighter"
+        className="bg-background rounded-lg border border-muted overflow-hidden transition-all duration-300 hover:border-primary-lighter"
       >
         <AccordionTrigger
           className="md:text-lg font-semibold hover:no-underline px-3 md:px-4 py-3"
@@ -39,7 +39,7 @@ const CourseModule: React.FC<CourseModuleProps> = React.memo(
         </AccordionTrigger>
 
         <AccordionContent>
-          <hr />
+          <hr className="border-muted" />
 
           <div className="p-4">
             <ul className="space-y-3">
