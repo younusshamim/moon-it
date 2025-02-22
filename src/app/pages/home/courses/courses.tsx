@@ -13,7 +13,10 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import CourseCard from "./course-card";
-import StaggeredSection from "@/components/animations/staggered-section";
+import {
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/animations/StaggerAnimation";
 
 const Courses = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | number>(
@@ -36,47 +39,49 @@ const Courses = () => {
           হয়েছে।
         </p>
 
-        <StaggeredSection>
-          <Tabs
-            tabOptions={tabOptions}
-            selected={selectedCategory}
-            setSelected={setSelectedCategory}
-          />
+        <Tabs
+          tabOptions={tabOptions}
+          selected={selectedCategory}
+          setSelected={setSelectedCategory}
+        />
 
-          <div>
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
-              {courses.map((course, index) => {
-                return <CourseCard course={course} key={course.name + index} />;
-              })}
-            </div>
+        <StaggerContainer>
+          <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-6">
+            {courses.map((course, index) => {
+              return (
+                <StaggerItem key={course.name + index}>
+                  <CourseCard course={course} />
+                </StaggerItem>
+              );
+            })}
           </div>
+        </StaggerContainer>
 
-          <Carousel
-            key={selectedCategory}
-            sliderDots={true}
-            className="block md:hidden"
-            dotsClassName="bg-gray-500"
-          >
-            {courses.map((course, index) => (
-              <CarouselItem
-                key={course.name + index}
-                className="basis-4/5 sm:basis-1/2"
-              >
-                <CourseCard course={course} />
-              </CarouselItem>
-            ))}
-          </Carousel>
-
-          <Link href="/courses">
-            <PrimaryButton
-              size="lg"
-              className="mx-auto mt-10"
-              iconRight={<FaArrowRight />}
+        <Carousel
+          key={selectedCategory}
+          sliderDots={true}
+          className="block md:hidden"
+          dotsClassName="bg-gray-500"
+        >
+          {courses.map((course, index) => (
+            <CarouselItem
+              key={course.name + index}
+              className="basis-4/5 sm:basis-1/2"
             >
-              সব কোর্স দেখুন
-            </PrimaryButton>
-          </Link>
-        </StaggeredSection>
+              <CourseCard course={course} />
+            </CarouselItem>
+          ))}
+        </Carousel>
+
+        <Link href="/courses">
+          <PrimaryButton
+            size="lg"
+            className="mx-auto mt-10"
+            iconRight={<FaArrowRight />}
+          >
+            সব কোর্স দেখুন
+          </PrimaryButton>
+        </Link>
       </Container>
     </div>
   );

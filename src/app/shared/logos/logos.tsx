@@ -1,4 +1,8 @@
-"use client"
+"use client";
+import {
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/animations/StaggerAnimation";
 import Container from "@/components/container";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -33,24 +37,26 @@ const Logos = () => {
   ];
 
   return (
-    <div className="">
+    <StaggerContainer>
       <Container className="pb-20 flex flex-wrap gap-10 justify-center items-center ">
         {logos.map((item, index) => {
-          const src = theme === 'light' ? item.src : item.darkModeSrc ?? item.src;
+          const src =
+            theme === "light" ? item.src : item.darkModeSrc ?? item.src;
           return (
-            <Image
-              key={index}
-              className="w-[70px] h-20 lg:w-24 lg:h-20 object-contain hover:scale-110 duration-500"
-              sizes="100vw"
-              width={0}
-              height={0}
-              src={src}
-              alt={item.label}
-            />
-          )
+            <StaggerItem key={index}>
+              <Image
+                className="w-[70px] h-20 lg:w-24 lg:h-20 object-contain hover:scale-110 duration-500"
+                sizes="100vw"
+                width={0}
+                height={0}
+                src={src}
+                alt={item.label}
+              />
+            </StaggerItem>
+          );
         })}
       </Container>
-    </div>
+    </StaggerContainer>
   );
 };
 

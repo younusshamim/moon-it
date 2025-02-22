@@ -1,4 +1,8 @@
 import MentorCard from "@/app/shared/mentor-card/mentor-card";
+import {
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/animations/StaggerAnimation";
 import Container from "@/components/container";
 import { MentorType } from "@/types/mentor";
 
@@ -10,16 +14,16 @@ const CourseMentors = ({ mentors }: { mentors: MentorType[] }) => {
           কোর্স ইনস্ট্রাক্টর
         </h2>
 
-        <div className="flex gap-3 sm:gap-8 justify-center items-stretch">
+        <StaggerContainer className="flex gap-3 sm:gap-8 justify-center items-stretch">
           {mentors.map((mentor, index) => (
-            <div
+            <StaggerItem
               className="w-full h-auto sm:w-[250px]"
               key={mentor.name + index}
             >
               <MentorCard mentor={mentor} />
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </Container>
     </div>
   );

@@ -3,6 +3,7 @@ import LineShapes from "@/components/shapes/line-shapes";
 import { CourseType } from "@/types/course";
 import Image from "next/image";
 import FeeAndDiscount from "./fee-and-discount";
+import SpringyScroll from "@/components/animations/SpringyScroll";
 
 const CourseDetails = ({ course }: { course: CourseType }) => {
   const {
@@ -31,14 +32,16 @@ const CourseDetails = ({ course }: { course: CourseType }) => {
       </div>
 
       <div className="w-full lg:w-1/2 z-40">
-        <Image
-          className="w-full lg:h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={image}
-          alt={name}
-        />
+        <SpringyScroll>
+          <Image
+            className="w-full lg:h-[390px] object-cover object-center rounded-card shadow-lg  hover:scale-[1.02] transition-all duration-500"
+            sizes="100vw"
+            width={0}
+            height={0}
+            src={image}
+            alt={name}
+          />
+        </SpringyScroll>
       </div>
     </Container>
   );
