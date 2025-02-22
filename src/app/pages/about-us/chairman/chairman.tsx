@@ -1,3 +1,5 @@
+import ScrollAnimation from "@/components/animations/ScrollAnimation";
+import SpringyScroll from "@/components/animations/SpringyScroll";
 import Container from "@/components/container";
 import { chairmanImage } from "@/data/focused-images";
 import Image from "next/image";
@@ -6,14 +8,21 @@ const Chairman = () => {
   return (
     <Container className="pt-20 flex flex-col lg:flex-row gap-20 lg:gap-28 items-center justify-center">
       <div className="w-[calc(100%-50px)] lg:w-1/2 flex justify-start lg:justify-end relative">
-        <Image
-          className="w-full h-[350px] lg:h-[400px] object-cover object-center rounded-card  border-white border-4 shadow-lg"
-          sizes="100vw"
-          width={0}
-          height={0}
-          src={chairmanImage}
-          alt="Yousuf Shahin - Chairman of Moon IT"
-        />
+        <ScrollAnimation
+          className="z-50"
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 1, rotate: -3 }}
+          transition={{ duration: 0.2, delay: 1 }}
+        >
+          <Image
+            className="w-full h-[350px] lg:h-[400px] object-cover object-center rounded-card border-white border-4 shadow-lg"
+            sizes="100vw"
+            width={0}
+            height={0}
+            src={chairmanImage}
+            alt="Yousuf Shahin - Chairman of Moon IT"
+          />
+        </ScrollAnimation>
 
         <div className="w-[90%] lg:w-[80%] h-[350px] lg:h-[400px] bg-primary-lighter dark:bg-background rounded-card absolute top-7 -right-5 lg:top-10 lg:-right-10 z-0 border-white border-4 shadow-lg"></div>
       </div>

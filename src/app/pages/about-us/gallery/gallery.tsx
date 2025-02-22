@@ -6,20 +6,21 @@ import imageCategories from "@/data/gallery-categories";
 import galleryImages from "@/data/gallery-images";
 import { useIsMounted } from "@/hooks/use-is-mounted";
 import { useLgScreen } from "@/hooks/use-media-query";
-import TabsAnimation from "@/lib/animations/tabs-animation";
 import getOptions from "@/lib/utils/get-options";
 import { useState } from "react";
 import EmblaCarousel from "./embla-carousel";
 import "./embla.css";
 
 const Gallery = () => {
-  const [selected, setSelected] = useState<string | number>(imageCategories[0].id);
+  const [selected, setSelected] = useState<string | number>(
+    imageCategories[0].id
+  );
   const filteredImages = galleryImages.filter(
     (item) => item.category === selected
   );
   const tabOptions = getOptions(imageCategories, "title", "id");
-  const lgScreen = useLgScreen()
-  const mounted = useIsMounted()
+  const lgScreen = useLgScreen();
+  const mounted = useIsMounted();
 
   return (
     <div>
@@ -38,11 +39,7 @@ const Gallery = () => {
           setSelected={setSelected}
         />
 
-        {mounted && (
-          <TabsAnimation selected={selected}>
-            <EmblaCarousel filteredImages={filteredImages} lgScreen={lgScreen} />
-          </TabsAnimation>
-        )}
+        <EmblaCarousel filteredImages={filteredImages} lgScreen={lgScreen} />
       </Container>
     </div>
   );

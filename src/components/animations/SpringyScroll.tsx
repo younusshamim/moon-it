@@ -9,6 +9,7 @@ interface SpringyScrollProps
   stiffness?: number;
   damping?: number;
   mass?: number;
+  delay?: number;
 }
 
 const SpringyScroll = ({
@@ -16,6 +17,7 @@ const SpringyScroll = ({
   stiffness = 100,
   damping = 10,
   mass = 1,
+  delay = 0,
   ...props
 }: SpringyScrollProps) => {
   return (
@@ -27,6 +29,7 @@ const SpringyScroll = ({
         stiffness,
         damping,
         mass,
+        delay,
       }}
       {...props}
     >

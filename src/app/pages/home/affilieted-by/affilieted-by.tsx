@@ -14,7 +14,7 @@ const AffilietedBy = () => {
     <div className="pt-10 pb-14">
       <Container className="py-10 lg:p-10 flex flex-col lg:flex-row items-center lg:gap-10 bg-card xl:rounded-card shadow-lg shadow-gray-200 dark:shadow-gray-900 lg:border border-muted ">
         <div className="w-full lg:mt-0 lg:w-1/4 lg:pl-10 flex flex-col items-center lg:items-start">
-          <SpringyScroll>
+          <SpringyScroll delay={1}>
             <Image
               className="w-20 h-auto mb-3"
               sizes="100vw"

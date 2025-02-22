@@ -4,6 +4,10 @@ import { CarouselItem } from "@/components/ui/carousel";
 import mentorList from "@/data/mentor-list";
 import MentorCard from "../../../shared/mentor-card/mentor-card";
 import Chairman from "../chairman/chairman";
+import {
+  StaggerContainer,
+  StaggerItem,
+} from "@/components/animations/StaggerAnimation";
 
 const Mentors = () => {
   return (
@@ -15,13 +19,15 @@ const Mentors = () => {
           ইন্ডাস্ট্রি এক্সপার্ট ইনস্ট্রাক্টর
         </h2>
 
-        <div className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-8">
+        <StaggerContainer className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-8">
           {mentorList.map((mentor, index) => (
-            <MentorCard mentor={mentor} key={mentor.name + index} />
+            <StaggerItem key={mentor.name + index}>
+              <MentorCard mentor={mentor} />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
-        <Carousel className="block sm:hidden" sliderDots={true} >
+        <Carousel className="block sm:hidden" sliderDots={true}>
           {mentorList.map((mentor, index) => (
             <CarouselItem key={mentor.name + index} className="basis-1/2 ">
               <MentorCard mentor={mentor} />
